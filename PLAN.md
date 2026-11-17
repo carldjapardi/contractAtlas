@@ -1,5 +1,65 @@
 # Spending Atlas — four-hour prototype plan
 
+## Current plan and progress — November 16, 2026
+
+This section is the active plan. The original four-hour plan below is retained as the starting scope. See PIVOT.md for the sponsor-focused acceptance criteria and TEAM_CONTRACT.md for runtime interfaces.
+
+**Confirmed user:** a cybersecurity contractor's business-development/capture team.
+
+**Current product:** Contract Atlas, a research team that connects historical awards, agency guidance, vendor capability claims, and internal briefs through shared Cognee memory. The demonstration centers on review → native `improve()` → a fresh agent retrieving durable guidance.
+
+### Pivot log
+
+1. **General spending graph → company research workflow.** We initially explored agency/vendor relationships without selecting a primary user. The user confirmed company business development: identify relevant work, incumbents, and potential teaming partners. Government oversight is no longer the primary demo persona.
+2. **Award-only chatbot/graph → multi-source shared agent memory.** The sponsor specifically emphasized self-improvement and shared agent memory. A graph over existing award IDs alone would not demonstrate these. We preserved the explorer and benchmark as supporting views and added three research roles with persistent sessions and source-linked memory.
+3. **Default hybrid retrieval → explicit, inspectable memory behavior.** The initial adapter retrieved Cognee chunks while hiding much of its internal graph contribution. Its initial exploratory benchmark favored the lexical baseline (83% versus 50% positive-anchor recall). We preserved those results and shifted the core demonstration to native agent traces, cross-agent recall, actual improvement stages and fresh-session learning proof. We did not claim the original results established Cognee superiority.
+4. **Local SDK → end-to-end Cloud REST workflow for the research team.** The local SDK pipeline was working. Inspection showed that a simple `serve()` switch could leave native session helpers local while retrieval went remote. After Cloud credentials and credits were authorized, we implemented the verified Cloud endpoints directly so graph, agent registrations, Q&A, traces and improvement remain in one tenant. The award-only SDK explorer remains local and independent.
+5. **Typed capability-graph expansion deferred.** Custom DataPoint/ontology exploration was considered before the sponsor clarification. It is not the current priority. Source-aware extraction, shared research sessions and evidence of durable learning provide a tighter hackathon story.
+
+### Completed checkpoints
+
+- [x] Real USAspending snapshot: 265 awards, 150 recipient identities; all detail requests succeeded.
+- [x] Explicit graph, identity-safe parent links, deterministic baseline, financial/coverage labels.
+- [x] Local Cognee full index and real retrieval smoke tests.
+- [x] Supporting Explore, Awards and Benchmark views; production frontend build passed.
+- [x] Data integrity protections, API/provider tests, dependency locks and CI configuration.
+- [x] Multi-source corpus: 25 historical awards + CISA guidance + two vendor capability excerpts.
+- [x] Cloud authentication and required APIs verified; the 28-source Cloud graph built successfully.
+- [x] Primary Research team UI and persistent background-job API.
+- [x] First actual Cloud run completed all three roles, recorded traces, and verified peer-agent trace retrieval.
+- [x] Reviewer produced real source/evidence findings; original output preserved for inspection.
+
+### Active implementation and validation
+
+- [ ] Finish source-aware report rendering and retrieval provenance checks.
+- [ ] Run a complete, readable research checkpoint through the UI after integration refinements.
+- [ ] Accept a real reviewer lesson and execute Cloud `improve()` over actual agent sessions.
+- [ ] Capture improvement stage statuses/counts and identify newly distilled documents.
+- [ ] Verify a fresh session retrieves a new durable lesson without feedback copied into its prompt.
+- [ ] Clearly report zero lessons or failed retrieval; never manufacture a successful learning result.
+- [ ] Validate the actual memory graph layout, source navigation, responsive states and job recovery.
+- [ ] Add focused Cloud/provenance regression tests and run final backend/frontend checks.
+- [ ] Update README verification status, record the actual demo results, and commit remaining working slices.
+
+### Reviewable commits so far
+
+| Commit | Checkpoint |
+| --- | --- |
+| `07d5495` | Real data and source-grounded retrieval API |
+| `317b926` | Interactive investigation workspace |
+| `58d7e58` | Source integrity and canonical graph identities |
+| `a744a3a` | Readability and complete award browsing |
+| `01ea44b` | Initial comparison and reproducible workflow |
+| `fd699ee` | Multi-source collection and sponsor pivot contracts |
+| `9cc8ed3` | Company use case, scope and track rationale |
+| `e74523b` | Cloud research agents, session traces and review UI |
+
+### Success criteria for the revised demo
+
+The user can inspect a real source-backed research run, accept a reusable review lesson, execute native improvement, and inspect a fresh agent's actual retrieved memory and report. Source classes remain explicit. A completed API call alone is insufficient evidence of learning. A new lesson document plus its retrieval in a fresh session establishes durable memory reuse; it does not by itself establish improved research quality or model training.
+
+## Original starting plan
+
 ## Outcome
 
 Build a local investigation workspace for discovering federal contractors and inspecting the award records behind each answer. Demonstrate a structured retrieval baseline and a Cognee-powered retrieval path over the same frozen data snapshot.

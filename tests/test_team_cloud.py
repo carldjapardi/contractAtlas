@@ -77,3 +77,20 @@ def test_tenant_operation_lock_releases_after_exception(monkeypatch, tmp_path):
             assert cloud.is_busy() is True
             raise ValueError("simulated failure")
     assert cloud.is_busy() is False
+
+
+def test_graph_provenance_follows_native_document_contains_edges_only():
+    graph = cloud.graph_view({"nodes": [
+        {"id": "chunk", "type": "DocumentChunk", "name": "raw source", "text": "[TEAM_SOURCE:known]"},
+        {"id": "entity", "type": "Entity", "name": "IAM"},
+        {"id": "other", "type": "Entity", "name": "Unrelated entity"},
+    ], "links": [
+        {"source": "chunk", "target": "entity", "relation": "contains"},
+        {"source": "entity", "target": "other", "relation": "related"},
+        {"source": "missing", "target": "entity", "relation": "contains"},
+    ]}, [{"id": "known", "title": "Actual source title"}])
+    by_id = {node["id"]: node for node in graph["nodes"]}
+    assert by_id["chunk"]["label"] == "Actual source title"
+    assert by_id["entity"]["award_ids"] == ["known"]
+    assert by_id["other"]["award_ids"] == []
+    assert len(graph["edges"]) == 2

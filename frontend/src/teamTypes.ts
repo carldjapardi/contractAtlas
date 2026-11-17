@@ -4,7 +4,7 @@ export interface TeamSource {
   id: string; title: string; kind: 'award' | 'agency_guidance' | 'company_capability' | 'internal_brief';
   url: string | null; retrieved_at: string; text: string; notes: string[];
 }
-export interface TeamStatus { available: boolean; ready: boolean; reason: string; source_count: number; dataset_name: string | null }
+export interface TeamStatus { available: boolean; ready: boolean; reason: string; source_count: number; dataset_name: string | null; runtime_mode?: 'local'|'cloud'; busy?: boolean }
 export type AgentRole = 'opportunity' | 'partner' | 'reviewer';
 export interface ResearchAgent {
   role: AgentRole; name: string; session_id: string; status: 'complete' | 'error';

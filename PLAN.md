@@ -31,15 +31,15 @@ This section is the active plan. The original four-hour plan below is retained a
 
 ### Active implementation and validation
 
-- [ ] Finish source-aware report rendering and retrieval provenance checks.
-- [ ] Run a complete, readable research checkpoint through the UI after integration refinements.
-- [ ] Accept a real reviewer lesson and execute Cloud `improve()` over actual agent sessions.
-- [ ] Capture improvement stage statuses/counts and identify newly distilled documents.
-- [ ] Verify a fresh session retrieves a new durable lesson without feedback copied into its prompt.
-- [ ] Clearly report zero lessons or failed retrieval; never manufacture a successful learning result.
-- [ ] Validate the actual memory graph layout, source navigation, responsive states and job recovery.
-- [ ] Add focused Cloud/provenance regression tests and run final backend/frontend checks.
-- [ ] Update README verification status, record the actual demo results, and commit remaining working slices.
+- [x] Finish source-aware report rendering and retrieval provenance checks.
+- [x] Run a complete, readable research checkpoint through the UI after integration refinements.
+- [x] Accept a real reviewer lesson and execute Cloud `improve()` over actual agent sessions.
+- [x] Capture improvement stage statuses/counts and identify newly distilled documents: four new lesson documents observed.
+- [x] Verify a fresh session retrieves a new durable lesson without feedback copied into its prompt: all four new excerpts were retrieved.
+- [x] Clearly report zero lessons or failed retrieval; no success is inferred from completion status alone.
+- [x] Validate the actual memory graph layout, source navigation, responsive states and job recovery. Desktop and 390px mobile views inspected; no page-width overflow observed.
+- [x] Add focused Cloud/provenance regression tests: 83 backend tests pass; production frontend build passes. Final browser QA remains.
+- [x] Update README verification status and record the actual demo results in DEMO_RESULTS.md. Final verification/commits are being completed.
 
 ### Reviewable commits so far
 
@@ -53,6 +53,12 @@ This section is the active plan. The original four-hour plan below is retained a
 | `fd699ee` | Multi-source collection and sponsor pivot contracts |
 | `9cc8ed3` | Company use case, scope and track rationale |
 | `e74523b` | Cloud research agents, session traces and review UI |
+| `aa31630` | Active plan and pivot history |
+| `f07d27f` | Cloud provenance checks and plain-English explanation |
+
+### Observed learning checkpoint
+
+The November 16 live Cloud run completed three research roles with recorded traces. The partner and reviewer retrieved earlier role traces. Native `improve()` persisted three QA sessions and three trace windows, extracted three agent-context lessons, and distilled four permanent lesson documents. A fresh partner session retrieved all four newly recorded lesson excerpts using the original question/profile, without accepted feedback copied into its prompt. The original report was preserved. This verifies shared memory and durable reuse; it does not establish a quantitative improvement in research quality.
 
 ### Success criteria for the revised demo
 

@@ -302,19 +302,44 @@ async def _run_agent(role, question, profile, session_id, manifest, emit, peers=
             pass
 
 
+def graph_view(raw, sources):
+    """Adapt real nodes/edges, preserving exact document-to-entity lineage."""
+    source_map = {source["id"]: source for source in sources}
+    known = set(source_map)
+    nodes, raw_by_id = [], {}
+    for node in raw.get("nodes", []):
+        identity = str(node["id"])
+        raw_by_id[identity] = node
+        refs = set(MARKER.findall(str(node.get("text", "")))) & known
+        name = str(node.get("name") or "")
+        if name in known:
+            refs.add(name)
+        if name.startswith("team_source:") and name[len("team_source:"):] in known:
+            refs.add(name[len("team_source:"):])
+        typ = str(node.get("entity_type") or node.get("type") or "Concept")
+        label = source_map[sorted(refs)[0]]["title"] if refs and node.get("type") in {"DocumentChunk", "TextDocument"} else name or typ
+        nodes.append({"id": identity, "type": "topic", "label": label[:140], "sublabel": "Cognee · " + typ, "award_ids": sorted(refs)})
+    by_id = {node["id"]: node for node in nodes}
+    edges = []
+    for index, edge in enumerate(raw.get("links", [])):
+        source, target = str(edge["source"]), str(edge["target"])
+        if source not in by_id or target not in by_id:
+            continue
+        relation = str(edge.get("relation") or "related")
+        if relation == "contains" and raw_by_id[source].get("type") in {"DocumentChunk", "TextDocument"}:
+            by_id[target]["award_ids"] = sorted(set(by_id[target]["award_ids"]) | set(by_id[source]["award_ids"]))
+        edges.append({"id": f"cloud-edge-{index}", "source": source, "target": target, "relationship": relation, "origin": "inferred", "award_ids": []})
+    for edge in edges:
+        edge["award_ids"] = sorted(set(by_id[edge["source"]]["award_ids"]) | set(by_id[edge["target"]]["award_ids"]))
+    return {"nodes": nodes, "edges": edges, "truncated": len(nodes) >= 45}
+
+
 async def _graph(manifest, question, emit):
     from backend.team_memory import _sources
     try:
         raw = await request("GET", "/api/v1/visualize/json", params={"dataset_id": manifest["dataset_id"], "query": question, "max_nodes": 45, "neighborhood_depth": 2, "include_session_events": "false"})
-        known = {s["id"] for s in _sources()}
-        nodes = []
-        for node in raw.get("nodes", []):
-            ids = sorted(set(MARKER.findall(str(node.get("text", "")))) & known)
-            typ = str(node.get("entity_type") or node.get("type") or "Concept")
-            nodes.append({"id": str(node["id"]), "type": "topic", "label": str(node.get("name") or typ)[:140], "sublabel": "Cognee · " + typ, "award_ids": ids})
-        ids = {n["id"] for n in nodes}
-        edges = [{"id": "cloud-edge-" + str(i), "source": str(e["source"]), "target": str(e["target"]), "relationship": str(e.get("relation") or "related"), "origin": "inferred", "award_ids": []} for i, e in enumerate(raw.get("links", [])) if str(e.get("source")) in ids and str(e.get("target")) in ids]
-        return {"nodes": nodes, "edges": edges, "truncated": len(nodes) >= 45}, {"nodes": len(nodes), "edges": len(edges), "source_count": manifest["source_count"], "dataset_name": manifest["dataset_name"], "runtime_mode": "cloud"}
+        graph = graph_view(raw, _sources())
+        return graph, {"nodes": len(graph["nodes"]), "edges": len(graph["edges"]), "source_count": manifest["source_count"], "dataset_name": manifest["dataset_name"], "runtime_mode": "cloud"}
     except RuntimeError:
         await _emit(emit, "notice", "Graph preview unavailable", "Reports and session memory remain available; no replacement graph was fabricated.")
         return None, {"source_count": manifest["source_count"], "dataset_name": manifest["dataset_name"], "runtime_mode": "cloud"}
@@ -361,4 +386,5 @@ async def improve_research(run, feedback, emit):
         if not verified:
             notes.append("Fresh-session retrieval did not verify a newly distilled lesson; learning is not claimed.")
         await _emit(emit, "verification", "Fresh-session memory check complete", "A new agent retrieved newly distilled shared guidance." if verified else "The run did not establish new durable learning; inspect its actual stage results.", metrics={"learning_verified": verified, "lesson_count": count})
-        return {"agents": run["agents"] + [after], "after_report": after["report"], "fresh_session_id": fresh_id, "memory_graph": graph, "memory_stats": stats, "improvement": {"status": result.get("status", "unknown"), "stages": stages, "lesson_count": count, "lessons": new_lessons, "learning_verified": verified, "durable_recall_excerpt": "\n\n".join(s["text"] for s in verified_lessons), "notes": notes}}
+        agents = [a for a in run["agents"] if a["session_id"] != fresh_id] + [after]
+        return {"agents": agents, "after_report": after["report"], "fresh_session_id": fresh_id, "memory_graph": graph, "memory_stats": stats, "improvement": {"status": result.get("status", "unknown"), "stages": stages, "lesson_count": count, "lessons": new_lessons, "learning_verified": verified, "durable_recall_excerpt": "\n\n".join(s["text"] for s in verified_lessons), "notes": notes}}

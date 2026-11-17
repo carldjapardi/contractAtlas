@@ -56,7 +56,9 @@ This makes the project a credible track submission; winning depends on the final
 
 - Real source collection, award explorer and initial Cognee index: verified.
 - Cognee Cloud authentication and required REST endpoints: verified.
-- Research-team UI, session/trace orchestration and improvement integration: implemented; end-to-end Cloud learning verification is in progress.
+- Research-team UI and Cloud session/trace orchestration: verified in a real run.
+- Native Cloud improvement: four new lesson documents created; a fresh partner session retrieved all four. Original report preserved. See [demo results](DEMO_RESULTS.md).
+- Regression checks: 83 backend tests passed; production frontend build passed. GitHub CI is configured but has not been run remotely in this session.
 - Initial retrieval benchmark: preserved, including cases where the lexical baseline performs better. Those results are not evidence of the revised team's learning quality.
 
 ## Start

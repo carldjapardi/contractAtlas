@@ -7,7 +7,7 @@ import { Building2, FileText, Landmark, Layers3, Network, Sparkles } from 'lucid
 import type { EntityType, Graph, GraphNode } from './types';
 
 const icons = { agency: Landmark, recipient: Building2, award: FileText, parent: Layers3, topic: Sparkles };
-const typeNames = { agency: 'Agency', recipient: 'Recipient', award: 'Contract award', parent: 'Ultimate parent', topic: 'Inferred topic' };
+const typeNames = { agency: 'Agency', recipient: 'Recipient', award: 'Contract award', parent: 'Ultimate parent', topic: 'Memory concept' };
 type EntityNode = Node<{ entity: GraphNode }, 'entity'>;
 
 const EntityCard = memo(function EntityCard({ data, selected }: NodeProps<EntityNode>) {
@@ -24,6 +24,31 @@ const EntityCard = memo(function EntityCard({ data, selected }: NodeProps<Entity
 const nodeTypes = { entity: EntityCard };
 
 function positionNodes(graph: Graph, selectedId?: string): EntityNode[] {
+  if (graph.nodes.every(node => node.type === 'topic')) {
+    // Memory graphs have semantic concepts rather than the award graph's fixed
+    // entity columns. Lay out their actual connected components in a grid.
+    const neighbors = new Map(graph.nodes.map(node => [node.id, new Set<string>()]));
+    for (const edge of graph.edges) {
+      neighbors.get(edge.source)?.add(edge.target);
+      neighbors.get(edge.target)?.add(edge.source);
+    }
+    const remaining = new Set(graph.nodes.map(node => node.id));
+    const ordered: string[] = [];
+    while (remaining.size) {
+      const root = [...remaining].sort((a, b) => (neighbors.get(b)?.size ?? 0) - (neighbors.get(a)?.size ?? 0) || a.localeCompare(b))[0];
+      const queue = [root]; remaining.delete(root);
+      while (queue.length) {
+        const id = queue.shift()!; ordered.push(id);
+        for (const next of neighbors.get(id) ?? []) if (remaining.delete(next)) queue.push(next);
+      }
+    }
+    const columns = Math.max(2, Math.ceil(Math.sqrt(ordered.length * 1.4)));
+    return graph.nodes.map(node => {
+      const index = ordered.indexOf(node.id);
+      return {id: node.id, type: 'entity', data: {entity: node}, selected: node.id === selectedId,
+        position: {x: (index % columns) * 270, y: Math.floor(index / columns) * 160}};
+    });
+  }
   const kinds: EntityType[] = ['agency', 'award', 'recipient', 'parent', 'topic'];
   const columns = kinds.filter(kind => graph.nodes.some(node => node.type === kind));
   const recipients = graph.nodes.filter(node => node.type === 'recipient');

@@ -175,7 +175,7 @@ class TeamJobManager:
             result = await self.memory.improve_research(run, feedback, emit)
             for key in ("agents", "after_report", "fresh_session_id", "improvement", "memory_graph", "memory_stats"):
                 if key in result:
-                    run[key] = result[key]
+                    run[key] = list({agent["session_id"]: agent for agent in result[key]}.values()) if key == "agents" else result[key]
             run["status"] = "complete"
             await emit({"kind": "complete", "title": "Memory improvement inspected", "detail": "Compare the original research with the fresh agent session and inspect the actual learning results."})
         except asyncio.CancelledError:

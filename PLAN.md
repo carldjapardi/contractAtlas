@@ -38,6 +38,7 @@ This section is the active plan. The original four-hour plan below is retained a
 - [x] Verify a new hosted research run: all three roles completed with persisted traces and a real graph (45 nodes, 149 edges before improvement).
 - [x] Publish production at https://contract-atlas-personal-d624.vercel.app; verify public reads and 401 rejection of paid actions without the demo cookie. Previews retain Vercel authentication.
 - [x] Finish production native-improvement/fresh-session smoke test: run 506d08150fb5447fb7d95ab9f117982f completed, two new lesson excerpts verified in a fresh session, original report preserved. Record in HOSTED_RESULTS.md.
+- [x] GitHub presentation clarified: show the production website in About and README (https://contract-atlas-vert.vercel.app). Remove the mistakenly created release/tag and temporary release automation; preserve the app source on Main.
 
 - [x] Integrate the separately authored 68-source expansion in an isolated dataset; preserve the original working demo.
 - [x] Freeze a matched document-RAG versus hybrid, before/after protocol and 24-check rubric before generating answers.

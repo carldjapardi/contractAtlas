@@ -212,8 +212,7 @@ def _require_manifest():
 async def _retrieve(question, manifest, *, lessons_only=False):
     from backend.team_memory import _sources
     body = {"query": question, "datasets": [manifest["dataset_name"]], "searchType": "CHUNKS", "topK": 10, "verbose": True, "includeReferences": True, "onlyContext": True, "scope": "graph"}
-    if lessons_only:
-        body["nodeName"] = ["session_learnings"]
+    body["nodeName"] = ["session_learnings" if lessons_only else "team_sources"]
     results = await request("POST", "/api/v1/recall", json=body)
     known = {s["id"] for s in _sources()}
     texts, ids, lessons = [], [], []
@@ -284,6 +283,11 @@ async def _run_agent(role, question, profile, session_id, manifest, emit, peers=
         if report.findings:
             report.report = report.report.rstrip() + "\n\n" + "\n\n".join("• " + finding for finding in report.findings)
         cited = set(re.findall(r"\[([^\]\n]+)\]", report.report))
+        invalid = {value for value in cited if value.startswith(("award_", "capability_", "guidance_", "brief:", "learning:")) and value not in allowed}
+        for value in invalid:
+            report.report = report.report.replace("[" + value + "]", "[source not verified]")
+        if invalid:
+            report.report += f"\n\nSource check: {len(invalid)} citation(s) were outside this agent's retrieved evidence and remain unverified."
         report.source_ids = sorted((set(report.source_ids) | cited) & allowed)
         trace = await request("POST", "/api/v1/remember/entry", json={"dataset_name": manifest["dataset_name"], "dataset_id": manifest["dataset_id"], "session_id": session_id, "self_improvement": False, "entry": {"type": "trace", "origin_function": "contract_atlas_" + role, "status": "success", "method_params": {"question": question, "profile": profile}, "method_return_value": report.model_dump(), "memory_query": question, "memory_context": memory[:26000]}})
         agent = {"role": role, "name": ROLE_NAMES[role], "session_id": session_id, "status": "complete", "report": report.report, "source_ids": report.source_ids, "memory_excerpt": memory[:26000], "trace_recorded": True, "retrieved_lessons": lessons, "peer_sessions_recalled": list(peers), "peer_memory_retrieved": bool(peer_context), "runtime_mode": "cloud"}

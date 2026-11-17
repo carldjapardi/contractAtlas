@@ -1,5 +1,7 @@
 # Contract Atlas
 
+**New to the project? Read [the plain-English explanation](PROJECT_SIMPLE.md) first.**
+
 **A shared research memory for cybersecurity contractors pursuing federal work.** Three research agents connect historical awards, agency guidance, and vendor capabilities, review their findings, and carry accepted lessons into a fresh agent session through Cognee.
 
 ## Motivation and user

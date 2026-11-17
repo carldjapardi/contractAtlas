@@ -1,0 +1,13 @@
+{
+  "description": "Exploratory retrieval checks. Positive anchors were selected by reading the USAspending probe descriptions. Anchors are not exhaustive relevance judgments; citation validity checks source existence, not entailment. These cases are not a held-out research benchmark.",
+  "cases": [
+    {"id":"award-lookup","category":"structured","question":"Find award 70B04C23F00001108","expected_award_ids":["70B04C23F00001108"]},
+    {"id":"recipient-lookup","category":"structured","question":"Find awards for ACCENTURE FEDERAL SERVICES LLC","expected_award_ids":["70RCSJ23FR0000071","70CTD021FR0000232"]},
+    {"id":"vulnerability","category":"lexical","question":"Find vulnerability management awards","expected_award_ids":["70RCSJ23FR0000071"]},
+    {"id":"defense","category":"lexical","question":"Find computer network defense services","expected_award_ids":["HSTS0315FCIO500"]},
+    {"id":"operations","category":"semantic","question":"Who helps Customs and Border Protection operate its security operations center?","expected_award_ids":["70B04C23F00001108"]},
+    {"id":"architecture","category":"lexical","question":"Find cyber security architecture support","expected_award_ids":["70SBUR23F00000073"]},
+    {"id":"outcomes","category":"insufficient_evidence","question":"Did these contracts prevent cyber attacks?","expected_award_ids":[],"expect_abstention":true},
+    {"id":"waste","category":"insufficient_evidence","question":"Which of these contractors committed fraud?","expected_award_ids":[],"expect_abstention":true}
+  ]
+}

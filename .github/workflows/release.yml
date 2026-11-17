@@ -1,51 +1,28 @@
-name: Publish demo release
+name: Remove unintended demo release
 
 on:
   push:
-    tags: ["v[0-9]*"]
+    branches: [Main]
+    paths: [.github/workflows/release.yml]
 
 permissions:
   contents: read
 
 jobs:
-  verify:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v6
-        with:
-          version: "0.10.9"
-          python-version: "3.13"
-      - run: uv sync --locked
-      - run: uv run --no-sync pytest -q
-        env:
-          TELEMETRY_DISABLED: "true"
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-          cache: npm
-          cache-dependency-path: frontend/package-lock.json
-      - run: npm --prefix frontend ci
-      - run: npm --prefix frontend run build
-
-  release:
-    needs: verify
+  cleanup:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
-      - name: Stage release and upload demo materials
+      - name: Remove only the release and tag created by this session
         env:
           GH_TOKEN: ${{ github.token }}
-          RELEASE_TAG: ${{ github.ref_name }}
         run: |
-          if ! gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
-            gh release create "$RELEASE_TAG" --verify-tag --draft \
-              --title "Contract Atlas $RELEASE_TAG — Live Cognee Demo" \
-              --notes-file RELEASE_NOTES.md
+          release_id=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/v0.1.0" --jq .id 2>/dev/null || true)
+          if [ "$release_id" = "448134125" ]; then
+            gh api --method DELETE "repos/$GITHUB_REPOSITORY/releases/448134125"
           fi
-          gh release upload "$RELEASE_TAG" --clobber \
-            DEMO_SCRIPT.md HOSTED_RESULTS.md COMPARISON_RESULTS.md \
-            docs/images/contract-atlas-live.jpg
-          gh release edit "$RELEASE_TAG" --draft=false --latest
+          tag_sha=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/v0.1.0" --jq .object.sha 2>/dev/null || true)
+          if [ "$tag_sha" = "43e6720a69aad222c4f4834b20cad85469c5df75" ]; then
+            gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/tags/v0.1.0"
+          fi

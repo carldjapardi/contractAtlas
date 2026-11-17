@@ -72,6 +72,30 @@ def unlock_demo(request: DemoUnlock, response: Response):
     return {"authorized": True}
 
 
+@app.post("/api/deployment/probe", dependencies=[Depends(demo_access.require_live_access)])
+async def probe_hosted_workflow():
+    try:
+        from vercel import workflow
+        from backend.workflows import deployment_probe
+        run = await workflow.start(deployment_probe)
+        return {"run_id": run.run_id}
+    except Exception as exc:
+        logger.error("Hosted workflow probe failed (%s).", type(exc).__name__)
+        raise HTTPException(503, "Native workflow dispatch could not be confirmed.") from None
+
+
+@app.get("/api/deployment/probe/{run_id}", dependencies=[Depends(demo_access.require_live_access)])
+async def hosted_workflow_probe_status(run_id: str):
+    if len(run_id) > 160 or not all(char.isalnum() or char in "_-" for char in run_id):
+        raise HTTPException(400, "Invalid workflow identifier.")
+    try:
+        from vercel import workflow
+        return {"status": await workflow.Run(run_id).status()}
+    except Exception as exc:
+        logger.error("Hosted workflow status failed (%s).", type(exc).__name__)
+        raise HTTPException(503, "Native workflow status is unavailable.") from None
+
+
 @app.get("/api/dataset")
 def dataset():
     return data.get_metadata()

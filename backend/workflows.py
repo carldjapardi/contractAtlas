@@ -5,6 +5,16 @@ wf = workflow.Workflows()
 
 
 @wf.step(max_retries=0)
+async def deployment_probe_step():
+    return {"ok": True, "runtime": "vercel-workflow"}
+
+
+@wf.workflow
+async def deployment_probe():
+    return await deployment_probe_step()
+
+
+@wf.step(max_retries=0)
 async def execute_job_step(*, run_id: str, action: str):
     from backend.durable_jobs import DurableTeamJobManager
     manager = DurableTeamJobManager()

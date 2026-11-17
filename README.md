@@ -1,23 +1,16 @@
 # Contract Atlas
 
-**Live demo:** [contract-atlas-personal-d624.vercel.app](https://contract-atlas-personal-d624.vercel.app). Completed research and benchmark results are viewable publicly; running new agents requires the shared demo code. The hosted research/improvement loop is [verified](HOSTED_RESULTS.md). See [deployment setup](DEPLOYMENT.md).
-
-**New to the project? Read [the plain-English explanation](PROJECT_SIMPLE.md) first.**
-
-**Filming:** [Two-minute walkthrough script](DEMO_SCRIPT.md), with screen actions and verified run selection.
+LIVE DEMO: https://contract-atlas-vert.vercel.app/
 
 ## Deliverables
 
-- A live web application with a primary **Research team** workspace, also runnable locally.
+- A local web application with a primary **Research team** workspace.
 - Three actual provider-backed research roles with distinct persistent sessions.
 - A shared collection showing source types, URLs, excerpts and evidence limitations.
 - Recorded activity, reports, retrieved memory, agent traces and a bounded actual Cognee graph.
 - An unchanged before checkpoint, editable review lesson, native improvement stage results, new-lesson counts and a fresh-session memory check.
 - Supporting award graph/search and an openly reported initial retrieval comparison.
 - Reproducible source collection, setup commands, tests, locked dependencies and small reviewable commits.
-
-
-**Latest measured result:** the isolated 68-source comparison completed 16 answers. Cognee hybrid scored 20/24 before and after. One new lesson was saved and retrieved. No answer-quality advantage is established. See [observed comparison](COMPARISON_RESULTS.md) and **Benchmark** in the app.
 
 **A shared research memory for cybersecurity contractors pursuing federal work.** Three research agents connect historical awards, agency guidance, and vendor capabilities, review their findings, and carry accepted lessons into a fresh agent session through Cognee.
 
@@ -65,7 +58,7 @@ This makes the project a credible track submission; winning depends on the final
 - Cognee Cloud authentication and required REST endpoints: verified.
 - Research-team UI and Cloud session/trace orchestration: verified in a real run.
 - Native Cloud improvement: four new lesson documents created; a fresh partner session retrieved all four. Original report preserved. See [demo results](DEMO_RESULTS.md).
-- Regression checks: 134 backend tests passed locally; production frontend build passed. GitHub Actions verifies pushes and gates release publication on its checks.
+- Regression checks: 83 backend tests passed; production frontend build passed. GitHub CI is configured but has not been run remotely in this session.
 - Initial retrieval benchmark: preserved, including cases where the lexical baseline performs better. Those results are not evidence of the revised team's learning quality.
 
 ## Start

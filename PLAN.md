@@ -33,6 +33,8 @@ This section is the active plan. The original four-hour plan below is retained a
 
 - [x] Deployment choice confirmed: live Vercel + Supabase; keep Cognee Cloud as graph/session memory.
 - [x] Implement server-only Supabase run/manifest storage, atomic operation admission, native Vercel Workflow execution and a shared code for paid actions.
+- [x] Deploy protected Vercel preview; verify HTML/API responses and an actual no-provider-cost native workflow completing after its HTTP dispatch returns. 134 tests and production build pass.
+- [ ] Resolve hosted Supabase migration: project API currently returns PGRST205 for public.atlas_runs; runtime keys are configured.
 - [ ] Apply hosted schema, import verified demo state, deploy preview and verify a live hosted operation before promoting.
 
 - [x] Integrate the separately authored 68-source expansion in an isolated dataset; preserve the original working demo.

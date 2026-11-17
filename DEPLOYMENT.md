@@ -30,3 +30,7 @@ Database transaction locks atomically admit one active research/improvement oper
 Provider side effects are not transactionally atomic with database writes. A hard interruption during a Cloud request can leave its result uncertain. Preserve recorded state and inspect the Cloud/workflow logs before manually retrying. This is a single shared hackathon workspace, not a tenant-isolated production service. The original local award-only Cognee index is not uploaded; the deterministic explorer remains available and the Research team uses the actual Cloud graph.
 
 The Python Workflow SDK is pinned to beta version `0.13.0`. Native execution must be verified on the account before claiming the deployed learning loop works. A ready Vercel build alone is insufficient. Preview deployments can require Vercel sign-in; test public reachability separately when publishing the final production URL.
+
+## November 16 deployment checkpoint
+
+The protected preview built successfully. Its HTML and API respond, and native probe `wrun_41M7KSRQTQ0GGARD58T1DS4QCF` reached `completed` after the start request returned. This probe calls no Cognee/model provider. The hosted agent/learning loop is still pending: the configured Supabase project reports PGRST205 for `public.atlas_runs` until the migration is applied. Do not describe the app as fully deployed until storage import and a real hosted operation succeed.

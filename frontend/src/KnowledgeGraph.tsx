@@ -24,7 +24,7 @@ const EntityCard = memo(function EntityCard({ data, selected }: NodeProps<Entity
 const nodeTypes = { entity: EntityCard };
 
 function positionNodes(graph: Graph, selectedId?: string): EntityNode[] {
-  const kinds: EntityType[] = ['agency', 'parent', 'recipient', 'award', 'topic'];
+  const kinds: EntityType[] = ['agency', 'award', 'recipient', 'parent', 'topic'];
   const columns = kinds.filter(kind => graph.nodes.some(node => node.type === kind));
   const recipients = graph.nodes.filter(node => node.type === 'recipient');
   const awards = graph.nodes.filter(node => node.type === 'award').sort((a, b) => {
@@ -32,12 +32,12 @@ function positionNodes(graph: Graph, selectedId?: string): EntityNode[] {
     return group(a) - group(b) || a.label.localeCompare(b.label);
   });
   const count = Math.max(awards.length, recipients.length, 1);
-  const height = (count - 1) * 104;
-  const ys = new Map(awards.map((node, index) => [node.id, index * 104]));
+  const height = (count - 1) * 136;
+  const ys = new Map(awards.map((node, index) => [node.id, index * 136]));
   const positions = new Map<string, number>();
   for (const node of recipients) {
     const related = awards.filter(a => a.award_ids.some(id => node.award_ids.includes(id)));
-    positions.set(node.id, related.length ? related.reduce((sum, a) => sum + (ys.get(a.id) ?? 0), 0) / related.length : recipients.indexOf(node) * 104);
+    positions.set(node.id, related.length ? related.reduce((sum, a) => sum + (ys.get(a.id) ?? 0), 0) / related.length : recipients.indexOf(node) * 136);
   }
   return graph.nodes.map(node => {
     const peers = graph.nodes.filter(peer => peer.type === node.type);
@@ -48,7 +48,7 @@ function positionNodes(graph: Graph, selectedId?: string): EntityNode[] {
       const related = recipients.filter(r => r.award_ids.some(id => node.award_ids.includes(id)));
       if (related.length) y = related.reduce((sum, r) => sum + (positions.get(r.id) ?? 0), 0) / related.length;
     }
-    return { id: node.id, type: 'entity', data: { entity: node }, position: { x: columns.indexOf(node.type) * 280, y }, selected: node.id === selectedId };
+    return { id: node.id, type: 'entity', data: { entity: node }, position: { x: columns.indexOf(node.type) * 250, y }, selected: node.id === selectedId };
   });
 }
 
@@ -77,6 +77,6 @@ export default function KnowledgeGraph({ graph, selectedId, onSelect, loading }:
     onPaneClick={() => onSelect(null)}
     fitView fitViewOptions={{ padding: .17 }} minZoom={.25} maxZoom={1.5}
     nodesConnectable={false} nodesDraggable panOnScroll selectionOnDrag={false}
-    aria-label="Federal contract relationship graph" proOptions={{ hideAttribution: true }}
+    aria-label="Federal contract relationship graph"
   ><Background gap={20} size={1} color="#dce4df" /><Controls showInteractive={false} /></ReactFlow>;
 }

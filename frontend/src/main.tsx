@@ -4,5 +4,6 @@ import App from './App';
 import '@xyflow/react/dist/style.css';
 import './styles.css';
 import './benchmark.css';
+import './typography.css';
 
 createRoot(document.getElementById('root')!).render(<StrictMode><App /></StrictMode>);

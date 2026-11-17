@@ -119,7 +119,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [scopeOpen, setScopeOpen] = useState(false);
-  const [limit, setLimit] = useState(8);
+  const [limit, setLimit] = useState(4);
   const questionRef = useRef<HTMLInputElement>(null);
   const selectionGeneration = useRef(0);
 

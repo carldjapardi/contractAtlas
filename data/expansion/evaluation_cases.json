@@ -1,0 +1,38 @@
+{
+  "ingest": false,
+  "purpose": "Human evaluation questions and evidence anchors. These are not sources or observed model results. Keep out of the shared dataset and agent prompts except for the selected question.",
+  "cases": [
+    {
+      "id": "public_entity_provenance",
+      "question": "Which curated candidates have historical evidence of SOC work, and what does that establish about their current staffing?",
+      "checks": ["Cite exact award descriptions and source identities", "Do not infer current staffing, availability, or interest from historical awards", "Do not transfer brand-level service claims to another legal entity"]
+    },
+    {
+      "id": "capacity_update",
+      "question": "Could fictional Harbor Signal support a December 2026 identity implementation handover, and who owns follow-up?",
+      "evidence_ids": ["demo:meeting-02", "demo:meeting-03"],
+      "checks": ["November 16 update supersedes provisional November 12 capacity", "No analysts available before January 18, 2027; even that is provisional", "Weekday 08:00-18:00 Pacific staffed triage is not 24/7 response", "Maya owns November 23 capacity recheck", "Label the organizations and statements fictional"]
+    },
+    {
+      "id": "held_out_readiness",
+      "question": "Prepare a January 2027 readiness comparison for fictional Harbor Signal and Cedar Response. Identify missing evidence and the next action owner.",
+      "evidence_ids": ["demo:meeting-02", "demo:meeting-03"],
+      "checks": ["Separate technical fit, staffed coverage, dated capacity, and eligibility evidence", "Harbor January 18 capacity is provisional and has no reserved staffing", "Cedar 24/7 coverage is an attributed claim with roster and escalation matrix pending", "Noah owns requesting Cedar evidence; Imani owns technical acceptance", "Do not claim Cedar documents were received", "Keep public contractors separate from fictional candidates"]
+    },
+    {
+      "id": "guidance_interpretation",
+      "question": "What identity capabilities does CISA's maturity model describe, and which of those are proven mandatory for this research exercise?",
+      "evidence_ids": ["guidance_cisa_identity_table2_v2"],
+      "checks": ["Reference section 5.1 and specific Table 2 maturity columns", "Do not call optimal maturity examples universal procurement requirements", "No solicitation was provided"]
+    }
+  ],
+  "comparison_protocol": [
+    "Use a separate dataset for the expansion. Preserve the completed original demo.",
+    "Capture initial research against the expanded sources without the synthetic review meeting or these checks in memory.",
+    "Submit the editable feedback from synthetic/review_meeting.md as an explicit accepted reviewer-session turn, then call native improve().",
+    "Record actual stages, new lesson documents, and fresh-session retrieval. Zero new lessons remains a valid result.",
+    "Ask held_out_readiness from a fresh session with the company profile and original sources only. Do not inject accepted feedback, expected answers, previous reports, or this rubric.",
+    "Inspect citations, correctness, and readiness-field coverage in both reports. Retrieval of a lesson alone does not prove improved answer quality.",
+    "Do not force the initial agent to make mistakes. If both outputs are correct, report memory reuse without inventing an accuracy gain."
+  ]
+}

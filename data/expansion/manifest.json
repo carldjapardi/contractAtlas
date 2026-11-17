@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "created_at": "2026-11-17T01:51:48.329148+00:00",
+  "active_corpus_unchanged": true,
+  "baseline_sha256": "80dbacb009ad4766e0763e3c2016f0a9287df2de17572e0330e861032d9709db",
+  "snapshot_id": "69edd1c86b7bc161c2bf51fbaf3775e45c1f1c2da8d365a1fdfa89b5e5acf3fc",
+  "public_captures": [
+    {
+      "file": "public/deloitte_identity.html",
+      "url": "https://www.deloitte.com/us/en/services/consulting/services/cyber-identity.html",
+      "retrieved_at": "2026-11-17T01:41:24.626539+00:00",
+      "sha256": "ae68e40a55c7459ad5f073f1424e59080fef7d80d92bf8c95dc25970edda3a34"
+    },
+    {
+      "file": "public/accenture_federal_cyber.html",
+      "url": "https://www.accenture.com/en-us/industries/accenture-federal-services/cybersecurity",
+      "retrieved_at": "2026-11-17T01:41:25.027476+00:00",
+      "sha256": "7e878aaa1a2a861db2398baf9ef08f6a73284634be0f91c68e50c1efebf96639"
+    },
+    {
+      "file": "public/cisa_zero_trust_v2.pdf",
+      "url": "https://www.cisa.gov/sites/default/files/2023-04/zero_trust_maturity_model_v2_508.pdf",
+      "retrieved_at": "2026-11-17T01:41:22.864643+00:00",
+      "sha256": "4a95fdff55a64e2468b69af075b7f208176b88c751af92aefc3b7dacad26fdb4"
+    }
+  ],
+  "candidate_rows": 12,
+  "relationship_rows": 6,
+  "initial_source_count": 68,
+  "review_input": "synthetic/review_meeting.md",
+  "excluded_from_initial_ingestion": [
+    "synthetic/review_meeting.md",
+    "evaluation_cases.json"
+  ],
+  "capability_companies": [
+    "Leidos",
+    "GuidePoint Security",
+    "Deloitte",
+    "Accenture Federal Services"
+  ]
+}

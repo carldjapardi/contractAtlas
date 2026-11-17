@@ -1,0 +1,2 @@
+# Preserve raw public captures byte-for-byte for their provenance hashes.
+data/expansion/public/*.html -diff

@@ -1,6 +1,6 @@
 # Contract Atlas
 
-**New to the project? Read [the plain-English explanation](PROJECT_SIMPLE.md) first.**
+LIVE DEMO: https://contract-atlas-vert.vercel.app/
 
 ## Deliverables
 
@@ -11,9 +11,6 @@
 - An unchanged before checkpoint, editable review lesson, native improvement stage results, new-lesson counts and a fresh-session memory check.
 - Supporting award graph/search and an openly reported initial retrieval comparison.
 - Reproducible source collection, setup commands, tests, locked dependencies and small reviewable commits.
-
-
-**Latest measured result:** the isolated 68-source comparison completed 16 answers. Cognee hybrid scored 20/24 before and after. One new lesson was saved and retrieved. No answer-quality advantage is established. See [observed comparison](COMPARISON_RESULTS.md) and **Benchmark** in the app.
 
 **A shared research memory for cybersecurity contractors pursuing federal work.** Three research agents connect historical awards, agency guidance, and vendor capabilities, review their findings, and carry accepted lessons into a fresh agent session through Cognee.
 

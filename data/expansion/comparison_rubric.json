@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "ingest": false,
+  "review_type": "assistant-reviewed exploratory checklist; not independent human scoring",
+  "cases": {
+    "public_entity_provenance": [
+      {"id":"soc_leidos_entity","criterion":"Identify the exact Leidos recipient through its name plus correct supporting record; UEI MYKLJHTX3MM7 may be explicit or established by its citation.","sources":["award_a0a4b48accc38adb0e4e"]},
+      {"id":"soc_cbp_scope","criterion":"Identify CBP SOC support award 70B04C23F00001108 as explicit historical SOC evidence.","sources":["award_a0a4b48accc38adb0e4e"]},
+      {"id":"soc_deloitte_entity","criterion":"Identify Deloitte & Touche LLP, distinct from other Deloitte entities; UEI F9KSDU7L9VP6 may be explicit or established by its citation.","sources":["award_7173c1725f9dc2bdeef1"]},
+      {"id":"soc_tsa_scope","criterion":"Identify TSA SOC engineering award 70T03025F7667N058 as explicit historical SOC evidence.","sources":["award_7173c1725f9dc2bdeef1"]},
+      {"id":"soc_current_unknown","criterion":"Historical awards do not establish current staffing, capacity or availability.","sources":["curated:public:MYKLJHTX3MM7","curated:public:F9KSDU7L9VP6"]},
+      {"id":"soc_brand_separation","criterion":"Keep brand capability claims distinct from exact legal-entity delivery evidence; do not transfer capabilities between related entities.","sources":["capability_deloitte_identity"]}
+    ],
+    "capacity_update": [
+      {"id":"capacity_fictional_attributed","criterion":"Label Harbor fictional and attribute its capacity statements to the meeting/delivery lead.","sources":["demo:meeting-02","demo:meeting-03"]},
+      {"id":"capacity_latest_update","criterion":"Recognize the November 16 update supersedes the provisional November 12 capacity statement.","sources":["demo:meeting-02","demo:meeting-03"]},
+      {"id":"capacity_no_december","criterion":"Reject December 2026 handover availability on current evidence.","sources":["demo:meeting-03"]},
+      {"id":"capacity_january_provisional","criterion":"No analysts before January 18, 2027; that date remains provisional/unreserved.","sources":["demo:meeting-03"]},
+      {"id":"capacity_coverage_limit","criterion":"Weekday 08:00–18:00 Pacific staffed triage does not establish 24/7 response.","sources":["demo:meeting-02","demo:meeting-03"]},
+      {"id":"capacity_owner_date","criterion":"Maya owns the November 23 capacity recheck.","sources":["demo:meeting-03"]}
+    ],
+    "held_out_readiness": [
+      {"id":"readiness_four_fields","criterion":"Distinguish technical fit, staffed coverage, dated capacity and eligibility for both candidates (eight assessments, explicit or clearly separated in prose).","sources":["demo:meeting-02","demo:meeting-03"]},
+      {"id":"readiness_harbor_capacity","criterion":"Harbor January 18 availability is provisional, with no staffing reservation or commitment.","sources":["demo:meeting-03"]},
+      {"id":"readiness_cedar_claim","criterion":"Cedar's 24/7 coverage is an attributed claim, not verified coverage.","sources":["demo:meeting-02"]},
+      {"id":"readiness_pending_evidence","criterion":"Cedar's roster and escalation matrix remain pending; do not claim receipt.","sources":["demo:meeting-02","demo:meeting-03"]},
+      {"id":"readiness_action_owners","criterion":"Noah owns requesting Cedar evidence; Imani owns technical acceptance/qualification.","sources":["demo:meeting-02","demo:meeting-03"]},
+      {"id":"readiness_no_false_confirmation","criterion":"Keep fictional partners separate from public contractors and do not claim confirmed January readiness.","sources":["demo:meeting-02","demo:meeting-03"]}
+    ],
+    "guidance_interpretation": [
+      {"id":"guidance_specific_section","criterion":"Identify CISA section 5.1/Table 2 or cite the focused source explicitly with its identity-pillar scope.","sources":["guidance_cisa_identity_table2_v2"]},
+      {"id":"guidance_authentication","criterion":"Describe strong authentication/phishing-resistant MFA accurately.","sources":["guidance_cisa_identity_table2_v2"]},
+      {"id":"guidance_identity_stores","criterion":"Describe integrated identity stores accurately.","sources":["guidance_cisa_identity_table2_v2"]},
+      {"id":"guidance_authorization","criterion":"Describe contextual/tailored or just-in-time/just-enough authorization accurately.","sources":["guidance_cisa_identity_table2_v2"]},
+      {"id":"guidance_visibility","criterion":"Describe user-activity visibility/analytics accurately.","sources":["guidance_cisa_identity_table2_v2"]},
+      {"id":"guidance_not_mandate","criterion":"Preserve maturity-stage context and state that no supplied solicitation establishes these as universally mandatory.","sources":["guidance_cisa_identity_table2_v2"]}
+    ]
+  },
+  "critical_errors": ["Current December staffing asserted despite the update", "Provisional capacity presented as reserved/committed", "Promised documents presented as received", "Fictional and real identities merged", "Maturity guidance presented as an established solicitation mandate"]
+}

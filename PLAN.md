@@ -31,6 +31,11 @@ This section is the active plan. The original four-hour plan below is retained a
 
 ### Active implementation and validation
 
+- [x] Integrate the separately authored 68-source expansion in an isolated dataset; preserve the original working demo.
+- [x] Freeze a matched document-RAG versus hybrid, before/after protocol and 24-check rubric before generating answers.
+- [ ] Run all 16 fresh-session answers, record native improvement and stable inventories, and review anonymous outputs.
+- [ ] Publish the observed comparison, including parity, failures and limitations; update the Benchmark view.
+
 - [x] Finish source-aware report rendering and retrieval provenance checks.
 - [x] Run a complete, readable research checkpoint through the UI after integration refinements.
 - [x] Accept a real reviewer lesson and execute Cloud `improve()` over actual agent sessions.

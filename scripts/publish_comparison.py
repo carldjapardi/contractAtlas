@@ -58,17 +58,20 @@ def publish():
     native = intervention["native_result"]
     if native.get("status") != "completed":
         raise ValueError("Native improvement did not complete.")
+    for phase in ("before", "after"):
+        if intervention[f"{phase}_inventory"]["fingerprint"] != inventories[phase]["fingerprint"]:
+            raise ValueError("Measured document inventory differs from the intervention boundary.")
     lessons = json.loads((RUNTIME / "lesson_evidence.json").read_text())
     result = {"status": "complete", "generated_at": datetime.now(timezone.utc).isoformat(),
-              "headline": "Observed results from the frozen memory experiment",
+              "headline": "Memory persisted; checklist scores stayed flat." if all(summary[i]["passed"] == summary[i + 2]["passed"] for i in (0, 1)) else "Observed results from the frozen memory experiment",
               "source_count": inventories["before"]["count"], "question_count": 4,
               "review_type": "Assistant-reviewed checklist, anonymous method/phase labels; not independent human evaluation.",
               "summary": summary, "answers": answers,
               "inventory": {phase: {k: value[k] for k in ("count", "fingerprint")} for phase, value in inventories.items()},
               "protocol_sha256": digest((BUNDLE / "comparison_protocol.md").read_text()),
               "rubric_sha256": digest(rubric),
-              "improvement": {"native_status": native["status"], "stages": native["stages"],
-                              "completed_stages": [stage["name"] for stage in native["stages"] if stage["status"] == "completed"],
+              "improvement": {"native_status": native["status"], "stages": [{"stage": s.get("stage", s.get("name")), "status": s["status"], "counts": s["counts"]} for s in native["stages"]],
+                              "completed_stages": [stage.get("stage", stage.get("name")) for stage in native["stages"] if stage["status"] == "completed"],
                               "new_documents": inventories["after"]["count"] - inventories["before"]["count"],
                               "freshly_retrieved_lessons": len(lessons["lessons"]), "lesson_excerpts": lessons["lessons"]},
               "limitations": ["Four repeated questions, one run and assistant-reviewed checks; no statistical or general accuracy claim.",

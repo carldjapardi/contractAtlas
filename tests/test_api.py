@@ -49,3 +49,16 @@ def test_provider_error_details_are_redacted(monkeypatch):
 
 def test_unknown_api_route_is_not_spa_html():
     assert client.get("/api/unknown").status_code == 404
+
+
+def test_comparison_reads_only_public_artifact(monkeypatch, tmp_path):
+    import importlib
+    module = importlib.import_module("backend.app")
+    monkeypatch.setattr(module, "ROOT", tmp_path)
+    assert client.get("/api/comparison").json() == {"status": "not_run"}
+    public = tmp_path / "data/expansion/comparison_results.json"
+    public.parent.mkdir(parents=True)
+    public.write_text('{"status":"complete","summary":[]}')
+    assert client.get("/api/comparison").json() == {"status": "complete", "summary": []}
+    public.write_text("invalid json")
+    assert client.get("/api/comparison").status_code == 503

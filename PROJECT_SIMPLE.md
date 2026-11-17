@@ -43,3 +43,9 @@ That directly demonstrates the track's two priorities: **shared agent memory** a
 A focused working demo with real past contract records, an official CISA page, two company capability pages, source links, and the review-and-memory loop. It helps with research and potential partners. It does not submit bids or establish that an opportunity is currently open.
 
 The memory check is honest: if no lesson is saved or retrieved, the app says so.
+
+## Is Cognee better than ordinary RAG?
+
+We tested that on the expanded source collection. Ordinary RAG passed 22 of 24 checks; Cognee hybrid passed 20. Neither score increased after review. Cognee did save a new lesson and retrieve it later, but this test does not prove better answers.
+
+Our demo's demonstrated value is that several workers share research and preserve reusable review lessons. The full comparison is in [COMPARISON_RESULTS.md](COMPARISON_RESULTS.md) and the app's Benchmark tab.

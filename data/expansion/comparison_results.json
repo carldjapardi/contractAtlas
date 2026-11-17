@@ -1,0 +1,1130 @@
+{
+  "status": "complete",
+  "generated_at": "2026-11-17T02:32:17.967966+00:00",
+  "headline": "Memory persisted; checklist scores stayed flat.",
+  "source_count": 68,
+  "question_count": 4,
+  "review_type": "Assistant-reviewed checklist, anonymous method/phase labels; not independent human evaluation.",
+  "summary": [
+    {
+      "phase": "before",
+      "method": "rag",
+      "passed": 22,
+      "total": 24,
+      "critical_errors": 1,
+      "mean_elapsed_ms": 10707.8
+    },
+    {
+      "phase": "before",
+      "method": "cognee",
+      "passed": 20,
+      "total": 24,
+      "critical_errors": 0,
+      "mean_elapsed_ms": 9892.6
+    },
+    {
+      "phase": "after",
+      "method": "rag",
+      "passed": 22,
+      "total": 24,
+      "critical_errors": 0,
+      "mean_elapsed_ms": 9423.3
+    },
+    {
+      "phase": "after",
+      "method": "cognee",
+      "passed": 20,
+      "total": 24,
+      "critical_errors": 0,
+      "mean_elapsed_ms": 9874.5
+    }
+  ],
+  "answers": [
+    {
+      "question": "Could fictional Harbor Signal support a December 2026 identity implementation handover, and who owns follow-up?",
+      "answer": "Harbor Signal is not available to support a December 2026 handover: its fictional delivery lead said the two analysts previously discussed for December 7 were allocated elsewhere, with no analysts available before January 18, 2027, which is provisional. Its reported staffed triage is weekdays 08:00–18:00 Pacific, excluding holidays; it does not promise staffed overnight or weekend response. Continuous alert collection is not the same as staffed coverage. [demo:meeting-03] [demo:meeting-02]\n\nFollow-up: Maya Chen owns Harbor’s capacity recheck on November 23; Imani Cole owns technical qualification. Harbor’s capacity statement is not a reservation or agreement, and eligibility remains unverified. [demo:meeting-03] [demo:curated:demo:relationship-06]",
+      "source_ids": [
+        "demo:meeting-03",
+        "demo:meeting-02",
+        "demo:curated:demo:relationship-06"
+      ],
+      "uncertainties": [
+        "Harbor’s January 18 availability is provisional and must be rechecked.",
+        "Technical delivery evidence and federal eligibility are unverified.",
+        "These are fictional scenario statements, not public records or an actual teaming commitment."
+      ],
+      "elapsed_ms": 7704.2,
+      "prompt_hash": "79cca5ec35c1989eb677b84a26d5f84e4e32388e96098413fc31ca38c33eaca9",
+      "method": "cognee",
+      "phase": "before",
+      "case_id": "capacity_update",
+      "anonymous_label": "answer-04",
+      "observed_search_type": "HYBRID_COMPLETION",
+      "passed": 6,
+      "total": 6,
+      "checks": [
+        {
+          "id": "capacity_fictional_attributed",
+          "pass": true,
+          "evidence": "\"Harbor Signal ... its fictional delivery lead said\" [demo:meeting-03]."
+        },
+        {
+          "id": "capacity_latest_update",
+          "pass": true,
+          "evidence": "\"two analysts previously discussed for December 7 were allocated elsewhere\" recognizes withdrawal of the earlier statement [demo:meeting-02; demo:meeting-03]."
+        },
+        {
+          "id": "capacity_no_december",
+          "pass": true,
+          "evidence": "\"not available to support a December 2026 handover\" [demo:meeting-03]."
+        },
+        {
+          "id": "capacity_january_provisional",
+          "pass": true,
+          "evidence": "\"no analysts available before January 18, 2027, which is provisional\" plus \"not a reservation or agreement\" [demo:meeting-03]."
+        },
+        {
+          "id": "capacity_coverage_limit",
+          "pass": true,
+          "evidence": "\"weekdays 08:00–18:00 Pacific, excluding holidays\" and \"does not promise staffed overnight or weekend response\" [demo:meeting-02; demo:meeting-03]."
+        },
+        {
+          "id": "capacity_owner_date",
+          "pass": true,
+          "evidence": "\"Maya Chen owns Harbor’s capacity recheck on November 23\" [demo:meeting-03]."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "The capacity, coverage, update and owner conclusions are entailed by valid demo:meeting-02/demo:meeting-03 citations. demo:curated:demo:relationship-06 is not an exact source ID; it appears intended to reference curated:demo:relationship-06.",
+      "review_notes": [
+        "Recognizing withdrawn analysts as superseding earlier proposed availability counts semantically; spelling out both November dates is not required by the frozen criterion.",
+        "The capacity, coverage, update and owner conclusions are entailed by valid demo:meeting-02/demo:meeting-03 citations. demo:curated:demo:relationship-06 is not an exact source ID; it appears intended to reference curated:demo:relationship-06."
+      ]
+    },
+    {
+      "question": "What identity capabilities does CISA's maturity model describe, and which of those are proven mandatory for this research exercise?",
+      "answer": "CISA’s Identity guidance describes appropriately scoped access for users and entities; integrating identity, credential, and access-management systems; strong authentication; context-based authorization; identity-risk assessment; and integrated identity stores. Its selected Optimal-maturity examples include continuous phishing-resistant MFA, secure identity-store integration, automated just-in-time/just-enough access, and automated activity-log analysis for visibility and behavioral analytics. [guidance_cisa_identity_table2_v2]\n\n**Proven mandatory for this exercise:** None. The cited material is agency guidance, and its Optimal examples are not blanket requirements. The scenario asserts no open procurement or agency-specific requirements. [guidance_cisa_identity_table2_v2] [demo:company-profile]",
+      "source_ids": [
+        "guidance_cisa_identity_table2_v2",
+        "demo:company-profile"
+      ],
+      "uncertainties": [
+        "No solicitation or agency statement of work is provided to establish procurement-specific mandatory capabilities."
+      ],
+      "elapsed_ms": 7659.4,
+      "prompt_hash": "5ebad640ddddb859b11b994c587bf2bfa6fd1f796a3df7695cc9fdabbf8324e9",
+      "method": "cognee",
+      "phase": "before",
+      "case_id": "guidance_interpretation",
+      "anonymous_label": "answer-16",
+      "observed_search_type": "HYBRID_COMPLETION",
+      "passed": 6,
+      "total": 6,
+      "checks": [
+        {
+          "id": "guidance_specific_section",
+          "pass": true,
+          "evidence": "\"CISA’s Identity guidance\" with the exact focused citation establishes identity-pillar scope. Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_authentication",
+          "pass": true,
+          "evidence": "\"continuous phishing-resistant MFA\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_identity_stores",
+          "pass": true,
+          "evidence": "\"secure identity-store integration\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_authorization",
+          "pass": true,
+          "evidence": "\"automated just-in-time/just-enough access\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_visibility",
+          "pass": true,
+          "evidence": "\"automated activity-log analysis for visibility and behavioral analytics\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_not_mandate",
+          "pass": true,
+          "evidence": "\"Optimal examples are not blanket requirements\"; uncertainty \"No solicitation or agency statement of work\" Supported by guidance_cisa_identity_table2_v2."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "The exact guidance_cisa_identity_table2_v2 citation entails the named capabilities and maturity-column limitation. The absence of a supplied solicitation is consistent with demo:company-profile and corpus scope; no mandate is invented.",
+      "review_notes": [
+        "Focused-source citation plus explicit identity-pillar scope satisfies the frozen section-identification alternative; a literal section number is not additionally required.",
+        "The exact guidance_cisa_identity_table2_v2 citation entails the named capabilities and maturity-column limitation. The absence of a supplied solicitation is consistent with demo:company-profile and corpus scope; no mandate is invented."
+      ]
+    },
+    {
+      "question": "Prepare a January 2027 readiness comparison for fictional Harbor Signal and Cedar Response. Identify missing evidence and the next action owner.",
+      "answer": "January 2027 readiness (fictional scenario; as of 2026-11-16)\n\n**Harbor Signal:** Partial fit for monitoring and weekday triage: it reports continuous alert collection and staffed triage weekdays 08:00–18:00 Pacific, but no staffed overnight or weekend response. It has no analysts available before January 18, and even that date is provisional; it is not ready for a December handover and January availability is not confirmed. **Next:** Maya Chen rechecks capacity November 23; Imani Cole verifies technical coverage. [demo:meeting-02] [demo:meeting-03]\n\n**Cedar Response:** Potentially stronger fit for round-the-clock coverage, but its staffed 24/7 triage is only an attributed claim. The roster and escalation matrix are pending, capacity is not reserved, and incident-response ownership is unresolved. **Next:** Noah Reed follows up for the promised evidence by November 18; Imani Cole reviews it and confirms coverage and escalation responsibilities. [demo:meeting-02] [demo:relationship-04]\n\n**Comparison / gaps:** Cedar cannot yet be treated as verified 24/7 coverage; Harbor’s documented staffed window is limited and January capacity remains provisional. For both, federal eligibility and credentials remain unknown, and no teaming commitment or reserved capacity exists. These are fictional candidates, not public contractors or actual teaming partners. [demo:company-profile] [demo:meeting-02] [demo:meeting-03]",
+      "source_ids": [
+        "demo:company-profile",
+        "demo:meeting-02",
+        "demo:meeting-03",
+        "demo:relationship-04"
+      ],
+      "uncertainties": [
+        "Harbor’s provisional January 18 availability and capacity recheck outcome are not yet confirmed.",
+        "Cedar’s promised coverage roster and escalation matrix have not been received or reviewed.",
+        "Incident-response ownership, federal eligibility, and credentials are unverified for both candidates."
+      ],
+      "elapsed_ms": 11501.6,
+      "prompt_hash": "a5e7366b58bc601c17cb9ef6048da604d8dffc142abcfa75d485fd2b453c618e",
+      "method": "cognee",
+      "phase": "before",
+      "case_id": "held_out_readiness",
+      "anonymous_label": "answer-12",
+      "observed_search_type": "HYBRID_COMPLETION",
+      "passed": 5,
+      "total": 6,
+      "checks": [
+        {
+          "id": "readiness_four_fields",
+          "pass": false,
+          "evidence": "Harbor \"Partial fit for monitoring and weekday triage\" is given, but Cedar only has \"Potentially stronger fit for round-the-clock coverage\"; technical fit apart from coverage is unassessed. Not all eight field assessments [demo:meeting-02]."
+        },
+        {
+          "id": "readiness_harbor_capacity",
+          "pass": true,
+          "evidence": "\"no analysts available before January 18, and even that date is provisional\" and \"no ... reserved capacity\" [demo:meeting-03]."
+        },
+        {
+          "id": "readiness_cedar_claim",
+          "pass": true,
+          "evidence": "\"staffed 24/7 triage is only an attributed claim\" [demo:meeting-02]."
+        },
+        {
+          "id": "readiness_pending_evidence",
+          "pass": true,
+          "evidence": "\"roster and escalation matrix are pending\" [demo:meeting-02; demo:meeting-03]."
+        },
+        {
+          "id": "readiness_action_owners",
+          "pass": true,
+          "evidence": "\"Noah Reed follows up for the promised evidence\"; \"Imani Cole reviews it\" [demo:meeting-02]."
+        },
+        {
+          "id": "readiness_no_false_confirmation",
+          "pass": true,
+          "evidence": "\"January availability is not confirmed\"; \"fictional candidates, not public contractors or actual teaming partners\" [demo:meeting-02; demo:meeting-03]."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "Valid demo:meeting-02/demo:meeting-03 citations support the substantive capacity, coverage, missing-evidence and owner statements. demo:relationship-04 are relationship record IDs, not exact curated:demo:relationship-* Source IDs; they are human-resolvable but not exact citations.",
+      "review_notes": [
+        "Readiness all-eight-fields check fails because Cedar technical fit is not separately distinguished from staffed coverage. This is an omission, not a critical falsehood.",
+        "Owner and technical-acceptance roles are correctly named; no owner/evidence request is assigned to every unresolved field, especially eligibility.",
+        "Valid demo:meeting-02/demo:meeting-03 citations support the substantive capacity, coverage, missing-evidence and owner statements. demo:relationship-04 are relationship record IDs, not exact curated:demo:relationship-* Source IDs; they are human-resolvable but not exact citations."
+      ]
+    },
+    {
+      "question": "Which curated candidates have historical evidence of SOC work, and what does that establish about their current staffing?",
+      "answer": "Among the curated candidates, LEIDOS, INC. has explicit historical SOC-work evidence: an award description says it provided cybersecurity SOC support services with CBP; other selected awards mention CISA cybersecurity operations and security operations services [award_a0a4b48accc38adb0e4e; award_9ea1aa349f1908207e54; award_9a1d3fca51ea172619ed]. This establishes recorded historical award scope only—not current SOC staffing, 24/7 coverage, availability, or capacity; those fields are unknown [TEAM_SOURCE:curated:public:MYKLJHTX3MM7]. Accenture Federal Services’ selected award descriptions do not explicitly establish historical SOC work; its MxDR/operations claims are self-reported capability, not staffing evidence [award_e1202b7433f31ea4644c; award_3199808bc6a5e9574d11; TEAM_SOURCE:capability_accenture_federal_cyber]. Next step: verify Leidos’ current staffed coverage and escalation arrangements directly.",
+      "source_ids": [
+        "award_a0a4b48accc38adb0e4e",
+        "award_9ea1aa349f1908207e54",
+        "award_9a1d3fca51ea172619ed",
+        "TEAM_SOURCE:curated:public:MYKLJHTX3MM7",
+        "award_e1202b7433f31ea4644c",
+        "award_3199808bc6a5e9574d11",
+        "TEAM_SOURCE:capability_accenture_federal_cyber"
+      ],
+      "uncertainties": [
+        "The available evidence does not establish any candidate’s current staffing or staffed 24/7 coverage.",
+        "Historical TSA SOC scope is mentioned in the context, but it is not attributed there to a named curated candidate."
+      ],
+      "elapsed_ms": 12705.3,
+      "prompt_hash": "aca044959151262bc730258098ceb7863377cd11e170c490ea1e498e88328431",
+      "method": "cognee",
+      "phase": "before",
+      "case_id": "public_entity_provenance",
+      "anonymous_label": "answer-01",
+      "observed_search_type": "HYBRID_COMPLETION",
+      "passed": 3,
+      "total": 6,
+      "checks": [
+        {
+          "id": "soc_leidos_entity",
+          "pass": true,
+          "evidence": "\"LEIDOS, INC.\" with award_a0a4b48accc38adb0e4e identifies the exact recipient; that record establishes UEI MYKLJHTX3MM7."
+        },
+        {
+          "id": "soc_cbp_scope",
+          "pass": true,
+          "evidence": "\"provided cybersecurity SOC support services with CBP\" cites award_a0a4b48accc38adb0e4e, the exact 70B04C23F00001108 record."
+        },
+        {
+          "id": "soc_deloitte_entity",
+          "pass": false,
+          "evidence": "Deloitte & Touche LLP is omitted; award_7173c1725f9dc2bdeef1 establishes the missing exact recipient."
+        },
+        {
+          "id": "soc_tsa_scope",
+          "pass": false,
+          "evidence": "TSA SOC scope is not attributed to Deloitte & Touche LLP or its award; award_7173c1725f9dc2bdeef1 is missing."
+        },
+        {
+          "id": "soc_current_unknown",
+          "pass": true,
+          "evidence": "\"not current SOC staffing, 24/7 coverage, availability, or capacity; those fields are unknown\" agrees with curated:public:MYKLJHTX3MM7."
+        },
+        {
+          "id": "soc_brand_separation",
+          "pass": false,
+          "evidence": "Self-reported Accenture claims are distinguished from staffing evidence, but no brand-versus-legal-entity boundary is stated; capability_deloitte_identity explicitly warns against entity transfer."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "The Leidos and Accenture award citations support the stated scopes. TEAM_SOURCE:curated:public:MYKLJHTX3MM7 and TEAM_SOURCE:capability_accenture_federal_cyber are marker-prefixed aliases, not exact Source IDs; the underlying records are human-resolvable. The uncertainty about unattributed TSA scope does not recover the missing candidate.",
+      "review_notes": [
+        "Incomplete candidate recall, without asserting a fabricated staffing commitment. Brand/entity-separation check is not awarded merely because no transfer was attempted.",
+        "The Leidos and Accenture award citations support the stated scopes. TEAM_SOURCE:curated:public:MYKLJHTX3MM7 and TEAM_SOURCE:capability_accenture_federal_cyber are marker-prefixed aliases, not exact Source IDs; the underlying records are human-resolvable. The uncertainty about unattributed TSA scope does not recover the missing candidate."
+      ]
+    },
+    {
+      "question": "Could fictional Harbor Signal support a December 2026 identity implementation handover, and who owns follow-up?",
+      "answer": "No—not for a December 2026 handover, based on the fictional update dated November 16. Harbor Signal’s two proposed analysts were allocated elsewhere; no analysts are available before January 18, 2027, and that later date is provisional. Its staffed triage is limited to weekdays, 08:00–18:00 Pacific, with no staffed overnight or weekend response. Maya Chen owns the Harbor capacity recheck, due November 23; Imani Cole owns technical qualification, including verifying coverage and eligibility evidence. Harbor’s December unavailability supersedes its earlier provisional December availability. Harbor Signal is fictional and is not matched to a real company. [demo:meeting-02] [demo:meeting-03] [demo:relationship-03] [demo:relationship-06]",
+      "source_ids": [
+        "demo:meeting-02",
+        "demo:meeting-03",
+        "demo:relationship-03",
+        "demo:relationship-06"
+      ],
+      "uncertainties": [
+        "January 18 capacity is provisional and must be rechecked.",
+        "No independent staffing evidence or federal eligibility evidence is provided; no teaming commitment or reserved capacity is established."
+      ],
+      "elapsed_ms": 6398.5,
+      "prompt_hash": "79cca5ec35c1989eb677b84a26d5f84e4e32388e96098413fc31ca38c33eaca9",
+      "method": "rag",
+      "phase": "before",
+      "case_id": "capacity_update",
+      "anonymous_label": "answer-15",
+      "observed_search_type": "RAG_COMPLETION",
+      "passed": 6,
+      "total": 6,
+      "checks": [
+        {
+          "id": "capacity_fictional_attributed",
+          "pass": true,
+          "evidence": "\"based on the fictional update dated November 16\" and \"Harbor Signal is fictional\" attribute to the cited meeting [demo:meeting-03]."
+        },
+        {
+          "id": "capacity_latest_update",
+          "pass": true,
+          "evidence": "\"December unavailability supersedes its earlier provisional December availability\" [demo:meeting-02; demo:meeting-03]."
+        },
+        {
+          "id": "capacity_no_december",
+          "pass": true,
+          "evidence": "\"No—not for a December 2026 handover\" [demo:meeting-03]."
+        },
+        {
+          "id": "capacity_january_provisional",
+          "pass": true,
+          "evidence": "\"no analysts are available before January 18, 2027, and that later date is provisional\" and uncertainty \"no ... reserved capacity\" [demo:meeting-03]."
+        },
+        {
+          "id": "capacity_coverage_limit",
+          "pass": true,
+          "evidence": "\"weekdays, 08:00–18:00 Pacific, with no staffed overnight or weekend response\" [demo:meeting-02; demo:meeting-03]."
+        },
+        {
+          "id": "capacity_owner_date",
+          "pass": true,
+          "evidence": "\"Maya Chen owns the Harbor capacity recheck, due November 23\" [demo:meeting-03]."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "The capacity, coverage, update and owner conclusions are entailed by valid demo:meeting-02/demo:meeting-03 citations. demo:relationship-03 and demo:relationship-06 are record_id aliases, not exact curated:demo:relationship-* Source IDs.",
+      "review_notes": [
+        "Recognizing withdrawn analysts as superseding earlier proposed availability counts semantically; spelling out both November dates is not required by the frozen criterion.",
+        "The capacity, coverage, update and owner conclusions are entailed by valid demo:meeting-02/demo:meeting-03 citations. demo:relationship-03 and demo:relationship-06 are record_id aliases, not exact curated:demo:relationship-* Source IDs."
+      ]
+    },
+    {
+      "question": "What identity capabilities does CISA's maturity model describe, and which of those are proven mandatory for this research exercise?",
+      "answer": "CISA’s Zero Trust Maturity Model describes identity practices including managing user and non-person identities so they receive the right access at the right time and for the right purpose, avoiding excessive access; integrating identity, credential, and access-management solutions; using strong authentication, context-based authorization, and identity-risk assessment; and integrating identity stores where appropriate. Its Optimal-maturity examples include continuously validating identity with phishing-resistant MFA, securely integrating identity stores, automating just-in-time and just-enough access, and analyzing activity logs for visibility and behavioral insights [guidance_cisa_identity_table2_v2]. None of these capabilities is proven mandatory for this research exercise: the cited material is agency guidance, explicitly labels the table examples as Optimal rather than universal procurement requirements, and the scenario asserts no open procurement or solicitation.",
+      "source_ids": [
+        "guidance_cisa_identity_table2_v2"
+      ],
+      "uncertainties": [
+        "No solicitation or other exercise-specific requirement document is provided, so mandatory capabilities for a future procurement cannot be determined."
+      ],
+      "elapsed_ms": 6477.1,
+      "prompt_hash": "5ebad640ddddb859b11b994c587bf2bfa6fd1f796a3df7695cc9fdabbf8324e9",
+      "method": "rag",
+      "phase": "before",
+      "case_id": "guidance_interpretation",
+      "anonymous_label": "answer-03",
+      "observed_search_type": "RAG_COMPLETION",
+      "passed": 6,
+      "total": 6,
+      "checks": [
+        {
+          "id": "guidance_specific_section",
+          "pass": true,
+          "evidence": "\"CISA’s Zero Trust Maturity Model\" with identity practices and the exact focused citation establishes identity-pillar scope. Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_authentication",
+          "pass": true,
+          "evidence": "\"continuously validating identity with phishing-resistant MFA\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_identity_stores",
+          "pass": true,
+          "evidence": "\"securely integrating identity stores\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_authorization",
+          "pass": true,
+          "evidence": "\"automating just-in-time and just-enough access\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_visibility",
+          "pass": true,
+          "evidence": "\"analyzing activity logs for visibility and behavioral insights\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_not_mandate",
+          "pass": true,
+          "evidence": "\"Optimal rather than universal procurement requirements\" and \"no open procurement or solicitation\" Supported by guidance_cisa_identity_table2_v2."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "The exact guidance_cisa_identity_table2_v2 citation entails the named capabilities and maturity-column limitation. The absence of a supplied solicitation is consistent with demo:company-profile and corpus scope; no mandate is invented.",
+      "review_notes": [
+        "Focused-source citation plus explicit identity-pillar scope satisfies the frozen section-identification alternative; a literal section number is not additionally required.",
+        "The exact guidance_cisa_identity_table2_v2 citation entails the named capabilities and maturity-column limitation. The absence of a supplied solicitation is consistent with demo:company-profile and corpus scope; no mandate is invented."
+      ]
+    },
+    {
+      "question": "Prepare a January 2027 readiness comparison for fictional Harbor Signal and Cedar Response. Identify missing evidence and the next action owner.",
+      "answer": "As of the fictional scenario record dated 2026-11-16, neither candidate is confirmed ready for a January 2027 handover. **Harbor Signal:** partial fit for identity-alert operations: its delivery lead described continuous alert collection but staffed triage only weekdays, 08:00–18:00 Pacific, with no staffed overnight or weekend response. Its December analysts were allocated elsewhere; January 18 is the earliest stated availability and remains provisional, so earlier January readiness is not supported. [demo:meeting-02] [demo:meeting-03] **Next actions:** Maya Chen rechecks Harbor capacity on November 23; Imani Cole verifies technical coverage and escalation evidence. [demo:meeting-03] [demo:relationship-03] **Cedar Response:** potentially the stronger coverage fit because its operations lead claimed staffed 24/7 triage, but the claim is unverified: its roster and escalation matrix are pending, no capacity is reserved, and incident-response ownership is unresolved. [demo:meeting-02] [demo:relationship-04] [demo:relationship-05] **Next actions:** Noah Reed follows up for the roster and matrix by November 18; Imani Cole assesses the evidence and clarifies response ownership. [demo:meeting-02] [demo:relationship-05] For both candidates, federal eligibility and certifications remain unknown; verify these before any procurement-specific recommendation. [demo:relationship-06] These are fictional candidates and meeting claims, not public contractor records or actual teaming commitments.",
+      "source_ids": [
+        "demo:meeting-02",
+        "demo:meeting-03",
+        "demo:relationship-03",
+        "demo:relationship-04",
+        "demo:relationship-05",
+        "demo:relationship-06"
+      ],
+      "uncertainties": [
+        "Harbor's January 18 availability is provisional and must be rechecked; its stated coverage does not include staffed nights or weekends.",
+        "Cedar's claimed 24/7 staffed triage, escalation process, and operational capacity have not been verified.",
+        "Incident-response ownership and federal eligibility or certifications are unconfirmed for both candidates.",
+        "The evidence is synthetic scenario material and does not establish real organizations, public-contractor history, or an actual agreement."
+      ],
+      "elapsed_ms": 14911.3,
+      "prompt_hash": "a5e7366b58bc601c17cb9ef6048da604d8dffc142abcfa75d485fd2b453c618e",
+      "method": "rag",
+      "phase": "before",
+      "case_id": "held_out_readiness",
+      "anonymous_label": "answer-05",
+      "observed_search_type": "RAG_COMPLETION",
+      "passed": 5,
+      "total": 6,
+      "checks": [
+        {
+          "id": "readiness_four_fields",
+          "pass": false,
+          "evidence": "Harbor \"partial fit for identity-alert operations\" is distinct, but Cedar only has \"potentially the stronger coverage fit\". A separate Cedar technical-fit assessment/unknown is missing, so all eight fields are not covered [demo:meeting-02]."
+        },
+        {
+          "id": "readiness_harbor_capacity",
+          "pass": true,
+          "evidence": "\"January 18 is the earliest stated availability and remains provisional\" and \"neither candidate is confirmed ready\" [demo:meeting-03]."
+        },
+        {
+          "id": "readiness_cedar_claim",
+          "pass": true,
+          "evidence": "\"operations lead claimed staffed 24/7 triage, but the claim is unverified\" [demo:meeting-02]."
+        },
+        {
+          "id": "readiness_pending_evidence",
+          "pass": true,
+          "evidence": "\"roster and escalation matrix are pending\" [demo:meeting-02; demo:meeting-03]."
+        },
+        {
+          "id": "readiness_action_owners",
+          "pass": true,
+          "evidence": "\"Noah Reed follows up for the roster and matrix\"; \"Imani Cole assesses the evidence\" [demo:meeting-02]."
+        },
+        {
+          "id": "readiness_no_false_confirmation",
+          "pass": true,
+          "evidence": "\"neither candidate is confirmed ready for a January 2027 handover\"; \"fictional candidates ... not public contractor records\" [demo:meeting-02; demo:meeting-03]."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "Valid demo:meeting-02/demo:meeting-03 citations support the substantive capacity, coverage, missing-evidence and owner statements. demo:relationship-03/04/05/06 are relationship record IDs, not exact curated:demo:relationship-* Source IDs; they are human-resolvable but not exact citations.",
+      "review_notes": [
+        "Readiness all-eight-fields check fails because Cedar technical fit is not separately distinguished from staffed coverage. This is an omission, not a critical falsehood.",
+        "Owner and technical-acceptance roles are correctly named; no owner/evidence request is assigned to every unresolved field, especially eligibility.",
+        "Valid demo:meeting-02/demo:meeting-03 citations support the substantive capacity, coverage, missing-evidence and owner statements. demo:relationship-03/04/05/06 are relationship record IDs, not exact curated:demo:relationship-* Source IDs; they are human-resolvable but not exact citations."
+      ]
+    },
+    {
+      "question": "Which curated candidates have historical evidence of SOC work, and what does that establish about their current staffing?",
+      "answer": "Among the real public curated candidates, LEIDOS, INC. has the clearest historical SOC evidence: one selected award explicitly says “CYBER SECURITY SOC SUPPORT SERVICES WITH CBP”; two other selected descriptions concern cybersecurity operations/engineering and security operations. DELOITTE & TOUCHE LLP has a selected award for cyber security and engineering services at the TSA SOC. These records establish historical SOC-related contract work, not that either company currently staffs a SOC or has capacity, coverage hours, or availability now; those fields are unknown. The selected records for IDEMIA IDENTITY & SECURITY USA LLC, INFORMATION TECHNOLOGY COMPANY, L.L.C., SOFITC3, LLC, and ACCENTURE FEDERAL SERVICES LLC do not explicitly establish SOC work in the supplied award descriptions. Separately, fictional Harbor Signal’s meeting statement reports staffed triage weekdays 08:00–18:00 Pacific, excluding holidays, with no standard staffed overnight/weekend response; its tentative two-analyst December availability is provisional. Fictional Cedar Response claims staffed 24/7 triage, but its roster and escalation matrix are pending and no capacity is reserved. These fictional claims are not public historical-award evidence and do not establish verified current staffing. Next step: verify current staffing, coverage schedules, capacity, and escalation ownership directly with any public candidate; for Cedar, inspect the promised roster and escalation matrix before treating its claim as verified.",
+      "source_ids": [
+        "public:MYKLJHTX3MM7",
+        "award_a0a4b48accc38adb0e4e",
+        "award_9ea1aa349f1908207e54",
+        "award_9a1d3fca51ea172619ed",
+        "public:F9KSDU7L9VP6",
+        "award_7173c1725f9dc2bdeef1",
+        "public:X4MZYGMNUAE7",
+        "public:EFRANUTCRPJ6",
+        "public:T1VQSK6NJKU9",
+        "public:C47BNA8GM833",
+        "demo:meeting-02"
+      ],
+      "uncertainties": [
+        "Historical awards do not show whether Leidos or Deloitte currently operate or staff the cited SOC services; current staffing, coverage, availability, and teaming interest are unknown.",
+        "Harbor Signal and Cedar Response are fictional scenario candidates, not public contractors. Harbor’s staffing and provisional availability are attributed meeting statements, not independently verified; Cedar’s claimed 24/7 coverage evidence remains pending."
+      ],
+      "elapsed_ms": 15044.4,
+      "prompt_hash": "aca044959151262bc730258098ceb7863377cd11e170c490ea1e498e88328431",
+      "method": "rag",
+      "phase": "before",
+      "case_id": "public_entity_provenance",
+      "anonymous_label": "answer-09",
+      "observed_search_type": "RAG_COMPLETION",
+      "passed": 5,
+      "total": 6,
+      "checks": [
+        {
+          "id": "soc_leidos_entity",
+          "pass": true,
+          "evidence": "\"LEIDOS, INC.\" with award_a0a4b48accc38adb0e4e establishes exact recipient UEI MYKLJHTX3MM7."
+        },
+        {
+          "id": "soc_cbp_scope",
+          "pass": true,
+          "evidence": "\"SOC support services with CBP\" / \"SOC SUPPORT SERVICES WITH CBP\" cites award_a0a4b48accc38adb0e4e, the exact 70B04C23F00001108 record."
+        },
+        {
+          "id": "soc_deloitte_entity",
+          "pass": true,
+          "evidence": "\"DELOITTE & TOUCHE LLP\" with award_7173c1725f9dc2bdeef1 establishes exact recipient UEI F9KSDU7L9VP6."
+        },
+        {
+          "id": "soc_tsa_scope",
+          "pass": true,
+          "evidence": "\"engineering services at the TSA SOC\" cites award_7173c1725f9dc2bdeef1, the exact 70T03025F7667N058 record."
+        },
+        {
+          "id": "soc_current_unknown",
+          "pass": true,
+          "evidence": "\"not current staffing, availability, or 24/7 coverage\" / \"not that either company currently staffs a SOC\" matches curated:public:MYKLJHTX3MM7 and curated:public:F9KSDU7L9VP6."
+        },
+        {
+          "id": "soc_brand_separation",
+          "pass": false,
+          "evidence": "No brand capability versus exact legal-entity delivery distinction is articulated; capability_deloitte_identity contains this limitation."
+        }
+      ],
+      "critical_errors": [
+        "Current December staffing asserted despite the update: \"its tentative two-analyst December availability is provisional\" presents withdrawn availability as current; demo:meeting-03 says those analysts were allocated elsewhere."
+      ],
+      "citation_review": "Award IDs in source_ids support both exact public recipients and their historical SOC scopes. Bare public:UEI citations identify candidate_id fields but are not exact curated:public:UEI Source IDs. Harbor’s present-tense provisional December capacity description uses demo:meeting-02 without the superseding demo:meeting-03 and is stale.",
+      "review_notes": [
+        "Scope statements use exact award citations rather than requiring the PIID to be spelled out in prose.",
+        "No brand/legal-entity criterion credit for merely avoiding a capability claim.",
+        "Harbor’s extra capacity statement is not presented as historical and conflicts with the November 16 update.",
+        "Award IDs in source_ids support both exact public recipients and their historical SOC scopes. Bare public:UEI citations identify candidate_id fields but are not exact curated:public:UEI Source IDs. Harbor’s present-tense provisional December capacity description uses demo:meeting-02 without the superseding demo:meeting-03 and is stale."
+      ]
+    },
+    {
+      "question": "Could fictional Harbor Signal support a December 2026 identity implementation handover, and who owns follow-up?",
+      "answer": "No. In this fictional scenario, Harbor Signal says its two December analysts were allocated elsewhere and it has no analysts available before January 18, 2027; that later date is provisional. Its staffed triage is limited to weekdays, 08:00–18:00 Pacific, with no promised overnight or weekend response, so it is not confirmed for a December handover or 24/7 coverage. Maya Chen owns the Harbor capacity recheck on November 23; Imani Cole owns technical qualification. No capacity is reserved and no teaming commitment exists. Next step: recheck capacity and verify coverage and escalation details before relying on Harbor. [demo:meeting-03] [demo:meeting-02] [curated:demo:relationship-03]",
+      "source_ids": [
+        "demo:meeting-03",
+        "demo:meeting-02",
+        "curated:demo:relationship-03"
+      ],
+      "uncertainties": [
+        "All Harbor information is fictional scenario evidence and attributed statements, not verified public-record facts.",
+        "January 18 availability is provisional; eligibility and technical evidence remain unverified."
+      ],
+      "elapsed_ms": 6919.1,
+      "prompt_hash": "79cca5ec35c1989eb677b84a26d5f84e4e32388e96098413fc31ca38c33eaca9",
+      "method": "cognee",
+      "phase": "after",
+      "case_id": "capacity_update",
+      "anonymous_label": "answer-14",
+      "observed_search_type": "HYBRID_COMPLETION",
+      "passed": 6,
+      "total": 6,
+      "checks": [
+        {
+          "id": "capacity_fictional_attributed",
+          "pass": true,
+          "evidence": "\"In this fictional scenario, Harbor Signal says\" with meeting citations attributes the fictional claim [demo:meeting-03]."
+        },
+        {
+          "id": "capacity_latest_update",
+          "pass": true,
+          "evidence": "\"two December analysts were allocated elsewhere\" recognizes the update replacing the earlier provisional availability [demo:meeting-02; demo:meeting-03]."
+        },
+        {
+          "id": "capacity_no_december",
+          "pass": true,
+          "evidence": "\"No\" and \"not confirmed for a December handover\" [demo:meeting-03]."
+        },
+        {
+          "id": "capacity_january_provisional",
+          "pass": true,
+          "evidence": "\"no analysts available before January 18, 2027; that later date is provisional\" and \"No capacity is reserved\" [demo:meeting-03]."
+        },
+        {
+          "id": "capacity_coverage_limit",
+          "pass": true,
+          "evidence": "\"weekdays, 08:00–18:00 Pacific, with no promised overnight or weekend response\" [demo:meeting-02; demo:meeting-03]."
+        },
+        {
+          "id": "capacity_owner_date",
+          "pass": true,
+          "evidence": "\"Maya Chen owns the Harbor capacity recheck on November 23\" [demo:meeting-03]."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "The capacity, coverage, update and owner conclusions are entailed by valid demo:meeting-02/demo:meeting-03 citations. curated:demo:relationship-03 is an exact source ID.",
+      "review_notes": [
+        "Recognizing withdrawn analysts as superseding earlier proposed availability counts semantically; spelling out both November dates is not required by the frozen criterion.",
+        "The capacity, coverage, update and owner conclusions are entailed by valid demo:meeting-02/demo:meeting-03 citations. curated:demo:relationship-03 is an exact source ID."
+      ]
+    },
+    {
+      "question": "What identity capabilities does CISA's maturity model describe, and which of those are proven mandatory for this research exercise?",
+      "answer": "CISA’s identity guidance describes appropriately scoped user and entity access; integrating identity, credential, and access-management systems; strong authentication; context-based authorization; and identity-risk assessment. Its Optimal-maturity examples include phishing-resistant MFA, integrated identity stores, automated just-in-time/just-enough access, and automated analysis of user-activity logs. [guidance_cisa_identity_table2_v2]\n\n**Proven mandatory for this research exercise:** None. The cited examples are maturity guidance, not universal procurement requirements, and the scenario provides no solicitation or agency-specific statement of work establishing mandatory capabilities. [guidance_cisa_identity_table2_v2] [demo:company-profile]",
+      "source_ids": [
+        "guidance_cisa_identity_table2_v2",
+        "demo:company-profile"
+      ],
+      "uncertainties": [],
+      "elapsed_ms": 9955.4,
+      "prompt_hash": "5ebad640ddddb859b11b994c587bf2bfa6fd1f796a3df7695cc9fdabbf8324e9",
+      "method": "cognee",
+      "phase": "after",
+      "case_id": "guidance_interpretation",
+      "anonymous_label": "answer-08",
+      "observed_search_type": "HYBRID_COMPLETION",
+      "passed": 6,
+      "total": 6,
+      "checks": [
+        {
+          "id": "guidance_specific_section",
+          "pass": true,
+          "evidence": "\"CISA’s identity guidance\" with the exact focused citation establishes identity-pillar scope. Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_authentication",
+          "pass": true,
+          "evidence": "\"strong authentication\" and \"phishing-resistant MFA\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_identity_stores",
+          "pass": true,
+          "evidence": "\"integrated identity stores\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_authorization",
+          "pass": true,
+          "evidence": "\"automated just-in-time/just-enough access\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_visibility",
+          "pass": true,
+          "evidence": "\"automated analysis of user-activity logs\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_not_mandate",
+          "pass": true,
+          "evidence": "\"Optimal-maturity examples\" / \"not universal procurement requirements\" and \"no solicitation\" Supported by guidance_cisa_identity_table2_v2."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "The exact guidance_cisa_identity_table2_v2 citation entails the named capabilities and maturity-column limitation. The absence of a supplied solicitation is consistent with demo:company-profile and corpus scope; no mandate is invented.",
+      "review_notes": [
+        "Focused-source citation plus explicit identity-pillar scope satisfies the frozen section-identification alternative; a literal section number is not additionally required.",
+        "The exact guidance_cisa_identity_table2_v2 citation entails the named capabilities and maturity-column limitation. The absence of a supplied solicitation is consistent with demo:company-profile and corpus scope; no mandate is invented."
+      ]
+    },
+    {
+      "question": "Prepare a January 2027 readiness comparison for fictional Harbor Signal and Cedar Response. Identify missing evidence and the next action owner.",
+      "answer": "### January 2027 readiness (fictional candidates)\n- **Harbor Signal:** Partial fit for weekday identity-alert triage and escalation workflows, but its staffed coverage is limited to weekdays 08:00–18:00 Pacific, excluding holidays; no staffed overnight or weekend response is offered under its standard service. Its previously discussed December analysts were allocated elsewhere; no analysts are available before January 18, and that date is provisional. Not ready for an early-January handover; capacity needs rechecking. [demo:meeting-02] [demo:meeting-03]\n- **Cedar Response:** Potentially stronger coverage fit because its operations lead described staffed 24/7 triage. This is unverified: the promised coverage roster and escalation matrix are still pending, and no capacity is reserved. January readiness cannot yet be confirmed. [demo:meeting-02]\n\n### Missing evidence and next actions\n- **Harbor:** Confirm January capacity and any applicable staffing commitment. **Owner: Maya Chen**, with a recheck planned for November 23; **Imani Cole** owns technical qualification. [demo:meeting-03]\n- **Cedar:** Obtain and review the roster and escalation matrix, confirm capacity, and clarify incident-response ownership. **Noah Reed** owns follow-up for the evidence; **Imani Cole** owns technical acceptance. [demo:meeting-02]\n\nBoth candidates are fictional; these statements are scenario inputs, not independently verified facts or teaming commitments. Federal eligibility and credentials remain unknown. [demo:company-profile] [demo:meeting-02]",
+      "source_ids": [
+        "demo:company-profile",
+        "demo:meeting-02",
+        "demo:meeting-03"
+      ],
+      "uncertainties": [
+        "Cedar's claimed 24/7 staffed triage, escalation arrangements, incident-response ownership, and January capacity are unverified.",
+        "Harbor's January 18 availability is provisional and must be rechecked; its stated standard staffed coverage excludes nights and weekends.",
+        "Federal eligibility, clearances, certifications, and other credentials for both fictional candidates are unknown."
+      ],
+      "elapsed_ms": 10739.5,
+      "prompt_hash": "a5e7366b58bc601c17cb9ef6048da604d8dffc142abcfa75d485fd2b453c618e",
+      "method": "cognee",
+      "phase": "after",
+      "case_id": "held_out_readiness",
+      "anonymous_label": "answer-06",
+      "observed_search_type": "HYBRID_COMPLETION",
+      "passed": 5,
+      "total": 6,
+      "checks": [
+        {
+          "id": "readiness_four_fields",
+          "pass": false,
+          "evidence": "Harbor \"Partial fit for weekday identity-alert triage and escalation workflows\" is explicit, but Cedar technical fit is not separate from \"Potentially stronger coverage fit\". Not all eight assessments [demo:meeting-02]."
+        },
+        {
+          "id": "readiness_harbor_capacity",
+          "pass": true,
+          "evidence": "\"no analysts are available before January 18, and that date is provisional\"; \"not ... teaming commitments\" [demo:meeting-03]."
+        },
+        {
+          "id": "readiness_cedar_claim",
+          "pass": true,
+          "evidence": "\"operations lead described staffed 24/7 triage. This is unverified\" [demo:meeting-02]."
+        },
+        {
+          "id": "readiness_pending_evidence",
+          "pass": true,
+          "evidence": "\"promised coverage roster and escalation matrix are still pending\" [demo:meeting-02]."
+        },
+        {
+          "id": "readiness_action_owners",
+          "pass": true,
+          "evidence": "\"Noah Reed owns follow-up for the evidence; Imani Cole owns technical acceptance\" [demo:meeting-02]."
+        },
+        {
+          "id": "readiness_no_false_confirmation",
+          "pass": true,
+          "evidence": "\"January readiness cannot yet be confirmed\"; \"Both candidates are fictional\" [demo:meeting-02; demo:meeting-03]."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "Valid demo:meeting-02/demo:meeting-03 citations support the substantive capacity, coverage, missing-evidence and owner statements. demo:company-profile is valid; its company-eligibility statement concerns Atlas, while the cited demo:meeting-02 independently supports both partners’ unknown credentials.",
+      "review_notes": [
+        "Readiness all-eight-fields check fails because Cedar technical fit is not separately distinguished from staffed coverage. This is an omission, not a critical falsehood.",
+        "Owner and technical-acceptance roles are correctly named; no owner/evidence request is assigned to every unresolved field, especially eligibility.",
+        "Valid demo:meeting-02/demo:meeting-03 citations support the substantive capacity, coverage, missing-evidence and owner statements. demo:company-profile is valid; its company-eligibility statement concerns Atlas, while the cited demo:meeting-02 independently supports both partners’ unknown credentials."
+      ]
+    },
+    {
+      "question": "Which curated candidates have historical evidence of SOC work, and what does that establish about their current staffing?",
+      "answer": "Leidos, Inc. is the only curated candidate with explicit historical SOC-work evidence in the supplied records: an award description says it provided “CYBER SECURITY SOC SUPPORT SERVICES WITH CBP” [award_a0a4b48accc38adb0e4e]. This establishes the recorded scope of that historical award—not Leidos’s current staffing, 24/7 coverage, or availability; those fields are unknown [TEAM_SOURCE:curated:public:MYKLJHTX3MM7]. No other listed candidate has explicit historical SOC work in the supplied evidence. Accenture’s MxDR/operations language is a self-reported capability claim, not evidence of historical SOC staffing [capability_accenture_federal_cyber]. Verify current staffed coverage and escalation arrangements directly with Leidos before relying on it for operational support.",
+      "source_ids": [
+        "award_a0a4b48accc38adb0e4e",
+        "TEAM_SOURCE:curated:public:MYKLJHTX3MM7",
+        "capability_accenture_federal_cyber"
+      ],
+      "uncertainties": [
+        "The award record is historical and does not establish present-day staffing, 24/7 coverage, availability, or teaming interest.",
+        "The supplied evidence does not establish that other candidates currently provide staffed SOC services."
+      ],
+      "elapsed_ms": 11884.1,
+      "prompt_hash": "aca044959151262bc730258098ceb7863377cd11e170c490ea1e498e88328431",
+      "method": "cognee",
+      "phase": "after",
+      "case_id": "public_entity_provenance",
+      "anonymous_label": "answer-07",
+      "observed_search_type": "HYBRID_COMPLETION",
+      "passed": 3,
+      "total": 6,
+      "checks": [
+        {
+          "id": "soc_leidos_entity",
+          "pass": true,
+          "evidence": "\"Leidos, Inc.\" with award_a0a4b48accc38adb0e4e identifies exact recipient UEI MYKLJHTX3MM7."
+        },
+        {
+          "id": "soc_cbp_scope",
+          "pass": true,
+          "evidence": "\"CYBER SECURITY SOC SUPPORT SERVICES WITH CBP\" cites award_a0a4b48accc38adb0e4e, the exact 70B04C23F00001108 record."
+        },
+        {
+          "id": "soc_deloitte_entity",
+          "pass": false,
+          "evidence": "Deloitte & Touche LLP is omitted despite award_7173c1725f9dc2bdeef1."
+        },
+        {
+          "id": "soc_tsa_scope",
+          "pass": false,
+          "evidence": "TSA SOC award 70T03025F7667N058 is omitted; supported by award_7173c1725f9dc2bdeef1."
+        },
+        {
+          "id": "soc_current_unknown",
+          "pass": true,
+          "evidence": "\"not Leidos’s current staffing, 24/7 coverage, or availability; those fields are unknown\" agrees with curated:public:MYKLJHTX3MM7."
+        },
+        {
+          "id": "soc_brand_separation",
+          "pass": false,
+          "evidence": "Accenture marketing versus staffing is distinguished, but brand versus exact legal-entity capability attribution is not addressed; see capability_deloitte_identity."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "Leidos historical scope and current-unknown conclusions are entailed by the referenced records, although TEAM_SOURCE:curated:public:MYKLJHTX3MM7 is not the exact Source ID. The assertion \"only curated candidate\" / \"No other listed candidate\" is contradicted by Deloitte award_7173c1725f9dc2bdeef1.",
+      "review_notes": [
+        "Incorrect exhaustive exclusion of other SOC candidates is a factual error, not one of the frozen critical-error categories.",
+        "Leidos historical scope and current-unknown conclusions are entailed by the referenced records, although TEAM_SOURCE:curated:public:MYKLJHTX3MM7 is not the exact Source ID. The assertion \"only curated candidate\" / \"No other listed candidate\" is contradicted by Deloitte award_7173c1725f9dc2bdeef1."
+      ]
+    },
+    {
+      "question": "Could fictional Harbor Signal support a December 2026 identity implementation handover, and who owns follow-up?",
+      "answer": "No—not for a December 2026 handover. Harbor Signal is fictional; its delivery lead said its two proposed analysts had been allocated elsewhere, with no availability before a provisional January 18, 2027 date. Its stated staffed triage is limited to weekdays, 08:00–18:00 Pacific, excluding holidays; it does not offer staffed overnight or weekend response under its standard service. Maya Chen owns the November 23 capacity recheck. Imani Cole owns technical qualification, and Harbor’s eligibility remains unverified. There is no reserved capacity or teaming commitment. [demo:meeting-03] [demo:relationship-03] [demo:relationship-06]",
+      "source_ids": [
+        "demo:meeting-03",
+        "demo:relationship-03",
+        "demo:relationship-06",
+        "demo:meeting-02"
+      ],
+      "uncertainties": [
+        "The January 18, 2027 availability is provisional and needs rechecking.",
+        "Harbor’s federal eligibility and any procurement-specific qualifications are unverified.",
+        "The evidence is fictional scenario material, not a real-world company record or agreement."
+      ],
+      "elapsed_ms": 6551.2,
+      "prompt_hash": "79cca5ec35c1989eb677b84a26d5f84e4e32388e96098413fc31ca38c33eaca9",
+      "method": "rag",
+      "phase": "after",
+      "case_id": "capacity_update",
+      "anonymous_label": "answer-10",
+      "observed_search_type": "RAG_COMPLETION",
+      "passed": 6,
+      "total": 6,
+      "checks": [
+        {
+          "id": "capacity_fictional_attributed",
+          "pass": true,
+          "evidence": "\"Harbor Signal is fictional; its delivery lead said\" [demo:meeting-03]."
+        },
+        {
+          "id": "capacity_latest_update",
+          "pass": true,
+          "evidence": "\"two proposed analysts had been allocated elsewhere\" recognizes that earlier proposed availability was withdrawn [demo:meeting-02; demo:meeting-03]."
+        },
+        {
+          "id": "capacity_no_december",
+          "pass": true,
+          "evidence": "\"No—not for a December 2026 handover\" [demo:meeting-03]."
+        },
+        {
+          "id": "capacity_january_provisional",
+          "pass": true,
+          "evidence": "\"no availability before a provisional January 18, 2027 date\" and \"There is no reserved capacity\" [demo:meeting-03]."
+        },
+        {
+          "id": "capacity_coverage_limit",
+          "pass": true,
+          "evidence": "\"weekdays, 08:00–18:00 Pacific, excluding holidays\" and no staffed overnight/weekend response [demo:meeting-02; demo:meeting-03]."
+        },
+        {
+          "id": "capacity_owner_date",
+          "pass": true,
+          "evidence": "\"Maya Chen owns the November 23 capacity recheck\" [demo:meeting-03]."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "The capacity, coverage, update and owner conclusions are entailed by valid demo:meeting-02/demo:meeting-03 citations. demo:relationship-03 and demo:relationship-06 are record_id aliases, not exact curated:demo:relationship-* Source IDs.",
+      "review_notes": [
+        "Recognizing withdrawn analysts as superseding earlier proposed availability counts semantically; spelling out both November dates is not required by the frozen criterion.",
+        "The capacity, coverage, update and owner conclusions are entailed by valid demo:meeting-02/demo:meeting-03 citations. demo:relationship-03 and demo:relationship-06 are record_id aliases, not exact curated:demo:relationship-* Source IDs."
+      ]
+    },
+    {
+      "question": "What identity capabilities does CISA's maturity model describe, and which of those are proven mandatory for this research exercise?",
+      "answer": "CISA’s Zero Trust Maturity Model describes identity practices including ensuring users and entities have appropriate access for the right resource, time, and purpose; integrating identity, credential, and access-management solutions and identity stores; using strong authentication, context-based authorization, and identity-risk assessment; and improving visibility through activity-log analysis. Its Table 2 also gives optimal-maturity examples: continuous phishing-resistant MFA, secure integration of identity stores, automated just-in-time/just-enough access, and comprehensive visibility with behavior-based analytics. None of these capabilities is proven mandatory for this research exercise: the cited material is guidance, and its Table 2 examples are explicitly optimal maturity, not universal procurement requirements. [guidance_cisa_identity_table2_v2]",
+      "source_ids": [
+        "guidance_cisa_identity_table2_v2"
+      ],
+      "uncertainties": [
+        "No solicitation or exercise-specific requirements document was provided to establish mandatory capabilities."
+      ],
+      "elapsed_ms": 5855.7,
+      "prompt_hash": "5ebad640ddddb859b11b994c587bf2bfa6fd1f796a3df7695cc9fdabbf8324e9",
+      "method": "rag",
+      "phase": "after",
+      "case_id": "guidance_interpretation",
+      "anonymous_label": "answer-13",
+      "observed_search_type": "RAG_COMPLETION",
+      "passed": 6,
+      "total": 6,
+      "checks": [
+        {
+          "id": "guidance_specific_section",
+          "pass": true,
+          "evidence": "\"CISA’s Zero Trust Maturity Model\" / \"identity practices\" and \"Table 2\" with the exact focused citation. Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_authentication",
+          "pass": true,
+          "evidence": "\"continuous phishing-resistant MFA\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_identity_stores",
+          "pass": true,
+          "evidence": "\"secure integration of identity stores\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_authorization",
+          "pass": true,
+          "evidence": "\"automated just-in-time/just-enough access\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_visibility",
+          "pass": true,
+          "evidence": "\"comprehensive visibility with behavior-based analytics\" Supported by guidance_cisa_identity_table2_v2."
+        },
+        {
+          "id": "guidance_not_mandate",
+          "pass": true,
+          "evidence": "\"explicitly optimal maturity, not universal procurement requirements\"; uncertainty \"No solicitation ... was provided\" Supported by guidance_cisa_identity_table2_v2."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "The exact guidance_cisa_identity_table2_v2 citation entails the named capabilities and maturity-column limitation. The absence of a supplied solicitation is consistent with demo:company-profile and corpus scope; no mandate is invented.",
+      "review_notes": [
+        "Focused-source citation plus explicit identity-pillar scope satisfies the frozen section-identification alternative; a literal section number is not additionally required.",
+        "The exact guidance_cisa_identity_table2_v2 citation entails the named capabilities and maturity-column limitation. The absence of a supplied solicitation is consistent with demo:company-profile and corpus scope; no mandate is invented."
+      ]
+    },
+    {
+      "question": "Prepare a January 2027 readiness comparison for fictional Harbor Signal and Cedar Response. Identify missing evidence and the next action owner.",
+      "answer": "January 2027 readiness (fictional scenario; not a real-world qualification or teaming decision):\n\n- **Harbor Signal:** Limited, conditional fit. Its stated staffed triage is weekdays 08:00–18:00 Pacific, with no staffed overnight or weekend response. December capacity is unavailable; January 18 is only a provisional earliest availability. It therefore is not presently ready for an earlier January handover or as the sole source of 24/7 monitoring. **Next action:** Maya Chen rechecks capacity on November 23; Imani Cole verifies technical coverage and clarifies escalation/incident-response responsibilities. [demo:meeting-02] [demo:meeting-03] [demo:relationship-03]\n- **Cedar Response:** Potentially the stronger coverage fit because its operations lead described staffed 24/7 triage, but that remains an unverified claim. The promised coverage roster and escalation matrix are pending, capacity is not reserved, and incident-response ownership is unresolved. **Next action:** Noah Reed obtains the roster and matrix (due November 18); Imani Cole reviews the evidence and confirms coverage and escalation fit. [demo:meeting-02] [demo:relationship-04] [demo:relationship-05]\n\nFor both candidates, federal eligibility, certifications and other procurement-specific qualifications are unknown; no agreement or capacity reservation is established. Verify those items before any procurement-specific recommendation. Both candidates are fictional scenario entities and must not be matched to real companies. [demo:relationship-06] [demo:meeting-03]",
+      "source_ids": [
+        "demo:meeting-02",
+        "demo:meeting-03",
+        "demo:relationship-03",
+        "demo:relationship-04",
+        "demo:relationship-05",
+        "demo:relationship-06"
+      ],
+      "uncertainties": [
+        "Harbor's January 18 availability is provisional and must be rechecked; no staffed overnight or weekend response is offered in the stated service.",
+        "Cedar's 24/7 staffed-triage claim is unverified until its promised roster and escalation matrix are received and reviewed; its capacity is not reserved.",
+        "Incident-response ownership, commercial terms, and federal eligibility or certifications are unverified for both candidates."
+      ],
+      "elapsed_ms": 12994.9,
+      "prompt_hash": "a5e7366b58bc601c17cb9ef6048da604d8dffc142abcfa75d485fd2b453c618e",
+      "method": "rag",
+      "phase": "after",
+      "case_id": "held_out_readiness",
+      "anonymous_label": "answer-02",
+      "observed_search_type": "RAG_COMPLETION",
+      "passed": 5,
+      "total": 6,
+      "checks": [
+        {
+          "id": "readiness_four_fields",
+          "pass": false,
+          "evidence": "\"Limited, conditional fit\" / \"Potentially the stronger coverage fit\" does not separately assess Cedar technical integration/monitoring fit apart from its staffed-coverage claim. All eight distinct field assessments are not present [demo:meeting-02]."
+        },
+        {
+          "id": "readiness_harbor_capacity",
+          "pass": true,
+          "evidence": "\"January 18 is only a provisional earliest availability\" and \"no agreement or capacity reservation\" [demo:meeting-03]."
+        },
+        {
+          "id": "readiness_cedar_claim",
+          "pass": true,
+          "evidence": "\"operations lead described staffed 24/7 triage, but that remains an unverified claim\" [demo:meeting-02]."
+        },
+        {
+          "id": "readiness_pending_evidence",
+          "pass": true,
+          "evidence": "\"promised coverage roster and escalation matrix are pending\" [demo:meeting-02; demo:meeting-03]."
+        },
+        {
+          "id": "readiness_action_owners",
+          "pass": true,
+          "evidence": "\"Noah Reed obtains the roster and matrix\" and \"Imani Cole reviews the evidence\" [demo:meeting-02]."
+        },
+        {
+          "id": "readiness_no_false_confirmation",
+          "pass": true,
+          "evidence": "\"not presently ready for an earlier January handover\"; \"Both candidates are fictional ... must not be matched to real companies\" [demo:meeting-02; demo:meeting-03]."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "Valid demo:meeting-02/demo:meeting-03 citations support the substantive capacity, coverage, missing-evidence and owner statements. demo:relationship-03/04/05/06 are relationship record IDs, not exact curated:demo:relationship-* Source IDs; they are human-resolvable but not exact citations.",
+      "review_notes": [
+        "Readiness all-eight-fields check fails because Cedar technical fit is not separately distinguished from staffed coverage. This is an omission, not a critical falsehood.",
+        "Owner and technical-acceptance roles are correctly named; no owner/evidence request is assigned to every unresolved field, especially eligibility.",
+        "Valid demo:meeting-02/demo:meeting-03 citations support the substantive capacity, coverage, missing-evidence and owner statements. demo:relationship-03/04/05/06 are relationship record IDs, not exact curated:demo:relationship-* Source IDs; they are human-resolvable but not exact citations."
+      ]
+    },
+    {
+      "question": "Which curated candidates have historical evidence of SOC work, and what does that establish about their current staffing?",
+      "answer": "Among the curated public candidates, LEIDOS, INC. has historical evidence of SOC work: an award description says it provided cybersecurity SOC support services with CBP. DELOITTE & TOUCHE LLP has an award for cybersecurity and engineering services at the TSA SOC. These establish recorded past contract work, not current staffing, availability, or 24/7 coverage; both candidate records list current capacity and staffed coverage as unknown. [public:MYKLJHTX3MM7] [award_a0a4b48accc38adb0e4e] [public:F9KSDU7L9VP6] [award_7173c1725f9dc2bdeef1] Other curated public records shown do not explicitly describe SOC work. Separately, the fictional Harbor Signal and Cedar Response statements are not historical public-award evidence: Harbor described weekday staffed triage only, while Cedar claimed 24/7 triage but its roster and escalation matrix were still pending review. [demo:meeting-02]",
+      "source_ids": [
+        "public:MYKLJHTX3MM7",
+        "award_a0a4b48accc38adb0e4e",
+        "public:F9KSDU7L9VP6",
+        "award_7173c1725f9dc2bdeef1",
+        "demo:meeting-02"
+      ],
+      "uncertainties": [
+        "Historical award descriptions do not establish whether either public contractor currently staffs a SOC, its current coverage hours, or its available capacity.",
+        "Cedar Response's fictional 24/7 staffing claim is unverified because the promised coverage roster and escalation matrix had not been inspected."
+      ],
+      "elapsed_ms": 12291.4,
+      "prompt_hash": "aca044959151262bc730258098ceb7863377cd11e170c490ea1e498e88328431",
+      "method": "rag",
+      "phase": "after",
+      "case_id": "public_entity_provenance",
+      "anonymous_label": "answer-11",
+      "observed_search_type": "RAG_COMPLETION",
+      "passed": 5,
+      "total": 6,
+      "checks": [
+        {
+          "id": "soc_leidos_entity",
+          "pass": true,
+          "evidence": "\"LEIDOS, INC.\" with award_a0a4b48accc38adb0e4e establishes exact recipient UEI MYKLJHTX3MM7."
+        },
+        {
+          "id": "soc_cbp_scope",
+          "pass": true,
+          "evidence": "\"SOC support services with CBP\" / \"SOC SUPPORT SERVICES WITH CBP\" cites award_a0a4b48accc38adb0e4e, the exact 70B04C23F00001108 record."
+        },
+        {
+          "id": "soc_deloitte_entity",
+          "pass": true,
+          "evidence": "\"DELOITTE & TOUCHE LLP\" with award_7173c1725f9dc2bdeef1 establishes exact recipient UEI F9KSDU7L9VP6."
+        },
+        {
+          "id": "soc_tsa_scope",
+          "pass": true,
+          "evidence": "\"engineering services at the TSA SOC\" cites award_7173c1725f9dc2bdeef1, the exact 70T03025F7667N058 record."
+        },
+        {
+          "id": "soc_current_unknown",
+          "pass": true,
+          "evidence": "\"not current staffing, availability, or 24/7 coverage\" / \"not that either company currently staffs a SOC\" matches curated:public:MYKLJHTX3MM7 and curated:public:F9KSDU7L9VP6."
+        },
+        {
+          "id": "soc_brand_separation",
+          "pass": false,
+          "evidence": "No brand capability versus exact legal-entity delivery distinction is articulated; capability_deloitte_identity contains this limitation."
+        }
+      ],
+      "critical_errors": [],
+      "citation_review": "Award IDs in source_ids support both exact public recipients and their historical SOC scopes. Bare public:UEI citations identify candidate_id fields but are not exact curated:public:UEI Source IDs. The fictional triage statements are supported by demo:meeting-02 and explicitly kept separate from public awards. No current public staffing is inferred.",
+      "review_notes": [
+        "Scope statements use exact award citations rather than requiring the PIID to be spelled out in prose.",
+        "No brand/legal-entity criterion credit for merely avoiding a capability claim.",
+        "Award IDs in source_ids support both exact public recipients and their historical SOC scopes. Bare public:UEI citations identify candidate_id fields but are not exact curated:public:UEI Source IDs. The fictional triage statements are supported by demo:meeting-02 and explicitly kept separate from public awards. No current public staffing is inferred."
+      ]
+    }
+  ],
+  "inventory": {
+    "before": {
+      "count": 68,
+      "fingerprint": "783be0480e4d754d8f10f72b5243ebc1771ecc4b73f6a916821d7e7ab023e568"
+    },
+    "after": {
+      "count": 70,
+      "fingerprint": "885f1d836da9e68a5df97718c8be6a06f2fd257f36ddf7f028cca488ff957ef7"
+    }
+  },
+  "protocol_sha256": "198cf9b7dbc367038050f39d1d612864a19e14c67b6e12a24d9cfd1ecaaffbae",
+  "rubric_sha256": "06a2c7532d24b42c92c3575a9c9f5a1c03fc48670b6e858d7afa44fedd67d2f4",
+  "improvement": {
+    "native_status": "completed",
+    "stages": [
+      {
+        "stage": "feedback_weights",
+        "status": "skipped",
+        "counts": {}
+      },
+      {
+        "stage": "persist_session_qa",
+        "status": "completed",
+        "counts": {
+          "sessions": 1
+        }
+      },
+      {
+        "stage": "persist_agent_traces",
+        "status": "already_completed",
+        "counts": {}
+      },
+      {
+        "stage": "extract_agent_context",
+        "status": "completed",
+        "counts": {
+          "lessons": 0,
+          "sessions_failed": 0
+        }
+      },
+      {
+        "stage": "distill_sessions",
+        "status": "completed",
+        "counts": {
+          "documents": 1,
+          "sessions_completed": 1,
+          "sessions_failed": 0,
+          "entries_uncurated": 0
+        }
+      },
+      {
+        "stage": "update_user_preferences",
+        "status": "completed",
+        "counts": {
+          "turns_applied": 0,
+          "edges_written": 0,
+          "edges_pruned": 0,
+          "text_lines_added": 0
+        }
+      },
+      {
+        "stage": "build_truth_subspace",
+        "status": "skipped",
+        "counts": {}
+      },
+      {
+        "stage": "review_conflicts",
+        "status": "skipped",
+        "counts": {}
+      },
+      {
+        "stage": "global_context_index",
+        "status": "completed",
+        "counts": {}
+      }
+    ],
+    "completed_stages": [
+      "persist_session_qa",
+      "extract_agent_context",
+      "distill_sessions",
+      "update_user_preferences",
+      "global_context_index"
+    ],
+    "new_documents": 2,
+    "freshly_retrieved_lessons": 1,
+    "lesson_excerpts": [
+      {
+        "id": "learning:9fb5cca550d7cfeae7125670",
+        "text": "# Session learning (session comparison-review-895dfe086042496d8f3eabc462424203)\n\nPartner shortlists should assess technical fit, staffed coverage, dated capacity, and eligibility evidence separately; attribute each claim to its source and date; apply explicit updates only to the fields they supersede while preserving prior statements as history; and treat promised evidence as pending. For each unresolved readiness field, identify an internal owner and the specific evidence needed. Do not infer readiness or teaming commitment from marketing, historical awards, or provisional conversations. (This was learned while reviewing partner-shortlist evidence and updates.)"
+      }
+    ]
+  },
+  "limitations": [
+    "Four repeated questions, one run and assistant-reviewed checks; no statistical or general accuracy claim.",
+    "Both methods use the same Cloud tenant configuration and the same documents within each phase; model version and temperature are not exposed in these responses.",
+    "Requested topK=10 and prompts match; internal retrieval context and token budgets differ. Document fingerprints do not prove complete graph/index immutability.",
+    "After combines new accepted synthetic feedback and native improvement; it does not isolate consolidation from adding information.",
+    "Citation entailment is reviewed separately from checklist coverage. Missing evidence is not a false assertion."
+  ]
+}

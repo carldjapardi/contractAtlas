@@ -38,7 +38,7 @@ The first command rebuilds from retained public captures and the frozen snapshot
 
 ## Use in the existing research workflow
 
-This is a staged source bundle, not an already executed new learning experiment. The active app and original verified Cloud dataset remain unchanged.
+The isolated Cloud experiment has now run against this bundle. The original Research team dataset remains unchanged. The app's Benchmark tab displays the new measured comparison. See [../../COMPARISON_RESULTS.md](../../COMPARISON_RESULTS.md) for the observed results.
 
 The isolated seed command below uses the existing Cloud implementation, expanded source path, and a separate manifest under ignored `runtime/`. The dataset name is derived from the expanded source fingerprint. It does not change `.env` or the active app's source/manifest paths:
 
@@ -46,8 +46,8 @@ The isolated seed command below uses the existing Cloud implementation, expanded
 .venv/bin/python -m scripts.seed_source_expansion
 ```
 
-The role sequence stays opportunity analyst, partner researcher, evidence reviewer, accepted feedback, native improvement, and fresh-session retrieval. Follow `evaluation_cases.json` to evaluate the new material without answer leakage. Do not add the synthetic review meeting or evaluation rubric to the initial source collection. The review is an explicit later feedback turn. Synthetic inputs are disclosed; stages, counts, reports and retrieval must remain actual observed outputs. No new improvement result is asserted by this bundle.
+The original app keeps its three-role workflow. This expansion's separate experiment used matched document-RAG and hybrid answers before and after an explicit synthetic reviewer turn and native improvement. Follow `comparison_protocol.md`; keep the synthetic review meeting and evaluation rubric out of initial memory. The four questions are repeated evaluation probes. Synthetic inputs are disclosed; stages, counts, reports and retrieval are actual observed outputs.
 
 ## Collection status
 
-All approved material is present and validated. Activation in the app and an expanded-corpus Cloud research/improvement run have not been performed. The separate seed tool is provided so integration can use the existing agent workflow without overwriting the preserved checkpoint.
+All approved material is present and validated. The separate dataset was seeded with 68 sources; 16 answers and native improvement completed, one new lesson was retrieved, and listed-document inventories remained stable within each batch. Document RAG passed 22/24 checks before and after; hybrid passed 20/24 before and after. These results establish memory persistence, without a checklist-score gain. Full outputs are in `comparison_results.json`.

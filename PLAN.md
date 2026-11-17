@@ -33,7 +33,8 @@ This section is the active plan. The original four-hour plan below is retained a
 
 - [x] Integrate the separately authored 68-source expansion in an isolated dataset; preserve the original working demo.
 - [x] Freeze a matched document-RAG versus hybrid, before/after protocol and 24-check rubric before generating answers.
-- [ ] Run all 16 fresh-session answers, record native improvement and stable inventories, and review anonymous outputs.
+- [x] Run all 16 fresh-session answers and record stable document inventories (68 before, 70 after). Native improvement distilled one lesson, retrieved separately afterward.
+- [ ] Finish anonymous review of the 24 frozen checks for each condition.
 - [ ] Publish the observed comparison, including parity, failures and limitations; update the Benchmark view.
 
 - [x] Finish source-aware report rendering and retrieval provenance checks.

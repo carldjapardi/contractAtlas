@@ -17,6 +17,8 @@ Method order alternates by question. Each answer uses a new session. Answering c
 
 The retrieval strategies construct different contexts internally. This is a package-level comparison with matched requested topK, not a token-budget-matched isolation of graph traversal. The before/after change combines new accepted feedback and native memory consolidation; it does not isolate improve() from adding information.
 
+The same tenant configuration is used throughout; the Cloud responses do not expose a pinned model version or temperature. Inventory fingerprints establish listed-document stability, not complete graph/index immutability. Returned search types are checked against the requested methods when publishing results.
+
 ## Review
 
 Freeze 24 binary checks: six per question in `comparison_rubric.json`. Assess semantic correctness against source documents; equivalent wording passes. An omitted answer fails that check. A contradiction also receives a separate critical-error flag where applicable.

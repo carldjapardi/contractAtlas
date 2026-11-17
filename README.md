@@ -2,6 +2,8 @@
 
 **New to the project? Read [the plain-English explanation](PROJECT_SIMPLE.md) first.**
 
+**Filming:** [Two-minute walkthrough script](DEMO_SCRIPT.md), with screen actions and verified run selection.
+
 **Latest measured result:** the isolated 68-source comparison completed 16 answers. Document RAG scored 22/24 checks before and after review; Cognee hybrid scored 20/24 before and after. One new lesson was saved and retrieved. No answer-quality advantage is established. See [observed comparison](COMPARISON_RESULTS.md) and **Benchmark** in the app.
 
 **A shared research memory for cybersecurity contractors pursuing federal work.** Three research agents connect historical awards, agency guidance, and vendor capabilities, review their findings, and carry accepted lessons into a fresh agent session through Cognee.

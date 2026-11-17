@@ -65,6 +65,28 @@ def test_graph_limit_declares_truncation(frozen_snapshot):
     assert len([n for n in graph["nodes"] if n["type"] == "award"]) == 1
 
 
+def test_graph_reuses_exact_uei_recipient_for_reported_parent_role(frozen_snapshot):
+    frozen_snapshot[0]["parent_uei"] = frozen_snapshot[1]["recipient_uei"]
+    frozen_snapshot[0]["parent_name"] = frozen_snapshot[1]["recipient_name"]
+    graph = data.build_graph(frozen_snapshot)
+    ids = {node["id"] for node in graph["nodes"]}
+    assert "parent:UEI2" not in ids
+    parent = next(node for node in graph["nodes"] if node["id"] == "recipient:UEI2")
+    assert parent["type"] == "recipient"
+    assert "reported ultimate parent" in parent["sublabel"]
+    assert set(parent["award_ids"]) == {"CONT_AWD_ONE", "CONT_AWD_TWO"}
+    edge = next(edge for edge in graph["edges"] if edge["source"] == "recipient:UEI2" and edge["target"] == "recipient:UEI1")
+    assert edge["relationship"] == "reported parent of"
+    assert edge["origin"] == "reported"
+    assert edge["award_ids"] == ["CONT_AWD_ONE"]
+
+
+def test_equal_parent_name_without_equal_uei_does_not_merge(frozen_snapshot):
+    frozen_snapshot[0]["parent_name"] = frozen_snapshot[1]["recipient_name"]
+    graph = data.build_graph(frozen_snapshot)
+    assert {"parent:PARENT", "recipient:UEI2"} <= {n["id"] for n in graph["nodes"]}
+
+
 def test_award_filter_combines_search_and_entity_identity(frozen_snapshot):
     assert data.get_awards(search="access", recipient_id="UEI1")["total"] == 1
     assert data.get_awards(search="access", recipient_id="UEI2")["total"] == 0
@@ -157,3 +179,49 @@ def test_ingestion_keeps_page_size_constant_when_limit_is_not_page_multiple(tmp_
     assert [request["limit"] for request in requests] == [100, 100]
     assert len(snapshot["awards"]) == 150
     assert snapshot["metadata"]["truncated"]
+    assert snapshot["metadata"]["raw_path"].startswith("data/raw/")
+    assert (tmp_path / snapshot["metadata"]["raw_path"] / "requests.json").exists()
+
+
+@pytest.mark.parametrize("bad_amount", [None, True, "NaN", "Infinity", "-Infinity", "1e10000", "not-a-number"])
+def test_missing_or_nonfinite_amount_never_becomes_a_published_obligation(bad_amount):
+    with pytest.raises(ValueError):
+        normalize(source_row(amount=bad_amount))
+
+
+@pytest.mark.parametrize("response", [{}, {"results": []}, {"results": [], "page_metadata": {}},
+                                     {"results": [], "page_metadata": {"hasNext": "false"}},
+                                     {"results": [], "page_metadata": {"hasNext": True}},
+                                     {"results": [source_row(amount="NaN")], "page_metadata": {"hasNext": False}}])
+def test_malformed_or_stalled_ingestion_preserves_snapshot_and_old_raw(tmp_path, monkeypatch, response):
+    existing = {"metadata": {}, "awards": [normalize(source_row())]}
+    path = tmp_path / "data/snapshot.json"
+    path.parent.mkdir()
+    original = json.dumps(existing)
+    path.write_text(original)
+    old_raw = tmp_path / "data/raw/old-run"
+    old_raw.mkdir(parents=True)
+    (old_raw / "search-page-1.json").write_text("old source evidence")
+    monkeypatch.setattr(ingest, "ROOT", tmp_path)
+    monkeypatch.setattr(ingest, "request_json", lambda *args, **kwargs: response)
+    monkeypatch.setattr(sys, "argv", ["ingest", "--skip-details"])
+    with pytest.raises(ValueError):
+        ingest.main()
+    assert path.read_text() == original
+    assert (old_raw / "search-page-1.json").read_text() == "old source evidence"
+
+
+def test_empty_replacement_requires_explicit_cli_flag(tmp_path, monkeypatch):
+    path = tmp_path / "data/snapshot.json"
+    path.parent.mkdir()
+    original = json.dumps({"metadata": {}, "awards": [normalize(source_row())]})
+    path.write_text(original)
+    monkeypatch.setattr(ingest, "ROOT", tmp_path)
+    monkeypatch.setattr(ingest, "request_json", lambda *args, **kwargs: {"results": [], "page_metadata": {"hasNext": False}})
+    monkeypatch.setattr(sys, "argv", ["ingest", "--skip-details"])
+    with pytest.raises(ValueError, match="allow-empty"):
+        ingest.main()
+    assert path.read_text() == original
+    monkeypatch.setattr(sys, "argv", ["ingest", "--skip-details", "--allow-empty"])
+    ingest.main()
+    assert json.loads(path.read_text())["awards"] == []

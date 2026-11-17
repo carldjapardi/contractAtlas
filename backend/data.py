@@ -46,6 +46,8 @@ def build_graph(awards: list[dict], limit: int = 12) -> dict:
     selected = sorted(unique.values(), key=lambda a: (-a["obligation"], a["id"]))[:max(0, min(limit, 100))]
     nodes: dict[str, dict] = {}
     edges: dict[tuple, dict] = {}
+    selected_recipients = {a["recipient_uei"]: a for a in selected if a.get("recipient_uei")}
+    canonical_recipient_ids = {uei: "recipient:" + a["recipient_id"] for uei, a in selected_recipients.items()}
 
     def node(node_id: str, kind: str, label: str, sublabel: str, award_id: str):
         item = nodes.setdefault(node_id, {"id": node_id, "type": kind, "label": label,
@@ -64,7 +66,7 @@ def build_graph(awards: list[dict], limit: int = 12) -> dict:
     for a in selected:
         aid = a["id"]
         agency_id = "agency:" + hashlib.sha256(a["agency"].encode()).hexdigest()[:12]
-        recipient_id = "recipient:" + a["recipient_id"]
+        recipient_id = canonical_recipient_ids.get(a.get("recipient_uei"), "recipient:" + a["recipient_id"])
         node(agency_id, "agency", a["agency"], "Awarding agency", aid)
         node(aid, "award", a["award_id"], a.get("description", "")[:100], aid)
         node(recipient_id, "recipient", a["recipient_name"], a.get("recipient_uei") or "UEI unavailable", aid)
@@ -72,8 +74,13 @@ def build_graph(awards: list[dict], limit: int = 12) -> dict:
         edge(aid, recipient_id, "awarded to", aid)
         # Names alone never establish a shared corporate parent.
         if a.get("parent_uei") and a["parent_uei"] != a.get("recipient_uei"):
-            pid = "parent:" + a["parent_uei"]
-            node(pid, "parent", a.get("parent_name") or a["parent_uei"], "Reported ultimate parent", aid)
+            parent_recipient = selected_recipients.get(a["parent_uei"])
+            pid = canonical_recipient_ids.get(a["parent_uei"], "parent:" + a["parent_uei"])
+            if parent_recipient:
+                node(pid, "recipient", parent_recipient["recipient_name"], a["parent_uei"], aid)
+                nodes[pid]["sublabel"] = a["parent_uei"] + " · Also a reported ultimate parent"
+            else:
+                node(pid, "parent", a.get("parent_name") or a["parent_uei"], "Reported ultimate parent", aid)
             edge(pid, recipient_id, "reported parent of", aid)
     return {"nodes": list(nodes.values()), "edges": list(edges.values()), "truncated": len(unique) > len(selected)}
 

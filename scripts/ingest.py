@@ -5,11 +5,13 @@ from __future__ import annotations
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 import hashlib
 import json
+import math
 from pathlib import Path
 import time
+import uuid
 from urllib.parse import quote
 
 import httpx
@@ -37,6 +39,15 @@ def normalize(row: dict, detail: dict | None = None) -> dict:
     stable_id = row.get("generated_internal_id")
     if not stable_id:
         raise ValueError("Missing generated_internal_id; refusing ambiguous award identity")
+    raw_amount = row.get("Award Amount")
+    if raw_amount is None or isinstance(raw_amount, bool):
+        raise ValueError("Missing or invalid Award Amount; refusing to invent a zero obligation")
+    try:
+        amount = Decimal(str(raw_amount))
+    except InvalidOperation:
+        raise ValueError("Award Amount must be numeric") from None
+    if not amount.is_finite() or not math.isfinite(float(amount)):
+        raise ValueError("Award Amount must be finite")
     uei = row.get("Recipient UEI")
     recipient_id = uei or row.get("recipient_id")
     if not recipient_id:
@@ -48,7 +59,7 @@ def normalize(row: dict, detail: dict | None = None) -> dict:
             "sub_agency": row.get("Awarding Sub Agency"), "recipient_id": recipient_id,
             "recipient_name": row.get("Recipient Name") or "Unknown recipient", "recipient_uei": uei,
             "parent_uei": recipient.get("parent_recipient_uei"), "parent_name": recipient.get("parent_recipient_name"),
-            "obligation": float(Decimal(str(row.get("Award Amount") or 0))),
+            "obligation": float(amount),
             "start_date": row.get("Start Date"), "end_date": row.get("End Date"),
             "source_url": "https://www.usaspending.gov/award/" + quote(stable_id, safe="_-")}
 
@@ -59,10 +70,12 @@ def main():
     parser.add_argument("--fiscal-year", type=int, default=2025)
     parser.add_argument("--keyword", default="cyber")
     parser.add_argument("--skip-details", action="store_true")
+    parser.add_argument("--allow-empty", action="store_true", help="Allow an empty result to replace a nonempty snapshot")
     args = parser.parse_args()
     if not 1 <= args.limit <= 500:
         parser.error("--limit must be between 1 and 500")
-    raw_dir = ROOT / "data" / "raw"
+    run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + uuid.uuid4().hex[:8]
+    raw_dir = ROOT / "data" / "raw" / run_id
     raw_dir.mkdir(parents=True, exist_ok=True)
     filters = {"award_type_codes": ["A", "B", "C", "D"],
                "agencies": [{"type": "awarding", "tier": "toptier", "name": "Department of Homeland Security"}],
@@ -78,16 +91,26 @@ def main():
             payload = {"filters": filters, "fields": FIELDS, "limit": page_size,
                        "page": page, "sort": "Award Amount", "order": "desc"}
             result = request_json(client, "POST", API + "/search/spending_by_award/", json=payload)
+            if not isinstance(result, dict) or not isinstance(result.get("results"), list):
+                raise ValueError("Malformed source search response: results must be an array")
+            page_metadata = result.get("page_metadata")
+            if not isinstance(page_metadata, dict) or not isinstance(page_metadata.get("hasNext"), bool):
+                raise ValueError("Malformed source search response: page_metadata.hasNext must be a boolean")
             requests.append(payload)
             (raw_dir / f"search-page-{page}.json").write_text(json.dumps(result, indent=2))
             before = len(rows)
-            for row in result.get("results", []):
+            for row in result["results"]:
+                if not isinstance(row, dict) or not row.get("generated_internal_id"):
+                    raise ValueError("Malformed source award: stable award identity required")
+                normalize(row)  # Validate required financial fields before publication.
                 rows[row["generated_internal_id"]] = row
-            has_next = result.get("page_metadata", {}).get("hasNext", False)
+            has_next = page_metadata["hasNext"]
             if len(rows) > args.limit:
                 rows = dict(list(rows.items())[:args.limit])
                 has_next = True
             if len(rows) == before:
+                if has_next:
+                    raise ValueError("Source pagination made no progress while reporting another page")
                 break
             page += 1
         details, detail_errors = {}, []
@@ -106,6 +129,11 @@ def main():
                     except Exception:
                         detail_errors.append(futures[future])
     awards = [normalize(row, details.get(aid)) for aid, row in rows.items()]
+    path = ROOT / "data" / "snapshot.json"
+    if not awards and not args.allow_empty and path.exists():
+        existing = json.loads(path.read_text())
+        if existing.get("awards"):
+            raise ValueError("Empty result would replace a nonempty snapshot. Use --allow-empty to confirm this intentionally.")
     awards.sort(key=lambda a: (-a["obligation"], a["id"]))
     digest = hashlib.sha256(json.dumps(awards, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
     metadata = {"name": f"DHS FY{args.fiscal_year} {args.keyword} keyword slice", "status": "live_snapshot" if awards else "empty",
@@ -121,13 +149,13 @@ def main():
                   "Missing parent information is unknown. No parent relationships are inferred from names.",
                   "No transaction history or subaward records are included."],
         "source_api": API + "/search/spending_by_award/", "filters": filters,
+        "raw_path": str(raw_dir.relative_to(ROOT)),
         "detail_failure_ids": detail_errors}
     snapshot = {"metadata": metadata, "awards": awards}
-    path = ROOT / "data" / "snapshot.json"
+    (raw_dir / "requests.json").write_text(json.dumps(requests, indent=2, allow_nan=False))
     temporary = path.with_suffix(".tmp")
-    temporary.write_text(json.dumps(snapshot, indent=2))
+    temporary.write_text(json.dumps(snapshot, indent=2, allow_nan=False))
     temporary.replace(path)
-    (raw_dir / "requests.json").write_text(json.dumps(requests, indent=2))
     print(json.dumps({"awards": len(awards), "recipients": metadata["recipient_count"],
                       "detail_records": len(details), "truncated": has_next, "snapshot_id": digest}))
 

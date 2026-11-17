@@ -1,6 +1,6 @@
 # Contract Atlas
 
-**Live demo:** [contract-atlas-personal-d624.vercel.app](https://contract-atlas-personal-d624.vercel.app). Completed research and benchmark results are viewable publicly; running new agents requires the shared demo code. See [deployment setup](DEPLOYMENT.md).
+**Live demo:** [contract-atlas-personal-d624.vercel.app](https://contract-atlas-personal-d624.vercel.app). Completed research and benchmark results are viewable publicly; running new agents requires the shared demo code. The hosted research/improvement loop is [verified](HOSTED_RESULTS.md). See [deployment setup](DEPLOYMENT.md).
 
 **New to the project? Read [the plain-English explanation](PROJECT_SIMPLE.md) first.**
 

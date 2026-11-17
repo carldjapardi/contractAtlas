@@ -33,4 +33,6 @@ The Python Workflow SDK is pinned to beta version `0.13.0`. Native execution mus
 
 ## November 16 deployment checkpoint
 
-The protected preview built successfully. Its HTML and API respond, and native probe `wrun_41M7KSRQTQ0GGARD58T1DS4QCF` reached `completed` after the start request returned. This probe calls no Cognee/model provider. The hosted agent/learning loop is still pending: the configured Supabase project reports PGRST205 for `public.atlas_runs` until the migration is applied. Do not describe the app as fully deployed until storage import and a real hosted operation succeed.
+The protected preview built successfully. Its HTML and API respond, and native probe `wrun_41M7KSRQTQ0GGARD58T1DS4QCF` reached `completed` after the start request returned. The Supabase migration and state import then succeeded. A real hosted three-role research run and production native improvement completed, with two new lessons verified in a fresh session and the original report preserved. See [HOSTED_RESULTS.md](HOSTED_RESULTS.md).
+
+Production is public at https://contract-atlas-personal-d624.vercel.app. Vercel authentication is limited to previews; production paid actions retain the app's demo-code gate. Browser source inspection, benchmark rendering and the native-learning result were checked against the public app.

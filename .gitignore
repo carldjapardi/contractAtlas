@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+.venv/
+node_modules/
+dist/
+__pycache__/
+.pytest_cache/
+*.pyc
+data/*.sqlite*
+data/cognee/
+.cognee*/
+.DS_Store

@@ -1,0 +1,242 @@
+{
+  "id": 291259841,
+  "generated_unique_award_id": "CONT_AWD_70US0923C70093122_7009_-NONE-_-NONE-",
+  "piid": "70US0923C70093122",
+  "category": "contract",
+  "type": "D",
+  "type_description": "DEFINITIVE CONTRACT",
+  "description": "THE PURPOSE OF THIS IS TO PURCHASE SOFTWARE LICENSES AND SUPPORT.",
+  "total_obligation": 99753.0,
+  "subaward_count": 0,
+  "total_subaward_amount": null,
+  "date_signed": "2023-06-05",
+  "base_exercised_options": 99753.0,
+  "base_and_all_options": 211405.22,
+  "total_account_outlay": 99753.0,
+  "total_account_obligation": 99753.0,
+  "account_outlays_by_defc": [
+    {
+      "code": "Q",
+      "amount": 99753.0
+    }
+  ],
+  "account_obligations_by_defc": [
+    {
+      "code": "Q",
+      "amount": 99753.0
+    }
+  ],
+  "parent_award": null,
+  "latest_transaction_contract_data": {
+    "idv_type_description": null,
+    "type_of_idc_description": null,
+    "referenced_idv_agency_iden": null,
+    "referenced_idv_agency_desc": null,
+    "solicitation_identifier": null,
+    "solicitation_procedures": "SP1",
+    "number_of_offers_received": "1",
+    "extent_competed": "G",
+    "type_set_aside": "NONE",
+    "type_set_aside_description": "NO SET ASIDE USED.",
+    "evaluated_preference": "NONE",
+    "fed_biz_opps": "X",
+    "fed_biz_opps_description": "NOT APPLICABLE",
+    "small_business_competitive": false,
+    "product_or_service_code": "7J20",
+    "naics": "541519",
+    "naics_description": "OTHER COMPUTER RELATED SERVICES",
+    "sea_transportation": null,
+    "clinger_cohen_act_planning": "N",
+    "labor_standards": "X",
+    "cost_or_pricing_data": "N",
+    "domestic_or_foreign_entity": "A",
+    "foreign_funding": "X",
+    "major_program": null,
+    "program_acronym": null,
+    "subcontracting_plan": "B",
+    "multi_year_contract": "N",
+    "consolidated_contract": "D",
+    "type_of_contract_pricing": "J",
+    "national_interest_action": null,
+    "multiple_or_single_award_description": null,
+    "solicitation_procedures_description": "SIMPLIFIED ACQUISITION",
+    "extent_competed_description": "NOT COMPETED UNDER SAP",
+    "other_than_full_and_open": "SP2",
+    "other_than_full_and_open_description": "SAP NON-COMPETITION (FAR 13)",
+    "commercial_item_acquisition": "A",
+    "commercial_item_acquisition_description": "COMMERCIAL PRODUCTS/SERVICES",
+    "commercial_item_test_program": "N",
+    "commercial_item_test_program_description": "NO",
+    "evaluated_preference_description": "NO PREFERENCE USED",
+    "fair_opportunity_limited": null,
+    "fair_opportunity_limited_description": null,
+    "product_or_service_description": "IT AND TELECOM - SECURITY AND COMPLIANCE PRODUCTS (HARDWARE AND PERPETUAL LICENSE SOFTWARE)",
+    "dod_claimant_program": null,
+    "dod_claimant_program_description": null,
+    "dod_acquisition_program": null,
+    "dod_acquisition_program_description": null,
+    "information_technology_commercial_item_category": null,
+    "information_technology_commercial_item_category_description": null,
+    "sea_transportation_description": null,
+    "clinger_cohen_act_planning_description": "NO",
+    "construction_wage_rate": "X",
+    "construction_wage_rate_description": "NOT APPLICABLE",
+    "labor_standards_description": "NOT APPLICABLE",
+    "materials_supplies": "X",
+    "materials_supplies_description": "NOT APPLICABLE",
+    "cost_or_pricing_data_description": "NO",
+    "domestic_or_foreign_entity_description": "U.S. OWNED BUSINESS",
+    "foreign_funding_description": "NOT APPLICABLE",
+    "interagency_contracting_authority": "X",
+    "interagency_contracting_authority_description": "NOT APPLICABLE",
+    "price_evaluation_adjustment": "0.00",
+    "subcontracting_plan_description": "PLAN NOT REQUIRED",
+    "multi_year_contract_description": "NO",
+    "purchase_card_as_payment_method": "N",
+    "purchase_card_as_payment_method_description": "NO",
+    "consolidated_contract_description": "NOT CONSOLIDATED",
+    "type_of_contract_pricing_description": "FIRM FIXED PRICE",
+    "national_interest_action_description": null
+  },
+  "funding_agency": {
+    "id": 773,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Secret Service",
+      "code": "7009",
+      "abbreviation": "USSS"
+    },
+    "office_agency_name": "U. S. SECRET SERVICE"
+  },
+  "awarding_agency": {
+    "id": 773,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Secret Service",
+      "code": "7009",
+      "abbreviation": "USSS"
+    },
+    "office_agency_name": "U. S. SECRET SERVICE"
+  },
+  "period_of_performance": {
+    "start_date": "2023-06-05",
+    "end_date": "2024-06-04",
+    "last_modified_date": "2025-04-17",
+    "potential_end_date": "2024-06-04 00:00:00"
+  },
+  "recipient": {
+    "recipient_hash": "e21a0195-d85c-c6d7-1d72-5a98c9fd9260-C",
+    "recipient_name": "CYBER TEAM SIX, LLC",
+    "recipient_uei": "RHKWP7RARCU5",
+    "recipient_unique_id": null,
+    "parent_recipient_hash": "e21a0195-d85c-c6d7-1d72-5a98c9fd9260-P",
+    "parent_recipient_name": "CYBER TEAM SIX, LLC",
+    "parent_recipient_uei": "RHKWP7RARCU5",
+    "parent_recipient_unique_id": null,
+    "business_categories": [
+      "Category Business",
+      "Corporate Entity Not Tax Exempt",
+      "Limited Liability Corporation",
+      "Small Business",
+      "Special Designations",
+      "U.S.-Owned Business"
+    ],
+    "location": {
+      "location_country_code": "USA",
+      "country_name": "UNITED STATES",
+      "state_code": "NC",
+      "state_name": "NORTH CAROLINA",
+      "city_name": "CHARLOTTE",
+      "county_code": "119",
+      "county_name": "MECKLENBURG",
+      "address_line1": "227 W 4TH ST STE 325",
+      "address_line2": null,
+      "address_line3": null,
+      "congressional_code": "12",
+      "zip4": "1545",
+      "zip5": "28202",
+      "foreign_postal_code": null,
+      "foreign_province": null
+    }
+  },
+  "executive_details": {
+    "officers": [
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      }
+    ]
+  },
+  "place_of_performance": {
+    "location_country_code": "USA",
+    "country_name": "UNITED STATES",
+    "county_code": "001",
+    "county_name": "DISTRICT OF COLUMBIA",
+    "city_name": "WASHINGTON",
+    "state_code": "DC",
+    "state_name": "DISTRICT OF COLUMBIA",
+    "congressional_code": "98",
+    "zip4": "0005",
+    "zip5": "20223",
+    "address_line1": null,
+    "address_line2": null,
+    "address_line3": null,
+    "foreign_province": null,
+    "foreign_postal_code": null
+  },
+  "psc_hierarchy": {
+    "toptier_code": {},
+    "midtier_code": {
+      "code": "7J",
+      "description": "IT AND TELECOM - SECURITY AND COMPLIANCE"
+    },
+    "subtier_code": {},
+    "base_code": {
+      "code": "7J20",
+      "description": "IT AND TELECOM - SECURITY AND COMPLIANCE PRODUCTS (HARDWARE AND PERPETUAL LICENSE SOFTWARE)"
+    }
+  },
+  "naics_hierarchy": {
+    "toptier_code": {
+      "code": "54",
+      "description": "Professional, Scientific, and Technical Services"
+    },
+    "midtier_code": {
+      "code": "5415",
+      "description": "Computer Systems Design and Related Services"
+    },
+    "base_code": {
+      "code": "541519",
+      "description": "Other Computer Related Services"
+    }
+  },
+  "total_outlay": 99753.0
+}

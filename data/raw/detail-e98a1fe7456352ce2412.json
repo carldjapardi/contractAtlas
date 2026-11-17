@@ -1,0 +1,264 @@
+{
+  "id": 307742262,
+  "generated_unique_award_id": "CONT_AWD_HSFE7015J0169_7022_HSHQDC13D00023_7001",
+  "piid": "HSFE7015J0169",
+  "category": "contract",
+  "type": "C",
+  "type_description": "DELIVERY ORDER",
+  "description": "THIS ACTION IS IN SUPPORT OF FEMA ENTERPRISE NETWORK (FEN) SYSTEM ENTERPRISE LOGGING PROJECT TO REQUIRE AUDIT LOGGING FROM ALL DEVICES, DATABASES AND APPLICATIONS AS NECESSARY TO STRENGTHEN FEMA CYBER DEFENSE.",
+  "total_obligation": 4931828.83,
+  "subaward_count": 0,
+  "total_subaward_amount": null,
+  "date_signed": "2015-09-25",
+  "base_exercised_options": 4931828.83,
+  "base_and_all_options": 4931828.83,
+  "total_account_outlay": 0.0,
+  "total_account_obligation": -26903.28,
+  "account_outlays_by_defc": [
+    {
+      "code": "N",
+      "amount": 0.0
+    },
+    {
+      "code": "4",
+      "amount": 0.0
+    }
+  ],
+  "account_obligations_by_defc": [
+    {
+      "code": "N",
+      "amount": -3141.51
+    },
+    {
+      "code": "4",
+      "amount": -23761.77
+    }
+  ],
+  "parent_award": {
+    "agency_id": 766,
+    "agency_name": "Department of Homeland Security",
+    "agency_slug": "department-of-homeland-security",
+    "sub_agency_id": "7001",
+    "sub_agency_name": "Office of Procurement Operations",
+    "award_id": 351329439,
+    "generated_unique_award_id": "CONT_IDV_HSHQDC13D00023_7001",
+    "idv_type_description": "IDC",
+    "multiple_or_single_aw_desc": "MULTIPLE AWARD",
+    "piid": "HSHQDC13D00023",
+    "type_of_idc_description": "INDEFINITE DELIVERY / INDEFINITE QUANTITY"
+  },
+  "latest_transaction_contract_data": {
+    "idv_type_description": null,
+    "type_of_idc_description": null,
+    "referenced_idv_agency_iden": "7001",
+    "referenced_idv_agency_desc": "OFFICE OF PROCUREMENT OPERATIONS",
+    "solicitation_identifier": null,
+    "solicitation_procedures": "MAFO",
+    "number_of_offers_received": "1",
+    "extent_competed": "D",
+    "type_set_aside": null,
+    "type_set_aside_description": null,
+    "evaluated_preference": "NONE",
+    "fed_biz_opps": "Y",
+    "fed_biz_opps_description": "YES",
+    "small_business_competitive": false,
+    "product_or_service_code": "7030",
+    "naics": "541519",
+    "naics_description": "OTHER COMPUTER RELATED SERVICES",
+    "sea_transportation": null,
+    "clinger_cohen_act_planning": "N",
+    "labor_standards": "N",
+    "cost_or_pricing_data": "N",
+    "domestic_or_foreign_entity": "A",
+    "foreign_funding": "X",
+    "major_program": null,
+    "program_acronym": null,
+    "subcontracting_plan": "B",
+    "multi_year_contract": "Y",
+    "consolidated_contract": "N",
+    "type_of_contract_pricing": "J",
+    "national_interest_action": null,
+    "multiple_or_single_award_description": null,
+    "solicitation_procedures_description": "SUBJECT TO MULTIPLE AWARD FAIR OPPORTUNITY",
+    "extent_competed_description": "FULL AND OPEN COMPETITION AFTER EXCLUSION OF SOURCES",
+    "other_than_full_and_open": null,
+    "other_than_full_and_open_description": null,
+    "commercial_item_acquisition": "A",
+    "commercial_item_acquisition_description": "COMMERCIAL PRODUCTS/SERVICES",
+    "commercial_item_test_program": "N",
+    "commercial_item_test_program_description": "NO",
+    "evaluated_preference_description": "NO PREFERENCE USED",
+    "fair_opportunity_limited": "ONE",
+    "fair_opportunity_limited_description": "ONLY ONE SOURCE - OTHER",
+    "product_or_service_description": "INFORMATION TECHNOLOGY SOFTWARE",
+    "dod_claimant_program": null,
+    "dod_claimant_program_description": null,
+    "dod_acquisition_program": null,
+    "dod_acquisition_program_description": null,
+    "information_technology_commercial_item_category": null,
+    "information_technology_commercial_item_category_description": null,
+    "sea_transportation_description": null,
+    "clinger_cohen_act_planning_description": "NO",
+    "construction_wage_rate": "X",
+    "construction_wage_rate_description": "NOT APPLICABLE",
+    "labor_standards_description": "NO",
+    "materials_supplies": "X",
+    "materials_supplies_description": "NOT APPLICABLE",
+    "cost_or_pricing_data_description": "NO",
+    "domestic_or_foreign_entity_description": "U.S. OWNED BUSINESS",
+    "foreign_funding_description": "NOT APPLICABLE",
+    "interagency_contracting_authority": "X",
+    "interagency_contracting_authority_description": "NOT APPLICABLE",
+    "price_evaluation_adjustment": null,
+    "subcontracting_plan_description": "PLAN NOT REQUIRED",
+    "multi_year_contract_description": "YES",
+    "purchase_card_as_payment_method": "N",
+    "purchase_card_as_payment_method_description": "NO",
+    "consolidated_contract_description": "NO",
+    "type_of_contract_pricing_description": "FIRM FIXED PRICE",
+    "national_interest_action_description": null
+  },
+  "funding_agency": {
+    "id": 782,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "Federal Emergency Management Agency",
+      "code": "7022",
+      "abbreviation": "FEMA"
+    },
+    "office_agency_name": "ORR \u2013 OFFICE OF RESPONSE AND RECOVERY"
+  },
+  "awarding_agency": {
+    "id": 782,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "Federal Emergency Management Agency",
+      "code": "7022",
+      "abbreviation": "FEMA"
+    },
+    "office_agency_name": "INCIDENT SUPPORT SECTION(ISS70)"
+  },
+  "period_of_performance": {
+    "start_date": "2015-09-25",
+    "end_date": "2016-09-24",
+    "last_modified_date": "2025-02-04",
+    "potential_end_date": "2016-09-24 00:00:00"
+  },
+  "recipient": {
+    "recipient_hash": "bcd07db9-001a-b962-dbab-d463bb99028f-C",
+    "recipient_name": "GOVERNMENT ACQUISITIONS LLC",
+    "recipient_uei": "R98MW4ZKUUK3",
+    "recipient_unique_id": null,
+    "parent_recipient_hash": "bcd07db9-001a-b962-dbab-d463bb99028f-P",
+    "parent_recipient_name": "GOVERNMENT ACQUISITIONS LLC",
+    "parent_recipient_uei": "R98MW4ZKUUK3",
+    "parent_recipient_unique_id": null,
+    "business_categories": [
+      "Asian Pacific American Owned Business",
+      "Category Business",
+      "Corporate Entity Not Tax Exempt",
+      "Minority Owned Business",
+      "Small Business",
+      "Special Designations",
+      "Subchapter S Corporation",
+      "U.S.-Owned Business"
+    ],
+    "location": {
+      "location_country_code": "USA",
+      "country_name": "UNITED STATES",
+      "state_code": "OH",
+      "state_name": "OHIO",
+      "city_name": "CINCINNATI",
+      "county_code": "061",
+      "county_name": "HAMILTON",
+      "address_line1": "2060 READING ROAD",
+      "address_line2": "FL 3",
+      "address_line3": null,
+      "congressional_code": "01",
+      "zip4": "1400",
+      "zip5": "45202",
+      "foreign_postal_code": null,
+      "foreign_province": null
+    }
+  },
+  "executive_details": {
+    "officers": [
+      {
+        "name": "JAY  LAMBKE",
+        "amount": 1533850.0
+      },
+      {
+        "name": "TRACY  PAVILLARD",
+        "amount": 1153018.0
+      },
+      {
+        "name": "JOHN  GELSINGER",
+        "amount": 458345.0
+      },
+      {
+        "name": "TODD  BROWN",
+        "amount": 538603.0
+      },
+      {
+        "name": "CHRISTOPHER  GORDON",
+        "amount": 738289.0
+      }
+    ]
+  },
+  "place_of_performance": {
+    "location_country_code": "USA",
+    "country_name": "UNITED STATES",
+    "county_code": "037",
+    "county_name": "JEFFERSON",
+    "city_name": "BLUEMONT",
+    "state_code": "WV",
+    "state_name": "WEST VIRGINIA",
+    "congressional_code": "02",
+    "zip4": "1718",
+    "zip5": "20135",
+    "address_line1": null,
+    "address_line2": null,
+    "address_line3": null,
+    "foreign_province": null,
+    "foreign_postal_code": null
+  },
+  "psc_hierarchy": {
+    "toptier_code": {},
+    "midtier_code": {
+      "code": "70",
+      "description": "INFORMATION TECHNOLOGY EQUIPMENT (INCLD FIRMWARE) SOFTWARE,SUPPLIES& SUPPORT EQUIPMENT"
+    },
+    "subtier_code": {},
+    "base_code": {
+      "code": "7030",
+      "description": "INFORMATION TECHNOLOGY SOFTWARE"
+    }
+  },
+  "naics_hierarchy": {
+    "toptier_code": {
+      "code": "54",
+      "description": "Professional, Scientific, and Technical Services"
+    },
+    "midtier_code": {
+      "code": "5415",
+      "description": "Computer Systems Design and Related Services"
+    },
+    "base_code": {
+      "code": "541519",
+      "description": "Other Computer Related Services"
+    }
+  },
+  "total_outlay": null
+}

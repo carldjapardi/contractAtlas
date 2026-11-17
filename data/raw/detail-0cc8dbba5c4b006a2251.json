@@ -1,0 +1,260 @@
+{
+  "id": 291267550,
+  "generated_unique_award_id": "CONT_AWD_70Z02325F93130001_7008_47QRCA25DA015_4732",
+  "piid": "70Z02325F93130001",
+  "category": "contract",
+  "type": "C",
+  "type_description": "DELIVERY ORDER",
+  "description": "PROGRAM MANAGEMENT, TECHNICAL & SYSTEMS ENGINEERING, CYBERSECURITY, AND LIFE-CYCLE LOGISTICS SUPPORT TO THE USCG UNMANNED AVIATION SYSTEMS (UAS) PROGRAM OFFICE WITHIN THE ROBOTICS AND AUTONOMOUS SYSTEMS PROGRAM EXECUTIVE OFFICE (RAS PEO)",
+  "total_obligation": 0.0,
+  "subaward_count": 0,
+  "total_subaward_amount": null,
+  "date_signed": "2025-09-16",
+  "base_exercised_options": 0.0,
+  "base_and_all_options": 0.0,
+  "total_account_outlay": 0.0,
+  "total_account_obligation": -2227274.77,
+  "account_outlays_by_defc": [
+    {
+      "code": "Q",
+      "amount": 0.0
+    }
+  ],
+  "account_obligations_by_defc": [
+    {
+      "code": "Q",
+      "amount": -2227274.77
+    }
+  ],
+  "parent_award": {
+    "agency_id": 614,
+    "agency_name": "General Services Administration",
+    "agency_slug": "general-services-administration",
+    "sub_agency_id": "4732",
+    "sub_agency_name": "Federal Acquisition Service",
+    "award_id": 350998392,
+    "generated_unique_award_id": "CONT_IDV_47QRCA25DA015_4732",
+    "idv_type_description": "IDC",
+    "multiple_or_single_aw_desc": "MULTIPLE AWARD",
+    "piid": "47QRCA25DA015",
+    "type_of_idc_description": "INDEFINITE DELIVERY / INDEFINITE QUANTITY"
+  },
+  "latest_transaction_contract_data": {
+    "idv_type_description": null,
+    "type_of_idc_description": null,
+    "referenced_idv_agency_iden": "4732",
+    "referenced_idv_agency_desc": "FEDERAL ACQUISITION SERVICE",
+    "solicitation_identifier": null,
+    "solicitation_procedures": "MAFO",
+    "number_of_offers_received": "1",
+    "extent_competed": "D",
+    "type_set_aside": null,
+    "type_set_aside_description": null,
+    "evaluated_preference": "NONE",
+    "fed_biz_opps": "Y",
+    "fed_biz_opps_description": "YES",
+    "small_business_competitive": false,
+    "product_or_service_code": "R707",
+    "naics": "336611",
+    "naics_description": "SHIP BUILDING AND REPAIRING",
+    "sea_transportation": null,
+    "clinger_cohen_act_planning": "N",
+    "labor_standards": "X",
+    "cost_or_pricing_data": "N",
+    "domestic_or_foreign_entity": "A",
+    "foreign_funding": "X",
+    "major_program": null,
+    "program_acronym": null,
+    "subcontracting_plan": "B",
+    "multi_year_contract": "N",
+    "consolidated_contract": "D",
+    "type_of_contract_pricing": "J",
+    "national_interest_action": null,
+    "multiple_or_single_award_description": null,
+    "solicitation_procedures_description": "SUBJECT TO MULTIPLE AWARD FAIR OPPORTUNITY",
+    "extent_competed_description": "FULL AND OPEN COMPETITION AFTER EXCLUSION OF SOURCES",
+    "other_than_full_and_open": null,
+    "other_than_full_and_open_description": null,
+    "commercial_item_acquisition": "D",
+    "commercial_item_acquisition_description": "COMMERCIAL PRODUCTS/SERVICES PROCEDURES NOT USED",
+    "commercial_item_test_program": "N",
+    "commercial_item_test_program_description": "NO",
+    "evaluated_preference_description": "NO PREFERENCE USED",
+    "fair_opportunity_limited": "SSRC",
+    "fair_opportunity_limited_description": "FAR 16.505(B)(2)(I)(G) SINGLE SOURCE",
+    "product_or_service_description": "SUPPORT- MANAGEMENT: CONTRACT/PROCUREMENT/ACQUISITION SUPPORT",
+    "dod_claimant_program": null,
+    "dod_claimant_program_description": null,
+    "dod_acquisition_program": null,
+    "dod_acquisition_program_description": null,
+    "information_technology_commercial_item_category": null,
+    "information_technology_commercial_item_category_description": null,
+    "sea_transportation_description": null,
+    "clinger_cohen_act_planning_description": "NO",
+    "construction_wage_rate": "X",
+    "construction_wage_rate_description": "NOT APPLICABLE",
+    "labor_standards_description": "NOT APPLICABLE",
+    "materials_supplies": "X",
+    "materials_supplies_description": "NOT APPLICABLE",
+    "cost_or_pricing_data_description": "NO",
+    "domestic_or_foreign_entity_description": "U.S. OWNED BUSINESS",
+    "foreign_funding_description": "NOT APPLICABLE",
+    "interagency_contracting_authority": "X",
+    "interagency_contracting_authority_description": "NOT APPLICABLE",
+    "price_evaluation_adjustment": null,
+    "subcontracting_plan_description": "PLAN NOT REQUIRED",
+    "multi_year_contract_description": "NO",
+    "purchase_card_as_payment_method": "N",
+    "purchase_card_as_payment_method_description": "NO",
+    "consolidated_contract_description": "NOT CONSOLIDATED",
+    "type_of_contract_pricing_description": "FIRM FIXED PRICE",
+    "national_interest_action_description": null
+  },
+  "funding_agency": {
+    "id": 772,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Coast Guard",
+      "code": "7008",
+      "abbreviation": "USCG"
+    },
+    "office_agency_name": "COMMANDANT ACQUISITIONS DIRECTORATE"
+  },
+  "awarding_agency": {
+    "id": 772,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Coast Guard",
+      "code": "7008",
+      "abbreviation": "USCG"
+    },
+    "office_agency_name": "HQ CONTRACT OPERATIONS (CG-912)(000"
+  },
+  "period_of_performance": {
+    "start_date": "2025-09-30",
+    "end_date": "2026-09-29",
+    "last_modified_date": "2025-10-29",
+    "potential_end_date": "2027-09-29 00:00:00"
+  },
+  "recipient": {
+    "recipient_hash": "16f780ab-99f8-e0d6-7400-7a8d6d863c90-C",
+    "recipient_name": "ABEYON LLC",
+    "recipient_uei": "VX16L4C8NDT5",
+    "recipient_unique_id": null,
+    "parent_recipient_hash": "16f780ab-99f8-e0d6-7400-7a8d6d863c90-P",
+    "parent_recipient_name": "ABEYON LLC",
+    "parent_recipient_uei": "VX16L4C8NDT5",
+    "parent_recipient_unique_id": null,
+    "business_categories": [
+      "8(a) Program Participant",
+      "Category Business",
+      "Minority Owned Business",
+      "Partnership or Limited Liability Partnership",
+      "Self-Certified Small Disadvantaged Business",
+      "Small Business",
+      "Special Designations",
+      "Indian (Subcontinent) American Owned Business",
+      "U.S.-Owned Business"
+    ],
+    "location": {
+      "location_country_code": "USA",
+      "country_name": "UNITED STATES",
+      "state_code": "VA",
+      "state_name": "VIRGINIA",
+      "city_name": "ARLINGTON",
+      "county_code": "013",
+      "county_name": "ARLINGTON",
+      "address_line1": "2700 S QUINCY ST STE 290",
+      "address_line2": null,
+      "address_line3": null,
+      "congressional_code": "08",
+      "zip4": "2242",
+      "zip5": "22206",
+      "foreign_postal_code": null,
+      "foreign_province": null
+    }
+  },
+  "executive_details": {
+    "officers": [
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      }
+    ]
+  },
+  "place_of_performance": {
+    "location_country_code": "USA",
+    "country_name": "UNITED STATES",
+    "county_code": "001",
+    "county_name": "DISTRICT OF COLUMBIA",
+    "city_name": "WASHINGTON",
+    "state_code": "DC",
+    "state_name": "DISTRICT OF COLUMBIA",
+    "congressional_code": "98",
+    "zip4": "9344",
+    "zip5": "20032",
+    "address_line1": null,
+    "address_line2": null,
+    "address_line3": null,
+    "foreign_province": null,
+    "foreign_postal_code": null
+  },
+  "psc_hierarchy": {
+    "toptier_code": {
+      "code": "R",
+      "description": "SUPPORT SVCS (PROF, ADMIN, MGMT)"
+    },
+    "midtier_code": {
+      "code": "R7",
+      "description": "MANAGEMENT SUPPORT SERVICES"
+    },
+    "subtier_code": {},
+    "base_code": {
+      "code": "R707",
+      "description": "SUPPORT- MANAGEMENT: CONTRACT/PROCUREMENT/ACQUISITION SUPPORT"
+    }
+  },
+  "naics_hierarchy": {
+    "toptier_code": {
+      "code": "33",
+      "description": "Manufacturing"
+    },
+    "midtier_code": {
+      "code": "3366",
+      "description": "Ship and Boat Building"
+    },
+    "base_code": {
+      "code": "336611",
+      "description": "Ship Building and Repairing"
+    }
+  },
+  "total_outlay": null
+}

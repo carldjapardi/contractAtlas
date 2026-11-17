@@ -1,0 +1,254 @@
+{
+  "id": 291194552,
+  "generated_unique_award_id": "CONT_AWD_70CMSD25FC0000006_7012_70RTAC24A00000001_7001",
+  "piid": "70CMSD25FC0000006",
+  "category": "contract",
+  "type": "A",
+  "type_description": "BPA CALL",
+  "description": "THIS AWARD PROVIDES ICE HSI CYBER AND OPERATIONAL TECHNOLOGY UNIT WITH MICROSOFT LICENSES FOR CALEA NETWORK.",
+  "total_obligation": 9054.18,
+  "subaward_count": 0,
+  "total_subaward_amount": null,
+  "date_signed": "2025-05-08",
+  "base_exercised_options": 9054.18,
+  "base_and_all_options": 9054.18,
+  "total_account_outlay": 9054.18,
+  "total_account_obligation": 9054.18,
+  "account_outlays_by_defc": [
+    {
+      "code": "Q",
+      "amount": 9054.18
+    }
+  ],
+  "account_obligations_by_defc": [
+    {
+      "code": "Q",
+      "amount": 9054.18
+    }
+  ],
+  "parent_award": {
+    "agency_id": 766,
+    "agency_name": "Department of Homeland Security",
+    "agency_slug": "department-of-homeland-security",
+    "sub_agency_id": "7001",
+    "sub_agency_name": "Office of Procurement Operations",
+    "award_id": 351027091,
+    "generated_unique_award_id": "CONT_IDV_70RTAC24A00000001_7001",
+    "idv_type_description": "BPA",
+    "multiple_or_single_aw_desc": "SINGLE AWARD",
+    "piid": "70RTAC24A00000001",
+    "type_of_idc_description": null
+  },
+  "latest_transaction_contract_data": {
+    "idv_type_description": null,
+    "type_of_idc_description": null,
+    "referenced_idv_agency_iden": "7001",
+    "referenced_idv_agency_desc": "OFFICE OF PROCUREMENT OPERATIONS",
+    "solicitation_identifier": null,
+    "solicitation_procedures": "MAFO",
+    "number_of_offers_received": null,
+    "extent_competed": "A",
+    "type_set_aside": null,
+    "type_set_aside_description": null,
+    "evaluated_preference": "NONE",
+    "fed_biz_opps": null,
+    "fed_biz_opps_description": null,
+    "small_business_competitive": false,
+    "product_or_service_code": "7A20",
+    "naics": "511210",
+    "naics_description": "SOFTWARE PUBLISHERS",
+    "sea_transportation": null,
+    "clinger_cohen_act_planning": "N",
+    "labor_standards": "N",
+    "cost_or_pricing_data": null,
+    "domestic_or_foreign_entity": "A",
+    "foreign_funding": "X",
+    "major_program": null,
+    "program_acronym": null,
+    "subcontracting_plan": null,
+    "multi_year_contract": null,
+    "consolidated_contract": "D",
+    "type_of_contract_pricing": "J",
+    "national_interest_action": null,
+    "multiple_or_single_award_description": null,
+    "solicitation_procedures_description": "SUBJECT TO MULTIPLE AWARD FAIR OPPORTUNITY",
+    "extent_competed_description": "FULL AND OPEN COMPETITION",
+    "other_than_full_and_open": null,
+    "other_than_full_and_open_description": null,
+    "commercial_item_acquisition": "D",
+    "commercial_item_acquisition_description": "COMMERCIAL PRODUCTS/SERVICES PROCEDURES NOT USED",
+    "commercial_item_test_program": "N",
+    "commercial_item_test_program_description": "NO",
+    "evaluated_preference_description": "NO PREFERENCE USED",
+    "fair_opportunity_limited": "FAIR",
+    "fair_opportunity_limited_description": "FAIR OPPORTUNITY GIVEN",
+    "product_or_service_description": "IT AND TELECOM - APPLICATION DEVELOPMENT SOFTWARE (PERPETUAL LICENSE SOFTWARE)",
+    "dod_claimant_program": null,
+    "dod_claimant_program_description": null,
+    "dod_acquisition_program": null,
+    "dod_acquisition_program_description": null,
+    "information_technology_commercial_item_category": null,
+    "information_technology_commercial_item_category_description": null,
+    "sea_transportation_description": null,
+    "clinger_cohen_act_planning_description": "NO",
+    "construction_wage_rate": "X",
+    "construction_wage_rate_description": "NOT APPLICABLE",
+    "labor_standards_description": "NO",
+    "materials_supplies": "X",
+    "materials_supplies_description": "NOT APPLICABLE",
+    "cost_or_pricing_data_description": null,
+    "domestic_or_foreign_entity_description": "U.S. OWNED BUSINESS",
+    "foreign_funding_description": "NOT APPLICABLE",
+    "interagency_contracting_authority": "X",
+    "interagency_contracting_authority_description": "NOT APPLICABLE",
+    "price_evaluation_adjustment": null,
+    "subcontracting_plan_description": null,
+    "multi_year_contract_description": null,
+    "purchase_card_as_payment_method": "N",
+    "purchase_card_as_payment_method_description": "NO",
+    "consolidated_contract_description": "NOT CONSOLIDATED",
+    "type_of_contract_pricing_description": "FIRM FIXED PRICE",
+    "national_interest_action_description": null
+  },
+  "funding_agency": {
+    "id": 776,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Immigration and Customs Enforcement",
+      "code": "7012",
+      "abbreviation": "ICE"
+    },
+    "office_agency_name": "HOMELAND SECURITY INVESTIGATIONS DIVISION 6"
+  },
+  "awarding_agency": {
+    "id": 776,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Immigration and Customs Enforcement",
+      "code": "7012",
+      "abbreviation": "ICE"
+    },
+    "office_agency_name": "INVESTIGATIONS AND OPERATIONS SUPPORT DALLAS"
+  },
+  "period_of_performance": {
+    "start_date": "2025-05-12",
+    "end_date": "2029-03-29",
+    "last_modified_date": "2026-09-10",
+    "potential_end_date": "2029-03-29 00:00:00"
+  },
+  "recipient": {
+    "recipient_hash": "3612de0a-9635-3846-a5a1-7f555fba52df-C",
+    "recipient_name": "DELL FEDERAL SYSTEMS L.P",
+    "recipient_uei": "N1C5QLNPJLS4",
+    "recipient_unique_id": null,
+    "parent_recipient_hash": "f96a8de9-a2b2-cc9d-cc9f-ec5976fb4c3b-P",
+    "parent_recipient_name": "FRANCISCO PARTNERS MANAGEMENT, L.P.",
+    "parent_recipient_uei": "JGSNSER23GR6",
+    "parent_recipient_unique_id": null,
+    "business_categories": [
+      "Category Business",
+      "Manufacturer of Goods",
+      "Not Designated a Small Business",
+      "Partnership or Limited Liability Partnership",
+      "Special Designations",
+      "U.S.-Owned Business"
+    ],
+    "location": {
+      "location_country_code": "USA",
+      "country_name": "UNITED STATES",
+      "state_code": "TX",
+      "state_name": "TEXAS",
+      "city_name": "ROUND ROCK",
+      "county_code": "491",
+      "county_name": "WILLIAMSON",
+      "address_line1": "1 DELL WAY",
+      "address_line2": null,
+      "address_line3": null,
+      "congressional_code": "17",
+      "zip4": "7000",
+      "zip5": "78682",
+      "foreign_postal_code": null,
+      "foreign_province": null
+    }
+  },
+  "executive_details": {
+    "officers": [
+      {
+        "name": "MATT  SEDLACEK",
+        "amount": 3205954.0
+      },
+      {
+        "name": "RAY  MCDUFFIE",
+        "amount": 1049477.0
+      },
+      {
+        "name": "SURI  DURVASULA",
+        "amount": 1022027.0
+      },
+      {
+        "name": "LEV  KATZ",
+        "amount": 942687.0
+      },
+      {
+        "name": "JOHN  GARRETT",
+        "amount": 844489.0
+      }
+    ]
+  },
+  "place_of_performance": {
+    "location_country_code": "USA",
+    "country_name": "UNITED STATES",
+    "county_code": "491",
+    "county_name": "WILLIAMSON",
+    "city_name": "ROUND ROCK",
+    "state_code": "TX",
+    "state_name": "TEXAS",
+    "congressional_code": "17",
+    "zip4": "7000",
+    "zip5": "78682",
+    "address_line1": null,
+    "address_line2": null,
+    "address_line3": null,
+    "foreign_province": null,
+    "foreign_postal_code": null
+  },
+  "psc_hierarchy": {
+    "toptier_code": {},
+    "midtier_code": {
+      "code": "7A",
+      "description": "IT AND TELECOM - APLLICATIONS"
+    },
+    "subtier_code": {},
+    "base_code": {
+      "code": "7A20",
+      "description": "IT AND TELECOM - APPLICATION DEVELOPMENT SOFTWARE (PERPETUAL LICENSE SOFTWARE)"
+    }
+  },
+  "naics_hierarchy": {
+    "toptier_code": {
+      "code": "51",
+      "description": "Information"
+    },
+    "midtier_code": {
+      "code": "5112",
+      "description": "Software Publishers"
+    },
+    "base_code": {
+      "code": "511210",
+      "description": "Software Publishers"
+    }
+  },
+  "total_outlay": 9054.18
+}

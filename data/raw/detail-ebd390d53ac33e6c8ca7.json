@@ -1,0 +1,256 @@
+{
+  "id": 291237304,
+  "generated_unique_award_id": "CONT_AWD_70RCSA20FR0000099_7001_GS00Q14OADU108_4732",
+  "piid": "70RCSA20FR0000099",
+  "category": "contract",
+  "type": "C",
+  "type_description": "DELIVERY ORDER",
+  "description": "THE DEPARTMENT OF HOMELAND SECURITY (DHS), CYBERSECURITY AND INFRASTRUCTURE SECURITY AGENCY ACQUISITIONS DIVISION (CISAAD) IS ISSUING THIS SINGLE TIME-AND-MATERIALS TASK ORDER TO BOOZ ALLEN HAMILTON, INC. UNDER THE ONE ACQUISITION SOLUTION FOR INTEGR",
+  "total_obligation": 54003653.7,
+  "subaward_count": 4,
+  "total_subaward_amount": 4853832.44,
+  "date_signed": "2020-09-29",
+  "base_exercised_options": 55192146.52,
+  "base_and_all_options": 55552287.68,
+  "total_account_outlay": 28414689.57,
+  "total_account_obligation": 53985122.35,
+  "account_outlays_by_defc": [
+    {
+      "code": "Q",
+      "amount": 28414689.57
+    }
+  ],
+  "account_obligations_by_defc": [
+    {
+      "code": "Q",
+      "amount": 53985122.35
+    }
+  ],
+  "parent_award": {
+    "agency_id": 614,
+    "agency_name": "General Services Administration",
+    "agency_slug": "general-services-administration",
+    "sub_agency_id": "4732",
+    "sub_agency_name": "Federal Acquisition Service",
+    "award_id": 351200606,
+    "generated_unique_award_id": "CONT_IDV_GS00Q14OADU108_4732",
+    "idv_type_description": "IDC",
+    "multiple_or_single_aw_desc": "MULTIPLE AWARD",
+    "piid": "GS00Q14OADU108",
+    "type_of_idc_description": "INDEFINITE DELIVERY / REQUIREMENTS"
+  },
+  "latest_transaction_contract_data": {
+    "idv_type_description": null,
+    "type_of_idc_description": null,
+    "referenced_idv_agency_iden": "4732",
+    "referenced_idv_agency_desc": "FEDERAL ACQUISITION SERVICE",
+    "solicitation_identifier": null,
+    "solicitation_procedures": "MAFO",
+    "number_of_offers_received": "1",
+    "extent_competed": "A",
+    "type_set_aside": null,
+    "type_set_aside_description": null,
+    "evaluated_preference": "NONE",
+    "fed_biz_opps": "Y",
+    "fed_biz_opps_description": "YES",
+    "small_business_competitive": false,
+    "product_or_service_code": "R408",
+    "naics": "541330",
+    "naics_description": "ENGINEERING SERVICES",
+    "sea_transportation": null,
+    "clinger_cohen_act_planning": "N",
+    "labor_standards": "N",
+    "cost_or_pricing_data": "N",
+    "domestic_or_foreign_entity": "A",
+    "foreign_funding": "X",
+    "major_program": null,
+    "program_acronym": null,
+    "subcontracting_plan": "C",
+    "multi_year_contract": "N",
+    "consolidated_contract": "D",
+    "type_of_contract_pricing": "Y",
+    "national_interest_action": null,
+    "multiple_or_single_award_description": null,
+    "solicitation_procedures_description": "SUBJECT TO MULTIPLE AWARD FAIR OPPORTUNITY",
+    "extent_competed_description": "FULL AND OPEN COMPETITION",
+    "other_than_full_and_open": null,
+    "other_than_full_and_open_description": null,
+    "commercial_item_acquisition": "D",
+    "commercial_item_acquisition_description": "COMMERCIAL PRODUCTS/SERVICES PROCEDURES NOT USED",
+    "commercial_item_test_program": "N",
+    "commercial_item_test_program_description": "NO",
+    "evaluated_preference_description": "NO PREFERENCE USED",
+    "fair_opportunity_limited": "FAIR",
+    "fair_opportunity_limited_description": "FAIR OPPORTUNITY GIVEN",
+    "product_or_service_description": "SUPPORT- PROFESSIONAL: PROGRAM MANAGEMENT/SUPPORT",
+    "dod_claimant_program": null,
+    "dod_claimant_program_description": null,
+    "dod_acquisition_program": null,
+    "dod_acquisition_program_description": null,
+    "information_technology_commercial_item_category": null,
+    "information_technology_commercial_item_category_description": null,
+    "sea_transportation_description": null,
+    "clinger_cohen_act_planning_description": "NO",
+    "construction_wage_rate": "X",
+    "construction_wage_rate_description": "NOT APPLICABLE",
+    "labor_standards_description": "NO",
+    "materials_supplies": "X",
+    "materials_supplies_description": "NOT APPLICABLE",
+    "cost_or_pricing_data_description": "NO",
+    "domestic_or_foreign_entity_description": "U.S. OWNED BUSINESS",
+    "foreign_funding_description": "NOT APPLICABLE",
+    "interagency_contracting_authority": "X",
+    "interagency_contracting_authority_description": "NOT APPLICABLE",
+    "price_evaluation_adjustment": null,
+    "subcontracting_plan_description": "PLAN REQUIRED - INCENTIVE NOT INCLUDED",
+    "multi_year_contract_description": "NO",
+    "purchase_card_as_payment_method": "N",
+    "purchase_card_as_payment_method_description": "NO",
+    "consolidated_contract_description": "NOT CONSOLIDATED",
+    "type_of_contract_pricing_description": "TIME AND MATERIALS",
+    "national_interest_action_description": null
+  },
+  "funding_agency": {
+    "id": 1480,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "Cybersecurity and Infrastructure Security Agency",
+      "code": "7061",
+      "abbreviation": null
+    },
+    "office_agency_name": "Off of the Dir CISA"
+  },
+  "awarding_agency": {
+    "id": 767,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "Office of Procurement Operations",
+      "code": "7001",
+      "abbreviation": "OPO"
+    },
+    "office_agency_name": "CISA CONTRACTING ACTIVITY"
+  },
+  "period_of_performance": {
+    "start_date": "2020-09-30",
+    "end_date": "2025-03-31",
+    "last_modified_date": "2025-02-03",
+    "potential_end_date": "2025-03-31 00:00:00"
+  },
+  "recipient": {
+    "recipient_hash": "ffca72e5-fba2-798a-6969-2a6c45e9f985-C",
+    "recipient_name": "BOOZ ALLEN HAMILTON INC",
+    "recipient_uei": "JCBMLGPE6Z71",
+    "recipient_unique_id": null,
+    "parent_recipient_hash": "ed02855e-60d7-2540-e3d7-18fba1dd1316-P",
+    "parent_recipient_name": "BOOZ ALLEN HAMILTON HOLDING CORPORATION",
+    "parent_recipient_uei": "MBPHTU7Y9S65",
+    "parent_recipient_unique_id": null,
+    "business_categories": [
+      "Category Business",
+      "Corporate Entity Not Tax Exempt",
+      "Not Designated a Small Business",
+      "Special Designations",
+      "U.S.-Owned Business"
+    ],
+    "location": {
+      "location_country_code": "USA",
+      "country_name": "UNITED STATES",
+      "state_code": "VA",
+      "state_name": "VIRGINIA",
+      "city_name": "MC LEAN",
+      "county_code": "059",
+      "county_name": "FAIRFAX",
+      "address_line1": "8283 GREENSBORO DR",
+      "address_line2": null,
+      "address_line3": null,
+      "congressional_code": "11",
+      "zip4": "3830",
+      "zip5": "22102",
+      "foreign_postal_code": null,
+      "foreign_province": null
+    }
+  },
+  "executive_details": {
+    "officers": [
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      }
+    ]
+  },
+  "place_of_performance": {
+    "location_country_code": "USA",
+    "country_name": "UNITED STATES",
+    "county_code": "001",
+    "county_name": "DISTRICT OF COLUMBIA",
+    "city_name": "WASHINGTON",
+    "state_code": "DC",
+    "state_name": "DISTRICT OF COLUMBIA",
+    "congressional_code": "98",
+    "zip4": "0001",
+    "zip5": "20528",
+    "address_line1": null,
+    "address_line2": null,
+    "address_line3": null,
+    "foreign_province": null,
+    "foreign_postal_code": null
+  },
+  "psc_hierarchy": {
+    "toptier_code": {
+      "code": "R",
+      "description": "SUPPORT SVCS (PROF, ADMIN, MGMT)"
+    },
+    "midtier_code": {
+      "code": "R4",
+      "description": "PROFESSIONAL SERVICES"
+    },
+    "subtier_code": {},
+    "base_code": {
+      "code": "R408",
+      "description": "SUPPORT- PROFESSIONAL: PROGRAM MANAGEMENT/SUPPORT"
+    }
+  },
+  "naics_hierarchy": {
+    "toptier_code": {
+      "code": "54",
+      "description": "Professional, Scientific, and Technical Services"
+    },
+    "midtier_code": {
+      "code": "5413",
+      "description": "Architectural, Engineering, and Related Services"
+    },
+    "base_code": {
+      "code": "541330",
+      "description": "Engineering Services"
+    }
+  },
+  "total_outlay": 28414689.57
+}

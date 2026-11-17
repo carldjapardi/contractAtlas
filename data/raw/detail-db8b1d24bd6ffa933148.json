@@ -1,0 +1,257 @@
+{
+  "id": 291199885,
+  "generated_unique_award_id": "CONT_AWD_70CTD025FC0000036_7012_70CTD025A00000001_7012",
+  "piid": "70CTD025FC0000036",
+  "category": "contract",
+  "type": "A",
+  "type_description": "BPA CALL",
+  "description": "PROVIDES THE PROCUREMENT & INSTALLATION OF VIDEO TELECONFERENCING EQUIPMENT FOR THE CYBER CRIMES CENTER (C3) LOCATED IN FAIRFAX, VA.",
+  "total_obligation": 419740.5,
+  "subaward_count": 0,
+  "total_subaward_amount": null,
+  "date_signed": "2025-09-23",
+  "base_exercised_options": 419740.5,
+  "base_and_all_options": 419740.5,
+  "total_account_outlay": 419740.5,
+  "total_account_obligation": 419740.5,
+  "account_outlays_by_defc": [
+    {
+      "code": "Q",
+      "amount": 419740.5
+    }
+  ],
+  "account_obligations_by_defc": [
+    {
+      "code": "Q",
+      "amount": 419740.5
+    }
+  ],
+  "parent_award": {
+    "agency_id": 766,
+    "agency_name": "Department of Homeland Security",
+    "agency_slug": "department-of-homeland-security",
+    "sub_agency_id": "7012",
+    "sub_agency_name": "U.S. Immigration and Customs Enforcement",
+    "award_id": 351025893,
+    "generated_unique_award_id": "CONT_IDV_70CTD025A00000001_7012",
+    "idv_type_description": "BPA",
+    "multiple_or_single_aw_desc": "SINGLE AWARD",
+    "piid": "70CTD025A00000001",
+    "type_of_idc_description": null
+  },
+  "latest_transaction_contract_data": {
+    "idv_type_description": null,
+    "type_of_idc_description": null,
+    "referenced_idv_agency_iden": "7012",
+    "referenced_idv_agency_desc": "U.S. IMMIGRATION AND CUSTOMS ENFORCEMENT",
+    "solicitation_identifier": null,
+    "solicitation_procedures": "SP1",
+    "number_of_offers_received": "3",
+    "extent_competed": "F",
+    "type_set_aside": "HZC",
+    "type_set_aside_description": "HUBZONE SET-ASIDE",
+    "evaluated_preference": "NONE",
+    "fed_biz_opps": null,
+    "fed_biz_opps_description": null,
+    "small_business_competitive": false,
+    "product_or_service_code": "7E20",
+    "naics": "541519",
+    "naics_description": "OTHER COMPUTER RELATED SERVICES",
+    "sea_transportation": null,
+    "clinger_cohen_act_planning": "N",
+    "labor_standards": "N",
+    "cost_or_pricing_data": null,
+    "domestic_or_foreign_entity": "A",
+    "foreign_funding": "X",
+    "major_program": null,
+    "program_acronym": null,
+    "subcontracting_plan": "B",
+    "multi_year_contract": null,
+    "consolidated_contract": "D",
+    "type_of_contract_pricing": "J",
+    "national_interest_action": null,
+    "multiple_or_single_award_description": null,
+    "solicitation_procedures_description": "SIMPLIFIED ACQUISITION",
+    "extent_competed_description": "COMPETED UNDER SAP",
+    "other_than_full_and_open": null,
+    "other_than_full_and_open_description": null,
+    "commercial_item_acquisition": "A",
+    "commercial_item_acquisition_description": "COMMERCIAL PRODUCTS/SERVICES",
+    "commercial_item_test_program": "N",
+    "commercial_item_test_program_description": "NO",
+    "evaluated_preference_description": "NO PREFERENCE USED",
+    "fair_opportunity_limited": null,
+    "fair_opportunity_limited_description": null,
+    "product_or_service_description": "IT AND TELECOM - END USER: HELP DESK;TIER 1-2,WORKSPACE,PRINT,OUTPUT,PRODUCTIVITY TOOLS (HW/PERP SW)",
+    "dod_claimant_program": null,
+    "dod_claimant_program_description": null,
+    "dod_acquisition_program": null,
+    "dod_acquisition_program_description": null,
+    "information_technology_commercial_item_category": null,
+    "information_technology_commercial_item_category_description": null,
+    "sea_transportation_description": null,
+    "clinger_cohen_act_planning_description": "NO",
+    "construction_wage_rate": "X",
+    "construction_wage_rate_description": "NOT APPLICABLE",
+    "labor_standards_description": "NO",
+    "materials_supplies": "X",
+    "materials_supplies_description": "NOT APPLICABLE",
+    "cost_or_pricing_data_description": null,
+    "domestic_or_foreign_entity_description": "U.S. OWNED BUSINESS",
+    "foreign_funding_description": "NOT APPLICABLE",
+    "interagency_contracting_authority": "X",
+    "interagency_contracting_authority_description": "NOT APPLICABLE",
+    "price_evaluation_adjustment": null,
+    "subcontracting_plan_description": "PLAN NOT REQUIRED",
+    "multi_year_contract_description": null,
+    "purchase_card_as_payment_method": "N",
+    "purchase_card_as_payment_method_description": "NO",
+    "consolidated_contract_description": "NOT CONSOLIDATED",
+    "type_of_contract_pricing_description": "FIRM FIXED PRICE",
+    "national_interest_action_description": null
+  },
+  "funding_agency": {
+    "id": 776,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Immigration and Customs Enforcement",
+      "code": "7012",
+      "abbreviation": "ICE"
+    },
+    "office_agency_name": "CHIEF INFORMATION OFFICER OPERATIONS DIVISION"
+  },
+  "awarding_agency": {
+    "id": 776,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Immigration and Customs Enforcement",
+      "code": "7012",
+      "abbreviation": "ICE"
+    },
+    "office_agency_name": "INFORMATION TECHNOLOGY DIVISION"
+  },
+  "period_of_performance": {
+    "start_date": "2025-09-23",
+    "end_date": "2026-02-20",
+    "last_modified_date": "2026-08-03",
+    "potential_end_date": "2026-02-20 00:00:00"
+  },
+  "recipient": {
+    "recipient_hash": "39a9c2ab-eb71-2cc3-2384-83a293e07a67-C",
+    "recipient_name": "HUMANGO SOLUTIONS, LLC",
+    "recipient_uei": "ZNP3WJKLFEW3",
+    "recipient_unique_id": null,
+    "parent_recipient_hash": "39a9c2ab-eb71-2cc3-2384-83a293e07a67-P",
+    "parent_recipient_name": "HUMANGO SOLUTIONS, LLC",
+    "parent_recipient_uei": "ZNP3WJKLFEW3",
+    "parent_recipient_unique_id": null,
+    "business_categories": [
+      "Category Business",
+      "Corporate Entity Not Tax Exempt",
+      "HUBZone Firm",
+      "Limited Liability Corporation",
+      "Small Business",
+      "Special Designations",
+      "U.S.-Owned Business",
+      "Woman Owned Business",
+      "Women Owned Small Business"
+    ],
+    "location": {
+      "location_country_code": "USA",
+      "country_name": "UNITED STATES",
+      "state_code": "VA",
+      "state_name": "VIRGINIA",
+      "city_name": "LEESBURG",
+      "county_code": "107",
+      "county_name": "LOUDOUN",
+      "address_line1": "222 CATOCTIN CIR SE STE 219",
+      "address_line2": null,
+      "address_line3": null,
+      "congressional_code": "10",
+      "zip4": "3730",
+      "zip5": "20175",
+      "foreign_postal_code": null,
+      "foreign_province": null
+    }
+  },
+  "executive_details": {
+    "officers": [
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      }
+    ]
+  },
+  "place_of_performance": {
+    "location_country_code": "USA",
+    "country_name": "UNITED STATES",
+    "county_code": "600",
+    "county_name": "FAIRFAX CITY",
+    "city_name": "FAIRFAX",
+    "state_code": "VA",
+    "state_name": "VIRGINIA",
+    "congressional_code": "11",
+    "zip4": "2514",
+    "zip5": "22030",
+    "address_line1": null,
+    "address_line2": null,
+    "address_line3": null,
+    "foreign_province": null,
+    "foreign_postal_code": null
+  },
+  "psc_hierarchy": {
+    "toptier_code": {},
+    "midtier_code": {
+      "code": "7E",
+      "description": "IT AND TELECOM - END USER"
+    },
+    "subtier_code": {},
+    "base_code": {
+      "code": "7E20",
+      "description": "IT and Telecom - End User: Help Desk;Tier 1-2,Workspace,Print,Output,Productivity Tools (HW/Perp SW)"
+    }
+  },
+  "naics_hierarchy": {
+    "toptier_code": {
+      "code": "54",
+      "description": "Professional, Scientific, and Technical Services"
+    },
+    "midtier_code": {
+      "code": "5415",
+      "description": "Computer Systems Design and Related Services"
+    },
+    "base_code": {
+      "code": "541519",
+      "description": "Other Computer Related Services"
+    }
+  },
+  "total_outlay": 419740.5
+}

@@ -1,0 +1,242 @@
+{
+  "id": 291194868,
+  "generated_unique_award_id": "CONT_AWD_70CMSD25P00000150_7012_-NONE-_-NONE-",
+  "piid": "70CMSD25P00000150",
+  "category": "contract",
+  "type": "B",
+  "type_description": "PURCHASE ORDER",
+  "description": "THIS AWARD PROVIDES ICE HOMELAND SECURITY INVESTIGATIONS CYBER CRIMES OFFICE WITH SOFTWARE LICENSES FOR USE IN SUPPORT OF ONGOING LAW ENFORCEMENT INVESTIGATIONS.",
+  "total_obligation": 45856.0,
+  "subaward_count": 0,
+  "total_subaward_amount": null,
+  "date_signed": "2025-09-23",
+  "base_exercised_options": 45856.0,
+  "base_and_all_options": 45856.0,
+  "total_account_outlay": 45856.0,
+  "total_account_obligation": 45856.0,
+  "account_outlays_by_defc": [
+    {
+      "code": "Q",
+      "amount": 45856.0
+    }
+  ],
+  "account_obligations_by_defc": [
+    {
+      "code": "Q",
+      "amount": 45856.0
+    }
+  ],
+  "parent_award": null,
+  "latest_transaction_contract_data": {
+    "idv_type_description": null,
+    "type_of_idc_description": null,
+    "referenced_idv_agency_iden": null,
+    "referenced_idv_agency_desc": null,
+    "solicitation_identifier": null,
+    "solicitation_procedures": "SP1",
+    "number_of_offers_received": "1",
+    "extent_competed": "G",
+    "type_set_aside": "NONE",
+    "type_set_aside_description": "NO SET ASIDE USED.",
+    "evaluated_preference": "NONE",
+    "fed_biz_opps": "N",
+    "fed_biz_opps_description": "NO",
+    "small_business_competitive": false,
+    "product_or_service_code": "7A21",
+    "naics": "513210",
+    "naics_description": "SOFTWARE PUBLISHERS",
+    "sea_transportation": null,
+    "clinger_cohen_act_planning": "N",
+    "labor_standards": "N",
+    "cost_or_pricing_data": null,
+    "domestic_or_foreign_entity": "A",
+    "foreign_funding": "X",
+    "major_program": null,
+    "program_acronym": null,
+    "subcontracting_plan": "B",
+    "multi_year_contract": null,
+    "consolidated_contract": "D",
+    "type_of_contract_pricing": "J",
+    "national_interest_action": null,
+    "multiple_or_single_award_description": null,
+    "solicitation_procedures_description": "SIMPLIFIED ACQUISITION",
+    "extent_competed_description": "NOT COMPETED UNDER SAP",
+    "other_than_full_and_open": "SP2",
+    "other_than_full_and_open_description": "SAP NON-COMPETITION (FAR 13)",
+    "commercial_item_acquisition": "A",
+    "commercial_item_acquisition_description": "COMMERCIAL PRODUCTS/SERVICES",
+    "commercial_item_test_program": "N",
+    "commercial_item_test_program_description": "NO",
+    "evaluated_preference_description": "NO PREFERENCE USED",
+    "fair_opportunity_limited": null,
+    "fair_opportunity_limited_description": null,
+    "product_or_service_description": "IT AND TELECOM - BUSINESS APPLICATION SOFTWARE (PERPETUAL LICENSE SOFTWARE)",
+    "dod_claimant_program": null,
+    "dod_claimant_program_description": null,
+    "dod_acquisition_program": null,
+    "dod_acquisition_program_description": null,
+    "information_technology_commercial_item_category": null,
+    "information_technology_commercial_item_category_description": null,
+    "sea_transportation_description": null,
+    "clinger_cohen_act_planning_description": "NO",
+    "construction_wage_rate": "N",
+    "construction_wage_rate_description": "NO",
+    "labor_standards_description": "NO",
+    "materials_supplies": "N",
+    "materials_supplies_description": "NO",
+    "cost_or_pricing_data_description": null,
+    "domestic_or_foreign_entity_description": "U.S. OWNED BUSINESS",
+    "foreign_funding_description": "NOT APPLICABLE",
+    "interagency_contracting_authority": "X",
+    "interagency_contracting_authority_description": "NOT APPLICABLE",
+    "price_evaluation_adjustment": null,
+    "subcontracting_plan_description": "PLAN NOT REQUIRED",
+    "multi_year_contract_description": null,
+    "purchase_card_as_payment_method": "N",
+    "purchase_card_as_payment_method_description": "NO",
+    "consolidated_contract_description": "NOT CONSOLIDATED",
+    "type_of_contract_pricing_description": "FIRM FIXED PRICE",
+    "national_interest_action_description": null
+  },
+  "funding_agency": {
+    "id": 776,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Immigration and Customs Enforcement",
+      "code": "7012",
+      "abbreviation": "ICE"
+    },
+    "office_agency_name": "HOMELAND SECURITY INVESTIGATIONS DIVISION 4"
+  },
+  "awarding_agency": {
+    "id": 776,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Immigration and Customs Enforcement",
+      "code": "7012",
+      "abbreviation": "ICE"
+    },
+    "office_agency_name": "INVESTIGATIONS AND OPERATIONS SUPPORT DALLAS"
+  },
+  "period_of_performance": {
+    "start_date": "2025-09-30",
+    "end_date": "2026-09-29",
+    "last_modified_date": "2025-09-23",
+    "potential_end_date": "2026-09-29 00:00:00"
+  },
+  "recipient": {
+    "recipient_hash": "b120655d-5ea6-db2f-ca2a-59cd9b1b9e66-C",
+    "recipient_name": "SAYARI ANALYTICS, LLC",
+    "recipient_uei": "YZZ2MKYNW468",
+    "recipient_unique_id": null,
+    "parent_recipient_hash": "b120655d-5ea6-db2f-ca2a-59cd9b1b9e66-P",
+    "parent_recipient_name": "SAYARI ANALYTICS, LLC",
+    "parent_recipient_uei": "YZZ2MKYNW468",
+    "parent_recipient_unique_id": null,
+    "business_categories": [
+      "Category Business",
+      "Corporate Entity Not Tax Exempt",
+      "Limited Liability Corporation",
+      "Small Business",
+      "Special Designations",
+      "U.S.-Owned Business"
+    ],
+    "location": {
+      "location_country_code": "USA",
+      "country_name": "UNITED STATES",
+      "state_code": "DC",
+      "state_name": "DISTRICT OF COLUMBIA",
+      "city_name": "WASHINGTON",
+      "county_code": "001",
+      "county_name": "DISTRICT OF COLUMBIA",
+      "address_line1": "829 7TH ST NW",
+      "address_line2": "FL 3",
+      "address_line3": null,
+      "congressional_code": "98",
+      "zip4": "3850",
+      "zip5": "20001",
+      "foreign_postal_code": null,
+      "foreign_province": null
+    }
+  },
+  "executive_details": {
+    "officers": [
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      }
+    ]
+  },
+  "place_of_performance": {
+    "location_country_code": "USA",
+    "country_name": "UNITED STATES",
+    "county_code": "001",
+    "county_name": "DISTRICT OF COLUMBIA",
+    "city_name": "WASHINGTON",
+    "state_code": "DC",
+    "state_name": "DISTRICT OF COLUMBIA",
+    "congressional_code": "98",
+    "zip4": "7612",
+    "zip5": "20005",
+    "address_line1": null,
+    "address_line2": null,
+    "address_line3": null,
+    "foreign_province": null,
+    "foreign_postal_code": null
+  },
+  "psc_hierarchy": {
+    "toptier_code": {},
+    "midtier_code": {
+      "code": "7A",
+      "description": "IT AND TELECOM - APLLICATIONS"
+    },
+    "subtier_code": {},
+    "base_code": {
+      "code": "7A21",
+      "description": "IT AND TELECOM - BUSINESS APPLICATION SOFTWARE (PERPETUAL LICENSE SOFTWARE)"
+    }
+  },
+  "naics_hierarchy": {
+    "toptier_code": {
+      "code": "51",
+      "description": "Information"
+    },
+    "midtier_code": {
+      "code": "5132",
+      "description": "Software Publishers"
+    },
+    "base_code": {
+      "code": "513210",
+      "description": "Software Publishers"
+    }
+  },
+  "total_outlay": 45856.0
+}

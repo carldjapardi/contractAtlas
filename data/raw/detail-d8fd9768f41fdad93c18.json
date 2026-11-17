@@ -1,0 +1,246 @@
+{
+  "id": 307737006,
+  "generated_unique_award_id": "CONT_AWD_HSFE3015C0363_7022_-NONE-_-NONE-",
+  "piid": "HSFE3015C0363",
+  "category": "contract",
+  "type": "D",
+  "type_description": "DEFINITIVE CONTRACT",
+  "description": "IGF::CT::IGF CYBER SECURITY RESILIENCY AND CDM TOOL DEPLOY FOR OCIO SECURITY. PERIOD OF PERFORMANCE IS FOR 6 MONTHS (SEPTEMBER 23, 2016 - MARCH 22, 2016) AND 3 MONTHS (MARCH 23, 2016 THROUGH JUNE 22, 2016).",
+  "total_obligation": 6716521.07,
+  "subaward_count": 0,
+  "total_subaward_amount": null,
+  "date_signed": "2015-09-23",
+  "base_exercised_options": 6716521.07,
+  "base_and_all_options": 11998840.52,
+  "total_account_outlay": 0.0,
+  "total_account_obligation": -404828.28,
+  "account_outlays_by_defc": [
+    {
+      "code": "Q",
+      "amount": 0.0
+    }
+  ],
+  "account_obligations_by_defc": [
+    {
+      "code": "Q",
+      "amount": -404828.28
+    }
+  ],
+  "parent_award": null,
+  "latest_transaction_contract_data": {
+    "idv_type_description": null,
+    "type_of_idc_description": null,
+    "referenced_idv_agency_iden": null,
+    "referenced_idv_agency_desc": null,
+    "solicitation_identifier": "HSFE30-15-R-0022",
+    "solicitation_procedures": "SSS",
+    "number_of_offers_received": "1",
+    "extent_competed": "B",
+    "type_set_aside": "8AN",
+    "type_set_aside_description": "8(A) SOLE SOURCE",
+    "evaluated_preference": "NONE",
+    "fed_biz_opps": "X",
+    "fed_biz_opps_description": "NOT APPLICABLE",
+    "small_business_competitive": false,
+    "product_or_service_code": "7030",
+    "naics": "813920",
+    "naics_description": "PROFESSIONAL ORGANIZATIONS",
+    "sea_transportation": null,
+    "clinger_cohen_act_planning": "N",
+    "labor_standards": "X",
+    "cost_or_pricing_data": "N",
+    "domestic_or_foreign_entity": "A",
+    "foreign_funding": "X",
+    "major_program": null,
+    "program_acronym": null,
+    "subcontracting_plan": "B",
+    "multi_year_contract": "N",
+    "consolidated_contract": "N",
+    "type_of_contract_pricing": "Y",
+    "national_interest_action": null,
+    "multiple_or_single_award_description": null,
+    "solicitation_procedures_description": "ONLY ONE SOURCE",
+    "extent_competed_description": "NOT AVAILABLE FOR COMPETITION",
+    "other_than_full_and_open": "OTH",
+    "other_than_full_and_open_description": "AUTHORIZED BY STATUTE (FAR 6.302-5(A)(2)(I))",
+    "commercial_item_acquisition": "D",
+    "commercial_item_acquisition_description": "COMMERCIAL PRODUCTS/SERVICES PROCEDURES NOT USED",
+    "commercial_item_test_program": "N",
+    "commercial_item_test_program_description": "NO",
+    "evaluated_preference_description": "NO PREFERENCE USED",
+    "fair_opportunity_limited": null,
+    "fair_opportunity_limited_description": null,
+    "product_or_service_description": "INFORMATION TECHNOLOGY SOFTWARE",
+    "dod_claimant_program": null,
+    "dod_claimant_program_description": null,
+    "dod_acquisition_program": null,
+    "dod_acquisition_program_description": null,
+    "information_technology_commercial_item_category": null,
+    "information_technology_commercial_item_category_description": null,
+    "sea_transportation_description": null,
+    "clinger_cohen_act_planning_description": "NO",
+    "construction_wage_rate": "X",
+    "construction_wage_rate_description": "NOT APPLICABLE",
+    "labor_standards_description": "NOT APPLICABLE",
+    "materials_supplies": "X",
+    "materials_supplies_description": "NOT APPLICABLE",
+    "cost_or_pricing_data_description": "NO",
+    "domestic_or_foreign_entity_description": "U.S. OWNED BUSINESS",
+    "foreign_funding_description": "NOT APPLICABLE",
+    "interagency_contracting_authority": "X",
+    "interagency_contracting_authority_description": "NOT APPLICABLE",
+    "price_evaluation_adjustment": "0.00",
+    "subcontracting_plan_description": "PLAN NOT REQUIRED",
+    "multi_year_contract_description": "NO",
+    "purchase_card_as_payment_method": "N",
+    "purchase_card_as_payment_method_description": "NO",
+    "consolidated_contract_description": "NO",
+    "type_of_contract_pricing_description": "TIME AND MATERIALS",
+    "national_interest_action_description": null
+  },
+  "funding_agency": {
+    "id": 782,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "Federal Emergency Management Agency",
+      "code": "7022",
+      "abbreviation": "FEMA"
+    },
+    "office_agency_name": "MS - MISSION SUPPORT"
+  },
+  "awarding_agency": {
+    "id": 782,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "Federal Emergency Management Agency",
+      "code": "7022",
+      "abbreviation": "FEMA"
+    },
+    "office_agency_name": "INFORMATION TECHNOLOGY COMMODITIES AND TELECOMMUNICATIONS"
+  },
+  "period_of_performance": {
+    "start_date": "2015-09-23",
+    "end_date": "2016-05-16",
+    "last_modified_date": "2025-06-06",
+    "potential_end_date": "2025-05-28 00:00:00"
+  },
+  "recipient": {
+    "recipient_hash": "4b2a195b-d3a4-27d1-e096-bf378d79a0d6-C",
+    "recipient_name": "CHENEGA DECISION SCIENCES LLC",
+    "recipient_uei": "PN2EBLQ12PH1",
+    "recipient_unique_id": null,
+    "parent_recipient_hash": "4b2a195b-d3a4-27d1-e096-bf378d79a0d6-P",
+    "parent_recipient_name": "CHENEGA DECISION SCIENCES LLC",
+    "parent_recipient_uei": "PN2EBLQ12PH1",
+    "parent_recipient_unique_id": null,
+    "business_categories": [
+      "8(a) Program Participant",
+      "Alaskan Native Corporation Owned Firm",
+      "Category Business",
+      "Limited Liability Corporation",
+      "Minority Owned Business",
+      "Native American Owned Business",
+      "Self-Certified Small Disadvantaged Business",
+      "Small Business",
+      "Special Designations",
+      "U.S.-Owned Business"
+    ],
+    "location": {
+      "location_country_code": "USA",
+      "country_name": "UNITED STATES",
+      "state_code": "VA",
+      "state_name": "VIRGINIA",
+      "city_name": "LORTON",
+      "county_code": "059",
+      "county_name": "FAIRFAX",
+      "address_line1": "10505 FURNACE RD STE 205",
+      "address_line2": null,
+      "address_line3": null,
+      "congressional_code": "11",
+      "zip4": "2636",
+      "zip5": "22079",
+      "foreign_postal_code": null,
+      "foreign_province": null
+    }
+  },
+  "executive_details": {
+    "officers": [
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      }
+    ]
+  },
+  "place_of_performance": {
+    "location_country_code": "USA",
+    "country_name": "UNITED STATES",
+    "county_code": "059",
+    "county_name": "FAIRFAX",
+    "city_name": "LORTON",
+    "state_code": "VA",
+    "state_name": "VIRGINIA",
+    "congressional_code": "11",
+    "zip4": "1447",
+    "zip5": "22079",
+    "address_line1": null,
+    "address_line2": null,
+    "address_line3": null,
+    "foreign_province": null,
+    "foreign_postal_code": null
+  },
+  "psc_hierarchy": {
+    "toptier_code": {},
+    "midtier_code": {
+      "code": "70",
+      "description": "INFORMATION TECHNOLOGY EQUIPMENT (INCLD FIRMWARE) SOFTWARE,SUPPLIES& SUPPORT EQUIPMENT"
+    },
+    "subtier_code": {},
+    "base_code": {
+      "code": "7030",
+      "description": "INFORMATION TECHNOLOGY SOFTWARE"
+    }
+  },
+  "naics_hierarchy": {
+    "toptier_code": {
+      "code": "81",
+      "description": "Other Services (except Public Administration)"
+    },
+    "midtier_code": {
+      "code": "8139",
+      "description": "Business, Professional, Labor, Political, and Similar Organizations"
+    },
+    "base_code": {
+      "code": "813920",
+      "description": "Professional Organizations"
+    }
+  },
+  "total_outlay": null
+}

@@ -1,0 +1,264 @@
+{
+  "id": 291254269,
+  "generated_unique_award_id": "CONT_AWD_70T04024F7672N016_7013_70T05019A9NMED049_7013",
+  "piid": "70T04024F7672N016",
+  "category": "contract",
+  "type": "A",
+  "type_description": "BPA CALL",
+  "description": "TASK ORDER UNDER INTEGRATED PROGRAM MANAGEMENT SUPPORT SERVICES (IPMSS) BLANKET PURCHASE AGREEMENT (BPA) IN SUPPORT OF FIELD INFORMATION SYSTEMS PROGRAM MANAGEMENT AND CYBERSECURITY SUPPORT",
+  "total_obligation": 2470711.91,
+  "subaward_count": 0,
+  "total_subaward_amount": null,
+  "date_signed": "2024-05-09",
+  "base_exercised_options": 2470711.91,
+  "base_and_all_options": 2470711.91,
+  "total_account_outlay": 2470711.91,
+  "total_account_obligation": 2470711.91,
+  "account_outlays_by_defc": [
+    {
+      "code": "Q",
+      "amount": 2470711.91
+    }
+  ],
+  "account_obligations_by_defc": [
+    {
+      "code": "Q",
+      "amount": 2470711.91
+    }
+  ],
+  "parent_award": {
+    "agency_id": 766,
+    "agency_name": "Department of Homeland Security",
+    "agency_slug": "department-of-homeland-security",
+    "sub_agency_id": "7013",
+    "sub_agency_name": "Transportation Security Administration",
+    "award_id": 351027286,
+    "generated_unique_award_id": "CONT_IDV_70T05019A9NMED049_7013",
+    "idv_type_description": "BPA",
+    "multiple_or_single_aw_desc": "SINGLE AWARD",
+    "piid": "70T05019A9NMED049",
+    "type_of_idc_description": null
+  },
+  "latest_transaction_contract_data": {
+    "idv_type_description": null,
+    "type_of_idc_description": null,
+    "referenced_idv_agency_iden": "7013",
+    "referenced_idv_agency_desc": "TRANSPORTATION SECURITY ADMINISTRATION",
+    "solicitation_identifier": "70T04024Q7672N005",
+    "solicitation_procedures": "MAFO",
+    "number_of_offers_received": null,
+    "extent_competed": "A",
+    "type_set_aside": null,
+    "type_set_aside_description": null,
+    "evaluated_preference": "NONE",
+    "fed_biz_opps": null,
+    "fed_biz_opps_description": null,
+    "small_business_competitive": false,
+    "product_or_service_code": "R408",
+    "naics": "541611",
+    "naics_description": "ADMINISTRATIVE MANAGEMENT AND GENERAL MANAGEMENT CONSULTING SERVICES",
+    "sea_transportation": null,
+    "clinger_cohen_act_planning": "N",
+    "labor_standards": "N",
+    "cost_or_pricing_data": null,
+    "domestic_or_foreign_entity": "A",
+    "foreign_funding": "X",
+    "major_program": null,
+    "program_acronym": null,
+    "subcontracting_plan": null,
+    "multi_year_contract": null,
+    "consolidated_contract": "D",
+    "type_of_contract_pricing": "J",
+    "national_interest_action": null,
+    "multiple_or_single_award_description": null,
+    "solicitation_procedures_description": "SUBJECT TO MULTIPLE AWARD FAIR OPPORTUNITY",
+    "extent_competed_description": "FULL AND OPEN COMPETITION",
+    "other_than_full_and_open": null,
+    "other_than_full_and_open_description": null,
+    "commercial_item_acquisition": "A",
+    "commercial_item_acquisition_description": "COMMERCIAL PRODUCTS/SERVICES",
+    "commercial_item_test_program": "N",
+    "commercial_item_test_program_description": "NO",
+    "evaluated_preference_description": "NO PREFERENCE USED",
+    "fair_opportunity_limited": "CSA",
+    "fair_opportunity_limited_description": "COMPETITIVE SET ASIDE",
+    "product_or_service_description": "SUPPORT- PROFESSIONAL: PROGRAM MANAGEMENT/SUPPORT",
+    "dod_claimant_program": null,
+    "dod_claimant_program_description": null,
+    "dod_acquisition_program": null,
+    "dod_acquisition_program_description": null,
+    "information_technology_commercial_item_category": null,
+    "information_technology_commercial_item_category_description": null,
+    "sea_transportation_description": null,
+    "clinger_cohen_act_planning_description": "NO",
+    "construction_wage_rate": "X",
+    "construction_wage_rate_description": "NOT APPLICABLE",
+    "labor_standards_description": "NO",
+    "materials_supplies": "X",
+    "materials_supplies_description": "NOT APPLICABLE",
+    "cost_or_pricing_data_description": null,
+    "domestic_or_foreign_entity_description": "U.S. OWNED BUSINESS",
+    "foreign_funding_description": "NOT APPLICABLE",
+    "interagency_contracting_authority": "X",
+    "interagency_contracting_authority_description": "NOT APPLICABLE",
+    "price_evaluation_adjustment": null,
+    "subcontracting_plan_description": null,
+    "multi_year_contract_description": null,
+    "purchase_card_as_payment_method": "N",
+    "purchase_card_as_payment_method_description": "NO",
+    "consolidated_contract_description": "NOT CONSOLIDATED",
+    "type_of_contract_pricing_description": "FIRM FIXED PRICE",
+    "national_interest_action_description": null
+  },
+  "funding_agency": {
+    "id": 777,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "Transportation Security Administration",
+      "code": "7013",
+      "abbreviation": "TSA"
+    },
+    "office_agency_name": "ACQUISITION PROGRAM MGMT"
+  },
+  "awarding_agency": {
+    "id": 777,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "Transportation Security Administration",
+      "code": "7013",
+      "abbreviation": "TSA"
+    },
+    "office_agency_name": "CLOSEOUT"
+  },
+  "period_of_performance": {
+    "start_date": "2024-05-09",
+    "end_date": "2025-08-08",
+    "last_modified_date": "2025-12-11",
+    "potential_end_date": "2025-08-08 12:00:00"
+  },
+  "recipient": {
+    "recipient_hash": "27d1396e-6220-99d3-ebf0-a775a91d36b6-C",
+    "recipient_name": "RELI GROUP INC",
+    "recipient_uei": "ZZEFBLYZN5B1",
+    "recipient_unique_id": null,
+    "parent_recipient_hash": "27d1396e-6220-99d3-ebf0-a775a91d36b6-P",
+    "parent_recipient_name": "RELI GROUP INC",
+    "parent_recipient_uei": "ZZEFBLYZN5B1",
+    "parent_recipient_unique_id": null,
+    "business_categories": [
+      "8(a) Program Participant",
+      "Category Business",
+      "Corporate Entity Not Tax Exempt",
+      "DoT Certified Disadvantaged Business Enterprise",
+      "HUBZone Firm",
+      "Minority Owned Business",
+      "Not Designated a Small Business",
+      "Self-Certified Small Disadvantaged Business",
+      "Small Business",
+      "Special Designations",
+      "Subchapter S Corporation",
+      "Indian (Subcontinent) American Owned Business",
+      "U.S.-Owned Business"
+    ],
+    "location": {
+      "location_country_code": "USA",
+      "country_name": "UNITED STATES",
+      "state_code": "MD",
+      "state_name": "MARYLAND",
+      "city_name": "CATONSVILLE",
+      "county_code": "005",
+      "county_name": "BALTIMORE",
+      "address_line1": "5520 RESEARCH PARK DR",
+      "address_line2": "STE 105",
+      "address_line3": null,
+      "congressional_code": "07",
+      "zip4": "4851",
+      "zip5": "21228",
+      "foreign_postal_code": null,
+      "foreign_province": null
+    }
+  },
+  "executive_details": {
+    "officers": [
+      {
+        "name": "MOHAMMAD  ELIAS",
+        "amount": 600000.0
+      },
+      {
+        "name": "SWAMI  SWAMINATHAN",
+        "amount": 586306.0
+      },
+      {
+        "name": "BRIAN  MCELYEA",
+        "amount": 333959.0
+      },
+      {
+        "name": "MEGAN  KOLTER",
+        "amount": 300839.0
+      },
+      {
+        "name": "BRIAN  SIMONSON",
+        "amount": 300750.0
+      }
+    ]
+  },
+  "place_of_performance": {
+    "location_country_code": "USA",
+    "country_name": "UNITED STATES",
+    "county_code": "059",
+    "county_name": "FAIRFAX",
+    "city_name": "SPRINGFIELD",
+    "state_code": "VA",
+    "state_name": "VIRGINIA",
+    "congressional_code": "08",
+    "zip4": "2404",
+    "zip5": "22150",
+    "address_line1": null,
+    "address_line2": null,
+    "address_line3": null,
+    "foreign_province": null,
+    "foreign_postal_code": null
+  },
+  "psc_hierarchy": {
+    "toptier_code": {
+      "code": "R",
+      "description": "SUPPORT SVCS (PROF, ADMIN, MGMT)"
+    },
+    "midtier_code": {
+      "code": "R4",
+      "description": "PROFESSIONAL SERVICES"
+    },
+    "subtier_code": {},
+    "base_code": {
+      "code": "R408",
+      "description": "SUPPORT- PROFESSIONAL: PROGRAM MANAGEMENT/SUPPORT"
+    }
+  },
+  "naics_hierarchy": {
+    "toptier_code": {
+      "code": "54",
+      "description": "Professional, Scientific, and Technical Services"
+    },
+    "midtier_code": {
+      "code": "5416",
+      "description": "Management, Scientific, and Technical Consulting Services"
+    },
+    "base_code": {
+      "code": "541611",
+      "description": "Administrative Management and General Management Consulting Services"
+    }
+  },
+  "total_outlay": 2470711.91
+}

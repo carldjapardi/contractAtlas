@@ -1,0 +1,249 @@
+{
+  "id": 291352362,
+  "generated_unique_award_id": "CONT_AWD_70Z0G322FISD40012_7008_GS35F0305N_4730",
+  "piid": "70Z0G322FISD40012",
+  "category": "contract",
+  "type": "C",
+  "type_description": "DELIVERY ORDER",
+  "description": "CORE TECHNOLOGY SUPPORT SERVICES TO SUPPORT THE USCG COMMAND, CONTROL, COMMUNICATIONS, COMPUTERS, CYBER, AND INTELLIGENCE SERVICE CENTER (C5ISC).",
+  "total_obligation": 17701598.63,
+  "subaward_count": 0,
+  "total_subaward_amount": null,
+  "date_signed": "2022-04-11",
+  "base_exercised_options": 17701598.63,
+  "base_and_all_options": 17701598.63,
+  "total_account_outlay": 0,
+  "total_account_obligation": 0,
+  "account_outlays_by_defc": [],
+  "account_obligations_by_defc": [],
+  "parent_award": {
+    "agency_id": 614,
+    "agency_name": "General Services Administration",
+    "agency_slug": "general-services-administration",
+    "sub_agency_id": "4730",
+    "sub_agency_name": "Federal Acquisition Service",
+    "award_id": 351279698,
+    "generated_unique_award_id": "CONT_IDV_GS35F0305N_4730",
+    "idv_type_description": "FSS",
+    "multiple_or_single_aw_desc": "MULTIPLE AWARD",
+    "piid": "GS35F0305N",
+    "type_of_idc_description": null
+  },
+  "latest_transaction_contract_data": {
+    "idv_type_description": null,
+    "type_of_idc_description": null,
+    "referenced_idv_agency_iden": "4730",
+    "referenced_idv_agency_desc": "FEDERAL ACQUISITION SERVICE",
+    "solicitation_identifier": "70Z0G322RCTS13600",
+    "solicitation_procedures": "MAFO",
+    "number_of_offers_received": "1",
+    "extent_competed": "B",
+    "type_set_aside": null,
+    "type_set_aside_description": null,
+    "evaluated_preference": null,
+    "fed_biz_opps": "X",
+    "fed_biz_opps_description": "NOT APPLICABLE",
+    "small_business_competitive": false,
+    "product_or_service_code": "DA01",
+    "naics": "541519",
+    "naics_description": "OTHER COMPUTER RELATED SERVICES",
+    "sea_transportation": null,
+    "clinger_cohen_act_planning": "N",
+    "labor_standards": "X",
+    "cost_or_pricing_data": "N",
+    "domestic_or_foreign_entity": null,
+    "foreign_funding": "X",
+    "major_program": null,
+    "program_acronym": null,
+    "subcontracting_plan": "B",
+    "multi_year_contract": "N",
+    "consolidated_contract": "D",
+    "type_of_contract_pricing": "J",
+    "national_interest_action": null,
+    "multiple_or_single_award_description": null,
+    "solicitation_procedures_description": "SUBJECT TO MULTIPLE AWARD FAIR OPPORTUNITY",
+    "extent_competed_description": "NOT AVAILABLE FOR COMPETITION",
+    "other_than_full_and_open": "OTH",
+    "other_than_full_and_open_description": "AUTHORIZED BY STATUTE (FAR 6.302-5(A)(2)(I))",
+    "commercial_item_acquisition": "A",
+    "commercial_item_acquisition_description": "COMMERCIAL PRODUCTS/SERVICES",
+    "commercial_item_test_program": "N",
+    "commercial_item_test_program_description": "NO",
+    "evaluated_preference_description": null,
+    "fair_opportunity_limited": "ONE",
+    "fair_opportunity_limited_description": "ONLY ONE SOURCE - OTHER",
+    "product_or_service_description": "IT AND TELECOM - BUSINESS APPLICATION/APPLICATION DEVELOPMENT SUPPORT SERVICES (LABOR)",
+    "dod_claimant_program": null,
+    "dod_claimant_program_description": null,
+    "dod_acquisition_program": null,
+    "dod_acquisition_program_description": null,
+    "information_technology_commercial_item_category": "E",
+    "information_technology_commercial_item_category_description": "COMMERCIAL SERVICE",
+    "sea_transportation_description": null,
+    "clinger_cohen_act_planning_description": "NO",
+    "construction_wage_rate": "X",
+    "construction_wage_rate_description": "NOT APPLICABLE",
+    "labor_standards_description": "NOT APPLICABLE",
+    "materials_supplies": "X",
+    "materials_supplies_description": "NOT APPLICABLE",
+    "cost_or_pricing_data_description": "NO",
+    "domestic_or_foreign_entity_description": null,
+    "foreign_funding_description": "NOT APPLICABLE",
+    "interagency_contracting_authority": "X",
+    "interagency_contracting_authority_description": "NOT APPLICABLE",
+    "price_evaluation_adjustment": null,
+    "subcontracting_plan_description": "PLAN NOT REQUIRED",
+    "multi_year_contract_description": "NO",
+    "purchase_card_as_payment_method": "N",
+    "purchase_card_as_payment_method_description": "NO",
+    "consolidated_contract_description": "NOT CONSOLIDATED",
+    "type_of_contract_pricing_description": "FIRM FIXED PRICE",
+    "national_interest_action_description": null
+  },
+  "funding_agency": {
+    "id": 772,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Coast Guard",
+      "code": "7008",
+      "abbreviation": "USCG"
+    },
+    "office_agency_name": "DEPUTY COMDT 4 MISSION SUPP WASH DC"
+  },
+  "awarding_agency": {
+    "id": 772,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Coast Guard",
+      "code": "7008",
+      "abbreviation": "USCG"
+    },
+    "office_agency_name": "C5I CONTRACT OPERATIONS DIVISION 2 (CG-C5I-C2) KEARNEYSVILLE"
+  },
+  "period_of_performance": {
+    "start_date": "2022-04-15",
+    "end_date": "2022-12-31",
+    "last_modified_date": "2025-05-06",
+    "potential_end_date": "2022-12-31 12:35:10"
+  },
+  "recipient": {
+    "recipient_hash": "7d6153d4-4d5e-6de7-cd4c-10cd4c355b26-C",
+    "recipient_name": "GUIDEHOUSE DIGITAL LLC",
+    "recipient_uei": "WKMCZLH1KJM4",
+    "recipient_unique_id": null,
+    "parent_recipient_hash": "7d6153d4-4d5e-6de7-cd4c-10cd4c355b26-P",
+    "parent_recipient_name": "GUIDEHOUSE DIGITAL LLC",
+    "parent_recipient_uei": "WKMCZLH1KJM4",
+    "parent_recipient_unique_id": null,
+    "business_categories": [
+      "8(a) Program Participant",
+      "Category Business",
+      "Minority Owned Business",
+      "Self-Certified Small Disadvantaged Business",
+      "Small Business",
+      "Small Disadvantaged Business",
+      "Special Designations",
+      "Indian (Subcontinent) American Owned Business"
+    ],
+    "location": {
+      "location_country_code": "USA",
+      "country_name": "UNITED STATES",
+      "state_code": "VA",
+      "state_name": "VIRGINIA",
+      "city_name": "RESTON",
+      "county_code": "059",
+      "county_name": "FAIRFAX",
+      "address_line1": "11490 COMMERCE PARK DR STE 340",
+      "address_line2": null,
+      "address_line3": null,
+      "congressional_code": "11",
+      "zip4": "1532",
+      "zip5": "20191",
+      "foreign_postal_code": null,
+      "foreign_province": null
+    }
+  },
+  "executive_details": {
+    "officers": [
+      {
+        "name": "SCOTT  MCINTYRE",
+        "amount": 2589085.0
+      },
+      {
+        "name": "ED  MEEHAN",
+        "amount": 974038.0
+      },
+      {
+        "name": "CHARLES  BEARD",
+        "amount": 1213700.0
+      },
+      {
+        "name": "DEBBIE  RICCI",
+        "amount": 865800.0
+      },
+      {
+        "name": "EDWARD  EICH",
+        "amount": 575100.0
+      }
+    ]
+  },
+  "place_of_performance": {
+    "location_country_code": "USA",
+    "country_name": "UNITED STATES",
+    "county_code": "003",
+    "county_name": "BERKELEY",
+    "city_name": "KEARNEYSVILLE",
+    "state_code": "WV",
+    "state_name": "WEST VIRGINIA",
+    "congressional_code": "02",
+    "zip4": "3002",
+    "zip5": "25430",
+    "address_line1": null,
+    "address_line2": null,
+    "address_line3": null,
+    "foreign_province": null,
+    "foreign_postal_code": null
+  },
+  "psc_hierarchy": {
+    "toptier_code": {
+      "code": "D",
+      "description": "IT AND TELECOM - INFORMATION TECHNOLOGY AND TELECOMMUNICATIONS"
+    },
+    "midtier_code": {
+      "code": "DA",
+      "description": "IT AND TELECOM - APLLICATIONS"
+    },
+    "subtier_code": {},
+    "base_code": {
+      "code": "DA01",
+      "description": "IT AND TELECOM - BUSINESS APPLICATION/APPLICATION DEVELOPMENT SUPPORT SERVICES (LABOR)"
+    }
+  },
+  "naics_hierarchy": {
+    "toptier_code": {
+      "code": "54",
+      "description": "Professional, Scientific, and Technical Services"
+    },
+    "midtier_code": {
+      "code": "5415",
+      "description": "Computer Systems Design and Related Services"
+    },
+    "base_code": {
+      "code": "541519",
+      "description": "Other Computer Related Services"
+    }
+  },
+  "total_outlay": null
+}

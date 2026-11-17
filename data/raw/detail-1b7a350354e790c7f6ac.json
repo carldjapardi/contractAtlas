@@ -1,0 +1,264 @@
+{
+  "id": 291184989,
+  "generated_unique_award_id": "CONT_AWD_70B04C25F00000246_7014_70B04C23A00000060_7014",
+  "piid": "70B04C25F00000246",
+  "category": "contract",
+  "type": "A",
+  "type_description": "BPA CALL",
+  "description": "CARGO SYSTEMS PROGRAM DIRECTORATE (CSPD) ESB ACQUISITION MANAGEMENT",
+  "total_obligation": 1035673.04,
+  "subaward_count": 0,
+  "total_subaward_amount": null,
+  "date_signed": "2025-04-24",
+  "base_exercised_options": 1035673.04,
+  "base_and_all_options": 2990731.28,
+  "total_account_outlay": 618130.48,
+  "total_account_obligation": 1035673.04,
+  "account_outlays_by_defc": [
+    {
+      "code": "Q",
+      "amount": 618130.48
+    }
+  ],
+  "account_obligations_by_defc": [
+    {
+      "code": "Q",
+      "amount": 1035673.04
+    }
+  ],
+  "parent_award": {
+    "agency_id": 766,
+    "agency_name": "Department of Homeland Security",
+    "agency_slug": "department-of-homeland-security",
+    "sub_agency_id": "7014",
+    "sub_agency_name": "U.S. Customs and Border Protection",
+    "award_id": 351025556,
+    "generated_unique_award_id": "CONT_IDV_70B04C23A00000060_7014",
+    "idv_type_description": "BPA",
+    "multiple_or_single_aw_desc": "MULTIPLE AWARD",
+    "piid": "70B04C23A00000060",
+    "type_of_idc_description": null
+  },
+  "latest_transaction_contract_data": {
+    "idv_type_description": null,
+    "type_of_idc_description": null,
+    "referenced_idv_agency_iden": "7014",
+    "referenced_idv_agency_desc": "U.S. CUSTOMS AND BORDER PROTECTION",
+    "solicitation_identifier": "70B04C25Q00000119",
+    "solicitation_procedures": "MAFO",
+    "number_of_offers_received": "5",
+    "extent_competed": "A",
+    "type_set_aside": "SBA",
+    "type_set_aside_description": "SMALL BUSINESS SET ASIDE - TOTAL",
+    "evaluated_preference": "NONE",
+    "fed_biz_opps": null,
+    "fed_biz_opps_description": null,
+    "small_business_competitive": false,
+    "product_or_service_code": "R408",
+    "naics": "541511",
+    "naics_description": "CUSTOM COMPUTER PROGRAMMING SERVICES",
+    "sea_transportation": null,
+    "clinger_cohen_act_planning": "N",
+    "labor_standards": "N",
+    "cost_or_pricing_data": "N",
+    "domestic_or_foreign_entity": "A",
+    "foreign_funding": "X",
+    "major_program": null,
+    "program_acronym": null,
+    "subcontracting_plan": null,
+    "multi_year_contract": null,
+    "consolidated_contract": "D",
+    "type_of_contract_pricing": "J",
+    "national_interest_action": null,
+    "multiple_or_single_award_description": null,
+    "solicitation_procedures_description": "SUBJECT TO MULTIPLE AWARD FAIR OPPORTUNITY",
+    "extent_competed_description": "FULL AND OPEN COMPETITION",
+    "other_than_full_and_open": null,
+    "other_than_full_and_open_description": null,
+    "commercial_item_acquisition": "A",
+    "commercial_item_acquisition_description": "COMMERCIAL PRODUCTS/SERVICES",
+    "commercial_item_test_program": "N",
+    "commercial_item_test_program_description": "NO",
+    "evaluated_preference_description": "NO PREFERENCE USED",
+    "fair_opportunity_limited": "CSA",
+    "fair_opportunity_limited_description": "COMPETITIVE SET ASIDE",
+    "product_or_service_description": "SUPPORT- PROFESSIONAL: PROGRAM MANAGEMENT/SUPPORT",
+    "dod_claimant_program": null,
+    "dod_claimant_program_description": null,
+    "dod_acquisition_program": null,
+    "dod_acquisition_program_description": null,
+    "information_technology_commercial_item_category": null,
+    "information_technology_commercial_item_category_description": null,
+    "sea_transportation_description": null,
+    "clinger_cohen_act_planning_description": "NO",
+    "construction_wage_rate": "X",
+    "construction_wage_rate_description": "NOT APPLICABLE",
+    "labor_standards_description": "NO",
+    "materials_supplies": "X",
+    "materials_supplies_description": "NOT APPLICABLE",
+    "cost_or_pricing_data_description": "NO",
+    "domestic_or_foreign_entity_description": "U.S. OWNED BUSINESS",
+    "foreign_funding_description": "NOT APPLICABLE",
+    "interagency_contracting_authority": "X",
+    "interagency_contracting_authority_description": "NOT APPLICABLE",
+    "price_evaluation_adjustment": null,
+    "subcontracting_plan_description": null,
+    "multi_year_contract_description": null,
+    "purchase_card_as_payment_method": "N",
+    "purchase_card_as_payment_method_description": "NO",
+    "consolidated_contract_description": "NOT CONSOLIDATED",
+    "type_of_contract_pricing_description": "FIRM FIXED PRICE",
+    "national_interest_action_description": null
+  },
+  "funding_agency": {
+    "id": 778,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Customs and Border Protection",
+      "code": "7014",
+      "abbreviation": "CBP"
+    },
+    "office_agency_name": "ENTERPRISE SERVICES OFFICE"
+  },
+  "awarding_agency": {
+    "id": 778,
+    "has_agency_page": true,
+    "toptier_agency": {
+      "name": "Department of Homeland Security",
+      "code": "070",
+      "abbreviation": "DHS",
+      "slug": "department-of-homeland-security"
+    },
+    "subtier_agency": {
+      "name": "U.S. Customs and Border Protection",
+      "code": "7014",
+      "abbreviation": "CBP"
+    },
+    "office_agency_name": "INFORMATION TECHNOLOGY CONTRACTING DIVISION"
+  },
+  "period_of_performance": {
+    "start_date": "2025-04-28",
+    "end_date": "2027-04-27",
+    "last_modified_date": "2026-08-24",
+    "potential_end_date": "2030-04-27 11:28:11"
+  },
+  "recipient": {
+    "recipient_hash": "62f50ed8-787f-b747-13db-3d1cccacadab-C",
+    "recipient_name": "CYBERMEDIA TECHNOLOGIES, LLC",
+    "recipient_uei": "MXTJKYDAEDQ9",
+    "recipient_unique_id": null,
+    "parent_recipient_hash": "3be9e9af-638c-bb8d-e3c8-6a148db64248-P",
+    "parent_recipient_name": "CYBERMEDIA TECHNOLOGIES INC",
+    "parent_recipient_uei": "T79ZMXQYHTB6",
+    "parent_recipient_unique_id": null,
+    "business_categories": [
+      "Category Business",
+      "Corporate Entity Not Tax Exempt",
+      "DoT Certified Disadvantaged Business Enterprise",
+      "Economically Disadvantaged Women Owned Small Business",
+      "Minority Owned Business",
+      "Self-Certified Small Disadvantaged Business",
+      "Small Business",
+      "Special Designations",
+      "Subchapter S Corporation",
+      "Indian (Subcontinent) American Owned Business",
+      "U.S.-Owned Business",
+      "Woman Owned Business",
+      "Women Owned Small Business"
+    ],
+    "location": {
+      "location_country_code": "USA",
+      "country_name": "UNITED STATES",
+      "state_code": "VA",
+      "state_name": "VIRGINIA",
+      "city_name": "RESTON",
+      "county_code": "059",
+      "county_name": "FAIRFAX",
+      "address_line1": "11490 COMMERCE PARK DR",
+      "address_line2": "STE 500",
+      "address_line3": null,
+      "congressional_code": "11",
+      "zip4": "1532",
+      "zip5": "20191",
+      "foreign_postal_code": null,
+      "foreign_province": null
+    }
+  },
+  "executive_details": {
+    "officers": [
+      {
+        "name": "AUDRA  UPCHURCH",
+        "amount": 325000.0
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      },
+      {
+        "name": null,
+        "amount": null
+      }
+    ]
+  },
+  "place_of_performance": {
+    "location_country_code": "USA",
+    "country_name": "UNITED STATES",
+    "county_code": "107",
+    "county_name": "LOUDOUN",
+    "city_name": "ASHBURN",
+    "state_code": "VA",
+    "state_name": "VIRGINIA",
+    "congressional_code": "10",
+    "zip4": "6122",
+    "zip5": "20147",
+    "address_line1": null,
+    "address_line2": null,
+    "address_line3": null,
+    "foreign_province": null,
+    "foreign_postal_code": null
+  },
+  "psc_hierarchy": {
+    "toptier_code": {
+      "code": "R",
+      "description": "SUPPORT SVCS (PROF, ADMIN, MGMT)"
+    },
+    "midtier_code": {
+      "code": "R4",
+      "description": "PROFESSIONAL SERVICES"
+    },
+    "subtier_code": {},
+    "base_code": {
+      "code": "R408",
+      "description": "SUPPORT- PROFESSIONAL: PROGRAM MANAGEMENT/SUPPORT"
+    }
+  },
+  "naics_hierarchy": {
+    "toptier_code": {
+      "code": "54",
+      "description": "Professional, Scientific, and Technical Services"
+    },
+    "midtier_code": {
+      "code": "5415",
+      "description": "Computer Systems Design and Related Services"
+    },
+    "base_code": {
+      "code": "541511",
+      "description": "Custom Computer Programming Services"
+    }
+  },
+  "total_outlay": 618130.48
+}

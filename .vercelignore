@@ -1,0 +1,13 @@
+.env
+.env.*
+.venv
+frontend/node_modules
+frontend/dist
+data/team
+data/cognee
+data/expansion/runtime
+data/cloud-openapi.json
+data/expansion/public
+tests
+.pytest_cache
+**/__pycache__

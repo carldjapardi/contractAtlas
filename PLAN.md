@@ -31,6 +31,10 @@ This section is the active plan. The original four-hour plan below is retained a
 
 ### Active implementation and validation
 
+- [x] Deployment choice confirmed: live Vercel + Supabase; keep Cognee Cloud as graph/session memory.
+- [x] Implement server-only Supabase run/manifest storage, atomic operation admission, native Vercel Workflow execution and a shared code for paid actions.
+- [ ] Apply hosted schema, import verified demo state, deploy preview and verify a live hosted operation before promoting.
+
 - [x] Integrate the separately authored 68-source expansion in an isolated dataset; preserve the original working demo.
 - [x] Freeze a matched document-RAG versus hybrid, before/after protocol and 24-check rubric before generating answers.
 - [x] Run all 16 fresh-session answers and record stable document inventories (68 before, 70 after). Native improvement distilled one lesson, retrieved separately afterward.

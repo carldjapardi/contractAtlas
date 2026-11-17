@@ -8,6 +8,7 @@ dependencies = [
   "uvicorn>=0.34,<1",
   "python-dotenv>=1,<2",
   "httpx>=0.28,<1",
+  "vercel-workflow==0.13.0",
 ]
 
 [project.optional-dependencies]
@@ -19,3 +20,12 @@ dev = ["pytest>=8,<10"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+
+[tool.vercel]
+entrypoint = "backend.app:app"
+
+[tool.vercel.scripts]
+build = "npm --prefix frontend ci && npm --prefix frontend run build"
+
+[[tool.vercel.workflows]]
+entrypoint = "backend.workflows:wf"

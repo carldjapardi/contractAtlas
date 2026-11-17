@@ -3,19 +3,28 @@
 import asyncio
 from contextlib import asynccontextmanager
 import json
+import inspect
+import hmac
 import logging
+import os
 from pathlib import Path
 
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import FileResponse
+from fastapi import Depends, FastAPI, HTTPException, Query, Request, Response
+from pydantic import BaseModel, Field
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from backend.models import Answer, Graph, ImproveRequest, QueryRequest, ResearchRequest
 from backend.team_jobs import TeamJobConflict, load_sources, manager as team_manager
+from backend import demo_access
 
 ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT / ".env")
+
+if os.getenv("ATLAS_JOB_RUNTIME") == "vercel":
+    from backend.durable_jobs import DurableTeamJobManager
+    team_manager = DurableTeamJobManager()
 
 from backend import baseline, cognee_adapter, data  # noqa: E402
 
@@ -32,10 +41,35 @@ async def lifespan(application: FastAPI):
 app = FastAPI(title="Contract Atlas", version="0.2.0", lifespan=lifespan)
 cognee_lock = asyncio.Lock()
 
+from backend.run_store import RunStoreUnavailable
+
+
+@app.exception_handler(RunStoreUnavailable)
+async def unavailable_hosted_state(request, exc):
+    return JSONResponse(status_code=503, content={"detail": str(exc)})
+
 
 @app.get("/api/health")
 def health():
     return {"status": "ok", "cognee": cognee_adapter.get_status()}
+
+
+class DemoUnlock(BaseModel):
+    code: str = Field(min_length=1, max_length=200)
+
+
+@app.get("/api/access")
+def demo_access_status(request: Request):
+    return {"required": demo_access.required(), "authorized": demo_access.authorized(request)}
+
+
+@app.post("/api/access")
+def unlock_demo(request: DemoUnlock, response: Response):
+    expected = os.getenv("ATLAS_DEMO_ACCESS_CODE", "")
+    if not expected or not hmac.compare_digest(request.code, expected):
+        raise HTTPException(401, "The demo access code was not accepted.")
+    response.set_cookie(demo_access.COOKIE, demo_access.token(), httponly=True, secure=bool(os.getenv("VERCEL")), samesite="lax", max_age=86400)
+    return {"authorized": True}
 
 
 @app.get("/api/dataset")
@@ -61,7 +95,7 @@ def graph(
     return data.build_graph(records, limit=limit)
 
 
-@app.post("/api/query", response_model=Answer)
+@app.post("/api/query", response_model=Answer, dependencies=[Depends(demo_access.require_live_access)])
 async def query(request: QueryRequest):
     if request.mode == "baseline":
         return await asyncio.to_thread(baseline.query, request.question)
@@ -124,7 +158,7 @@ def team_runs():
     return {"runs": team_manager.list()}
 
 
-@app.post("/api/team/runs", status_code=202)
+@app.post("/api/team/runs", status_code=202, dependencies=[Depends(demo_access.require_live_access)])
 async def start_team_run(request: ResearchRequest):
     status = team_status()
     if status.get("busy"):
@@ -132,7 +166,8 @@ async def start_team_run(request: ResearchRequest):
     if not status.get("available") or not status.get("source_count"):
         raise HTTPException(503, status.get("reason") or "The shared source collection is not ready.")
     try:
-        return team_manager.start(request.question, request.profile)
+        result = team_manager.start(request.question, request.profile)
+        return await result if inspect.isawaitable(result) else result
     except TeamJobConflict as exc:
         raise HTTPException(409, str(exc)) from None
 
@@ -145,10 +180,11 @@ def team_run(run_id: str):
         raise HTTPException(404, "Research run not found.") from None
 
 
-@app.post("/api/team/runs/{run_id}/improve", status_code=202)
+@app.post("/api/team/runs/{run_id}/improve", status_code=202, dependencies=[Depends(demo_access.require_live_access)])
 async def improve_team_run(run_id: str, request: ImproveRequest):
     try:
-        return team_manager.improve(run_id, request.feedback)
+        result = team_manager.improve(run_id, request.feedback)
+        return await result if inspect.isawaitable(result) else result
     except KeyError:
         raise HTTPException(404, "Research run not found.") from None
     except TeamJobConflict as exc:

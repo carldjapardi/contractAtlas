@@ -14,3 +14,4 @@ data/team/
 data/cloud-openapi.json
 .cognee*/
 .DS_Store
+.vercel/

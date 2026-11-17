@@ -21,7 +21,7 @@ import httpx
 from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = ROOT / "data/team/cloud_index.json"
+MANIFEST = Path(os.getenv("ATLAS_STATE_DIR", str(ROOT / "data/team"))) / "cloud_index.json"
 MARKER = re.compile(r"\[TEAM_SOURCE:([^\]\r\n]+)\]")
 
 
@@ -53,6 +53,9 @@ def config():
 
 
 def read_manifest():
+    if os.getenv("ATLAS_JOB_RUNTIME") == "vercel":
+        from backend.run_store import SupabaseRunStore
+        return SupabaseRunStore().get_manifest("cognee_cloud") or {}
     try:
         return json.loads(MANIFEST.read_text())
     except (OSError, ValueError):
@@ -60,6 +63,10 @@ def read_manifest():
 
 
 def _write_manifest(value):
+    if os.getenv("ATLAS_JOB_RUNTIME") == "vercel":
+        from backend.run_store import SupabaseRunStore
+        SupabaseRunStore().save_manifest("cognee_cloud", value)
+        return
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     temporary = MANIFEST.with_suffix(".tmp")
     temporary.write_text(json.dumps(value, indent=2))

@@ -10,6 +10,7 @@ import { api } from './api';
 import KnowledgeGraph from './KnowledgeGraph';
 import TeamResearch from './TeamResearch';
 import MemoryComparison from './MemoryComparison';
+import DemoAccess from './DemoAccess';
 import type { Answer, Award, AwardsResponse, Dataset, Evaluation, Evidence, Graph, GraphNode, Health, Mode, View } from './types';
 
 const emptyGraph: Graph = { nodes: [], edges: [], truncated: false };
@@ -180,6 +181,7 @@ export default function App() {
     </aside>
     <div className="workspace"><header className="topbar"><div className="breadcrumb"><span>Workspace</span><ChevronRight size={13} /><strong>{viewTitle}</strong></div><div className="topbar-right"><span className="snapshot-label"><Database size={13} /> {view === 'research' ? 'Shared research memory' : 'Frozen snapshot'}</span><span className="avatar" title="Local workspace">CA</span></div></header>
       <main id="main-content">
+        <DemoAccess />
         {view === 'research' && <TeamResearch />}
         {view === 'explore' && <>
           <div className="workspace-heading"><div><span className="eyebrow">CONNECTED RECORDS. CLEARER ANSWERS.</span><h1>Follow the funding<span>.</span></h1><p>Explore who gets funded, how they connect, and the evidence behind it.</p></div><button className="button-secondary refresh-button" onClick={() => void refresh()} disabled={loading || busy}><RefreshCw size={14} className={loading ? 'spin' : ''} /> Refresh data</button></div>

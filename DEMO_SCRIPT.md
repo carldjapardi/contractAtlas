@@ -1,5 +1,7 @@
 # Two-minute filming script
 
+Live site: https://contract-atlas-personal-d624.vercel.app. For a live recording, unlock using the value of `ATLAS_DEMO_ACCESS_CODE` from local `.env` before filming. Select the November 16, 5:22 PM completed run to match the four-lesson counts below; later runs have their own observed results.
+
 Use a completed run so the recording shows actual saved results without waiting for ingestion or improvement. Say that it is a completed run. The verified run was created at 5:22 PM Pacific on November 16 (ID `06b99bc85757443783635c11f3f81265`). It has four recorded lessons and verified fresh-session retrieval. The separate expanded-corpus benchmark has one lesson; do not mix those counts.
 
 Open Research team, select that completed run, collapse the research brief after introducing it, and rehearse the scroll positions. Record at a readable desktop size. Read only the quoted narration below, about 265 words. Screen directions are not spoken. No new paid run is necessary to film this checkpoint.

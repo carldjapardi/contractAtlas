@@ -1,5 +1,7 @@
 # Contract Atlas
 
+**Live demo:** [contract-atlas-personal-d624.vercel.app](https://contract-atlas-personal-d624.vercel.app). Completed research and benchmark results are viewable publicly; running new agents requires the shared demo code. See [deployment setup](DEPLOYMENT.md).
+
 **New to the project? Read [the plain-English explanation](PROJECT_SIMPLE.md) first.**
 
 **Filming:** [Two-minute walkthrough script](DEMO_SCRIPT.md), with screen actions and verified run selection.

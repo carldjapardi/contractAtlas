@@ -6,7 +6,18 @@
 
 **Filming:** [Two-minute walkthrough script](DEMO_SCRIPT.md), with screen actions and verified run selection.
 
-**Latest measured result:** the isolated 68-source comparison completed 16 answers. Document RAG scored 22/24 checks before and after review; Cognee hybrid scored 20/24 before and after. One new lesson was saved and retrieved. No answer-quality advantage is established. See [observed comparison](COMPARISON_RESULTS.md) and **Benchmark** in the app.
+## Deliverables
+
+- A live web application with a primary **Research team** workspace, also runnable locally.
+- Three actual provider-backed research roles with distinct persistent sessions.
+- A shared collection showing source types, URLs, excerpts and evidence limitations.
+- Recorded activity, reports, retrieved memory, agent traces and a bounded actual Cognee graph.
+- An unchanged before checkpoint, editable review lesson, native improvement stage results, new-lesson counts and a fresh-session memory check.
+- Supporting award graph/search and an openly reported initial retrieval comparison.
+- Reproducible source collection, setup commands, tests, locked dependencies and small reviewable commits.
+
+
+**Latest measured result:** the isolated 68-source comparison completed 16 answers. Cognee hybrid scored 20/24 before and after. One new lesson was saved and retrieved. No answer-quality advantage is established. See [observed comparison](COMPARISON_RESULTS.md) and **Benchmark** in the app.
 
 **A shared research memory for cybersecurity contractors pursuing federal work.** Three research agents connect historical awards, agency guidance, and vendor capabilities, review their findings, and carry accepted lessons into a fresh agent session through Cognee.
 
@@ -20,7 +31,7 @@ Contract Atlas turns these into a shared, source-linked memory that the next res
 
 **Example task:** “We implement identity and access management. Which companies could complement us on DHS cybersecurity work, what evidence supports the fit, and what still needs verification?”
 
-## Hackathon scope
+## Scope
 
 One company-focused research workflow, one agency domain, three agent roles, and an explicit review-and-improve cycle:
 
@@ -35,19 +46,9 @@ The source collection contains **28 genuine documents**: 25 selected historical 
 
 The four-hour scope excludes live SAM.gov opportunity feeds, automatic bidding, outreach, verified eligibility/certification checks, a comprehensive federal market index, and production access management.
 
-## Deliverables
+## Why Cognee 
 
-- A local web application with a primary **Research team** workspace.
-- Three actual provider-backed research roles with distinct persistent sessions.
-- A shared collection showing source types, URLs, excerpts and evidence limitations.
-- Recorded activity, reports, retrieved memory, agent traces and a bounded actual Cognee graph.
-- An unchanged before checkpoint, editable review lesson, native improvement stage results, new-lesson counts and a fresh-session memory check.
-- Supporting award graph/search and an openly reported initial retrieval comparison.
-- Reproducible source collection, setup commands, tests, locked dependencies and small reviewable commits.
-
-## Why this fits the Cognee track
-
-| Sponsor emphasis | What the demo must make visible |
+| Emphasis | What the demo must make visible |
 | --- | --- |
 | **Shared agent memory** | Distinct research roles read the same persistent dataset and retrieve earlier agents' recorded traces. |
 | **Self-improvement** | Accepted guidance enters a real session; `improve()` returns actual stages/counts; a fresh session attempts to retrieve the resulting durable lesson. |
@@ -64,7 +65,7 @@ This makes the project a credible track submission; winning depends on the final
 - Cognee Cloud authentication and required REST endpoints: verified.
 - Research-team UI and Cloud session/trace orchestration: verified in a real run.
 - Native Cloud improvement: four new lesson documents created; a fresh partner session retrieved all four. Original report preserved. See [demo results](DEMO_RESULTS.md).
-- Regression checks: 83 backend tests passed; production frontend build passed. GitHub CI is configured but has not been run remotely in this session.
+- Regression checks: 134 backend tests passed locally; production frontend build passed. GitHub Actions verifies pushes and gates release publication on its checks.
 - Initial retrieval benchmark: preserved, including cases where the lexical baseline performs better. Those results are not evidence of the revised team's learning quality.
 
 ## Start

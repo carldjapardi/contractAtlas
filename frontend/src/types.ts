@@ -1,5 +1,5 @@
 export type Mode = 'baseline' | 'cognee';
-export type View = 'explore' | 'awards' | 'benchmark';
+export type View = 'research' | 'explore' | 'awards' | 'benchmark';
 export type EntityType = 'agency' | 'award' | 'recipient' | 'parent' | 'topic';
 export interface Award {
   id: string; award_id: string; description: string; agency: string;

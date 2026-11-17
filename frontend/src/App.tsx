@@ -4,10 +4,11 @@ import {
   Check, ChevronDown, ChevronRight, CircleHelp, Clock3,
   Database, ExternalLink, FileText, FlaskConical, GitBranch, Globe2,
   Landmark, LoaderCircle, Network, RefreshCw, Search, ShieldCheck,
-  SlidersHorizontal, Sparkles, X,
+  SlidersHorizontal, Sparkles, Users, X,
 } from 'lucide-react';
 import { api } from './api';
 import KnowledgeGraph from './KnowledgeGraph';
+import TeamResearch from './TeamResearch';
 import type { Answer, Award, AwardsResponse, Dataset, Evaluation, Evidence, Graph, GraphNode, Health, Mode, View } from './types';
 
 const emptyGraph: Graph = { nodes: [], edges: [], truncated: false };
@@ -104,7 +105,7 @@ function BenchmarkView({ dataset }: { dataset: Dataset | null }) {
 }
 
 export default function App() {
-  const [view, setView] = useState<View>('explore');
+  const [view, setView] = useState<View>('research');
   const [dataset, setDataset] = useState<Dataset | null>(null);
   const [health, setHealth] = useState<Health | null>(null);
   const [graph, setGraph] = useState<Graph>(emptyGraph);
@@ -166,17 +167,18 @@ export default function App() {
   const cogneeReady = Boolean(health?.cognee.ready);
   const evidence = selected ? selectedRecords : answer?.evidence ?? [];
   const hasData = Boolean(dataset?.award_count);
-  const viewTitle = view === 'explore' ? 'Explore' : view === 'awards' ? 'Award records' : 'Benchmark';
+  const viewTitle = view === 'research' ? 'Research team' : view === 'explore' ? 'Explore' : view === 'awards' ? 'Award records' : 'Benchmark';
 
   return <div className="app-shell">
     <a className="skip-link" href="#main-content">Skip to workspace</a>
     <aside className="sidebar"><a href="/" className="brand" aria-label="Contract Atlas home"><span className="brand-mark"><Landmark size={23} strokeWidth={1.7} /></span><span>contract<span className="brand-light">atlas</span><small>FOLLOW THE FUNDING</small></span></a>
-      <div className="nav-label">WORKSPACE</div><nav aria-label="Workspace navigation">{([{ id: 'explore', label: 'Explore graph', icon: Network }, { id: 'awards', label: 'Award records', icon: FileText }, { id: 'benchmark', label: 'Benchmark', icon: FlaskConical }] as const).map(item => <button key={item.id} className={`nav-item ${view === item.id ? 'active' : ''}`} onClick={() => setView(item.id)} aria-label={item.label} aria-current={view === item.id ? 'page' : undefined}><item.icon size={18} /><span>{item.label}</span>{view === item.id && <span className="nav-active-dot" />}</button>)}</nav>
+      <div className="nav-label">WORKSPACE</div><nav aria-label="Workspace navigation">{([{ id: 'research', label: 'Research team', icon: Users }, { id: 'explore', label: 'Explore graph', icon: Network }, { id: 'awards', label: 'Award records', icon: FileText }, { id: 'benchmark', label: 'Benchmark', icon: FlaskConical }] as const).map(item => <button key={item.id} className={`nav-item ${view === item.id ? 'active' : ''}`} onClick={() => setView(item.id)} aria-label={item.label} aria-current={view === item.id ? 'page' : undefined}><item.icon size={18} /><span>{item.label}</span>{view === item.id && <span className="nav-active-dot" />}</button>)}</nav>
       <div className="sidebar-divider" /><div className="nav-label">DATA COLLECTION</div><div className="collection"><span className="collection-symbol"><ShieldCheck size={16} /></span><span>Federal contracts<small>{dataset?.agency === 'Department of Homeland Security' ? 'DHS' : dataset?.agency || 'DHS'} · FY {dataset?.fiscal_year || 2025}</small></span></div>
       <div className="sidebar-bottom"><div className="source-badge"><span className={`status-dot ${hasData ? '' : 'offline'}`} /><span>{hasData ? 'Real data. Traceable sources.' : 'Waiting for source data.'}</span></div><p>Built on public USAspending records. Every connection has a starting point.</p><a href="https://www.usaspending.gov" target="_blank" rel="noreferrer">About the source <ArrowUpRight size={13} /></a><div className="prototype-tag">HACKATHON PROTOTYPE <span>v0.1</span></div></div>
     </aside>
-    <div className="workspace"><header className="topbar"><div className="breadcrumb"><span>Workspace</span><ChevronRight size={13} /><strong>{viewTitle}</strong></div><div className="topbar-right"><span className="snapshot-label"><Database size={13} /> Frozen snapshot</span><span className="avatar" title="Local workspace">CA</span></div></header>
+    <div className="workspace"><header className="topbar"><div className="breadcrumb"><span>Workspace</span><ChevronRight size={13} /><strong>{viewTitle}</strong></div><div className="topbar-right"><span className="snapshot-label"><Database size={13} /> {view === 'research' ? 'Shared research memory' : 'Frozen snapshot'}</span><span className="avatar" title="Local workspace">CA</span></div></header>
       <main id="main-content">
+        {view === 'research' && <TeamResearch />}
         {view === 'explore' && <>
           <div className="workspace-heading"><div><span className="eyebrow">CONNECTED RECORDS. CLEARER ANSWERS.</span><h1>Follow the funding<span>.</span></h1><p>Explore who gets funded, how they connect, and the evidence behind it.</p></div><button className="button-secondary refresh-button" onClick={() => void refresh()} disabled={loading || busy}><RefreshCw size={14} className={loading ? 'spin' : ''} /> Refresh data</button></div>
           <section className="query-card" aria-label="Ask about federal contracts"><div className="query-topline"><span><Sparkles size={15} /> ASK YOUR DATA</span><div className="mode-switch" aria-label="Retrieval mode"><button className={mode === 'baseline' ? 'selected' : ''} onClick={() => setMode('baseline')} aria-pressed={mode === 'baseline'}><GitBranch size={13} /> Baseline</button><button className={mode === 'cognee' ? 'selected' : ''} onClick={() => setMode('cognee')} aria-pressed={mode === 'cognee'} title={health?.cognee.reason || 'Cognee status is loading'}><Sparkles size={13} /> Cognee {!cogneeReady && <span className="mode-pending-dot" />}</button></div></div>

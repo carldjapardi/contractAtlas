@@ -59,3 +59,28 @@ class Answer(BaseModel):
     elapsed_ms: float
     coverage_notes: list[str]
     matched_count: int
+
+
+class ResearchRequest(BaseModel):
+    question: str = Field(min_length=10, max_length=4000)
+    profile: str = Field(min_length=10, max_length=4000)
+
+    @field_validator("question", "profile")
+    @classmethod
+    def meaningful_text(cls, value: str) -> str:
+        value = value.strip()
+        if len(value) < 10:
+            raise ValueError("Provide at least ten characters of useful context.")
+        return value
+
+
+class ImproveRequest(BaseModel):
+    feedback: str = Field(min_length=10, max_length=4000)
+
+    @field_validator("feedback")
+    @classmethod
+    def meaningful_feedback(cls, value: str) -> str:
+        value = value.strip()
+        if len(value) < 10:
+            raise ValueError("Describe a useful correction or lasting team preference.")
+        return value

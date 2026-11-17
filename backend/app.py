@@ -1,6 +1,7 @@
 """Local API for Contract Atlas. Run with uvicorn backend.app:app."""
 
 import asyncio
+from contextlib import asynccontextmanager
 import json
 import logging
 from pathlib import Path
@@ -10,7 +11,8 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from backend.models import Answer, Graph, QueryRequest
+from backend.models import Answer, Graph, ImproveRequest, QueryRequest, ResearchRequest
+from backend.team_jobs import TeamJobConflict, load_sources, manager as team_manager
 
 ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT / ".env")
@@ -18,7 +20,16 @@ load_dotenv(ROOT / ".env")
 from backend import baseline, cognee_adapter, data  # noqa: E402
 
 logger = logging.getLogger(__name__)
-app = FastAPI(title="Contract Atlas", version="0.1.0")
+
+
+@asynccontextmanager
+async def lifespan(application: FastAPI):
+    team_manager.recover_interrupted()
+    yield
+    await team_manager.shutdown()
+
+
+app = FastAPI(title="Contract Atlas", version="0.2.0", lifespan=lifespan)
 cognee_lock = asyncio.Lock()
 
 
@@ -81,6 +92,56 @@ def evaluation():
     if result.get("snapshot_id") != data.get_metadata().get("snapshot_id"):
         return {"status": "stale", "message": "These results refer to a different snapshot. Re-run evaluation."}
     return result
+
+
+@app.get("/api/team/status")
+def team_status():
+    try:
+        status = team_manager.memory.get_status()
+    except ImportError:
+        status = {"available": False, "ready": False, "reason": "The research memory service is being prepared.", "source_count": len(load_sources()), "dataset_name": None}
+    return {**status, "busy": team_manager.busy or status.get("busy", False)}
+
+
+@app.get("/api/team/sources")
+def team_sources():
+    return {"sources": load_sources()}
+
+
+@app.get("/api/team/runs")
+def team_runs():
+    return {"runs": team_manager.list()}
+
+
+@app.post("/api/team/runs", status_code=202)
+async def start_team_run(request: ResearchRequest):
+    status = team_status()
+    if status.get("busy"):
+        raise HTTPException(409, "A team memory operation is already running.")
+    if not status.get("available") or not status.get("source_count"):
+        raise HTTPException(503, status.get("reason") or "The shared source collection is not ready.")
+    try:
+        return team_manager.start(request.question, request.profile)
+    except TeamJobConflict as exc:
+        raise HTTPException(409, str(exc)) from None
+
+
+@app.get("/api/team/runs/{run_id}")
+def team_run(run_id: str):
+    try:
+        return team_manager.get(run_id)
+    except KeyError:
+        raise HTTPException(404, "Research run not found.") from None
+
+
+@app.post("/api/team/runs/{run_id}/improve", status_code=202)
+async def improve_team_run(run_id: str, request: ImproveRequest):
+    try:
+        return team_manager.improve(run_id, request.feedback)
+    except KeyError:
+        raise HTTPException(404, "Research run not found.") from None
+    except TeamJobConflict as exc:
+        raise HTTPException(409, str(exc)) from None
 
 
 # The same backend can serve a production frontend build. Vite proxies API in development.

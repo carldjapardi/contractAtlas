@@ -10,5 +10,7 @@ __pycache__/
 *.tsbuildinfo
 data/*.sqlite*
 data/cognee/
+data/team/
+data/cloud-openapi.json
 .cognee*/
 .DS_Store

@@ -1,17 +1,5 @@
 # Contract Atlas
 
-LIVE DEMO: https://contract-atlas-vert.vercel.app/
-
-## Deliverables
-
-- A local web application with a primary **Research team** workspace.
-- Three actual provider-backed research roles with distinct persistent sessions.
-- A shared collection showing source types, URLs, excerpts and evidence limitations.
-- Recorded activity, reports, retrieved memory, agent traces and a bounded actual Cognee graph.
-- An unchanged before checkpoint, editable review lesson, native improvement stage results, new-lesson counts and a fresh-session memory check.
-- Supporting award graph/search and an openly reported initial retrieval comparison.
-- Reproducible source collection, setup commands, tests, locked dependencies and small reviewable commits.
-
 **A shared research memory for cybersecurity contractors pursuing federal work.** Three research agents connect historical awards, agency guidance, and vendor capabilities, review their findings, and carry accepted lessons into a fresh agent session through Cognee.
 
 ## Motivation and user
@@ -39,7 +27,7 @@ The source collection contains **28 genuine documents**: 25 selected historical 
 
 The four-hour scope excludes live SAM.gov opportunity feeds, automatic bidding, outreach, verified eligibility/certification checks, a comprehensive federal market index, and production access management.
 
-## Why Cognee 
+## Leveraging Cognee 
 
 | Emphasis | What the demo must make visible |
 | --- | --- |
@@ -52,14 +40,15 @@ The strongest demonstration is a visible learning loop: a team reviews a source-
 
 This makes the project a credible track submission; winning depends on the final execution and judging. We will not claim a lesson was learned merely because an API call completed. **Learning verification requires a newly distilled document and its actual retrieval in a fresh session.** Report quality remains subject to human review. Improvement changes persistent memory and retrieval, not model weights.
 
-## Current verification checkpoint
+## Deliverables
 
-- Real source collection, award explorer and initial Cognee index: verified.
-- Cognee Cloud authentication and required REST endpoints: verified.
-- Research-team UI and Cloud session/trace orchestration: verified in a real run.
-- Native Cloud improvement: four new lesson documents created; a fresh partner session retrieved all four. Original report preserved. See [demo results](DEMO_RESULTS.md).
-- Regression checks: 83 backend tests passed; production frontend build passed. GitHub CI is configured but has not been run remotely in this session.
-- Initial retrieval benchmark: preserved, including cases where the lexical baseline performs better. Those results are not evidence of the revised team's learning quality.
+- A local web application with a primary **Research team** workspace.
+- Three actual provider-backed research roles with distinct persistent sessions.
+- A shared collection showing source types, URLs, excerpts and evidence limitations.
+- Recorded activity, reports, retrieved memory, agent traces and a bounded actual Cognee graph.
+- An unchanged before checkpoint, editable review lesson, native improvement stage results, new-lesson counts and a fresh-session memory check.
+- Supporting award graph/search and an openly reported initial retrieval comparison.
+- Reproducible source collection, setup commands, tests, locked dependencies and small reviewable commits.
 
 ## Start
 

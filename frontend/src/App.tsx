@@ -9,6 +9,7 @@ import {
 import { api } from './api';
 import KnowledgeGraph from './KnowledgeGraph';
 import TeamResearch from './TeamResearch';
+import MemoryComparison from './MemoryComparison';
 import type { Answer, Award, AwardsResponse, Dataset, Evaluation, Evidence, Graph, GraphNode, Health, Mode, View } from './types';
 
 const emptyGraph: Graph = { nodes: [], edges: [], truncated: false };
@@ -87,7 +88,8 @@ function BenchmarkView({ dataset }: { dataset: Dataset | null }) {
   const percent = (value: number | null | undefined) => value == null ? '—' : `${Math.round(value * 100)}%`;
   const snapshotMatches = Boolean(dataset?.snapshot_id && result?.snapshot_id === dataset.snapshot_id);
   return <section className="benchmark-view"><div className="section-title"><div><span className="eyebrow">SHOW YOUR WORK</span><h2>Better is a measurable claim.</h2><p>Compare retrieval approaches against the same frozen dataset.</p></div></div>
-    <div className="comparison-grid"><div className="comparison-card"><span className="method-icon"><GitBranch size={22} /></span><span className="eyebrow">BASELINE</span><h3>Structured + lexical</h3><p>Explicit source relationships and description search. A transparent reference point for every comparison.</p></div><div className="comparison-card"><span className="method-icon"><Sparkles size={22} /></span><span className="eyebrow">COGNEE</span><h3>Graph-powered retrieval</h3><p>Retrieve related evidence through Cognee’s memory graph. Compare grounded answers and supporting records.</p></div></div>
+    <MemoryComparison />
+    <div className="comparison-grid"><div className="comparison-card"><span className="method-icon"><GitBranch size={22} /></span><span className="eyebrow">ORIGINAL AWARD BASELINE</span><h3>Structured + lexical</h3><p>Explicit source relationships and description search over the original award snapshot.</p></div><div className="comparison-card"><span className="method-icon"><Sparkles size={22} /></span><span className="eyebrow">ORIGINAL AWARD COGNEE INDEX</span><h3>Graph-powered retrieval</h3><p>Earlier exploratory retrieval checks, preserved separately from the multi-source memory experiment.</p></div></div>
     {hasResults ? <div className="benchmark-results-heading"><div><span className="eyebrow">EXPLORATORY RETRIEVAL CHECKS</span><h3>{bothModes ? 'Two approaches. The same questions.' : 'Baseline checked. Comparison pending.'}</h3><p>{cases.length} questions · Generated {date(result?.generated_at)}</p></div><button className="button-secondary" onClick={() => downloadJson(result, 'contract-atlas-evaluation.json')}><ArrowDownToLine size={14} /> Export results</button></div> : <div className="benchmark-status"><div className="empty-icon"><FlaskConical size={27} /></div><h3>The benchmark is not complete yet.</h3><p>No improvement claims until both approaches are tested. The evaluation will report retrieval of selected relevant records, source ID validity, and latency.</p>
       {error && <p className="muted">Evaluation status unavailable: {error}</p>}
       {result && <button className="button-secondary" onClick={() => downloadJson(result, 'contract-atlas-evaluation.json')}><ArrowDownToLine size={15} /> Download evaluation artifact</button>}

@@ -94,6 +94,17 @@ def evaluation():
     return result
 
 
+@app.get("/api/comparison")
+def memory_comparison():
+    path = ROOT / "data" / "expansion" / "comparison_results.json"
+    if not path.exists():
+        return {"status": "not_run"}
+    try:
+        return json.loads(path.read_text())
+    except (ValueError, OSError):
+        raise HTTPException(503, "Comparison artifact is unavailable.") from None
+
+
 @app.get("/api/team/status")
 def team_status():
     try:

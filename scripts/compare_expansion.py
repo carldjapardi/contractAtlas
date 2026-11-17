@@ -145,9 +145,9 @@ async def improve(manifest):
             "datasetName": manifest["dataset_name"], "datasetId": manifest["dataset_id"], "sessionIds": [session],
             "runInBackground": False, "reviewConflicts": False, "buildGlobalContextIndex": True,
         })
-        state.update(status="complete", native_result=result, after_inventory=await inventory(manifest), finished_at=datetime.now(timezone.utc).isoformat())
+        state.update(status="complete" if result.get("status") == "completed" else "native_incomplete", native_result=result, after_inventory=await inventory(manifest), finished_at=datetime.now(timezone.utc).isoformat())
         save(path, state)
-        print(json.dumps({"intervention": "complete", "native_status": result.get("status"), "stages": [{"stage": s.get("stage"), "status": s.get("status"), "counts": s.get("counts")} for s in result.get("stages", [])]}), flush=True)
+        print(json.dumps({"intervention": state["status"], "native_status": result.get("status"), "stages": [{"stage": s.get("name"), "status": s.get("status"), "counts": s.get("counts")} for s in result.get("stages", [])]}), flush=True)
     except Exception:
         state["status"] = "error"
         save(path, state)
